@@ -52,7 +52,7 @@ What is an agent?
 
 They are nothing new.
 
-<briefly define agent>
+<image of agentic old thermostat>
 
 ---
 
@@ -61,9 +61,13 @@ The harness is the body + tools
 
 Together they make an agent
 
+<full screen image of agent-hardess-vs-model robot>
+
 ---
 
-Video of claude cowork doing stuff
+CoWork example
+
+<claude cowork example mp4>
 
 ---
 
@@ -167,7 +171,21 @@ Read only
 
 Sandbox
 
-(Link to Open AI sdk)
+Assume failure will happen. Limit the blast radius.
+
+Not perfect
+
+https://openai.com/index/hugging-face-incident-and-the-road-ahead/
+
+---
+
+Tool classifier
+
+Defense in depth, not perfect. Claude code auto-mode.
+
+---
+
+Evals
 
 ---
 
@@ -175,11 +193,10 @@ Observability and Audibility
 
 Still immature but improving.
 
----
+Lanfuse and LangSmith
 
-Local AI
-
-Models are just files, not programs.
+Gents:
+https://github.com/source-inc/gents
 
 ----
 
@@ -188,5 +205,11 @@ Build your own harness
 Open source examples
 
 OpenAI Agents SDK, Codex, Hermes, Opencode, Pi
+
+---
+
+Local AI
+
+Models are just files, not programs.
 
 ---
