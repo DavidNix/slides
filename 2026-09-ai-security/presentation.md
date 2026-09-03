@@ -65,7 +65,9 @@ Together they make an agent
 
 ---
 
-CoWork example
+Agentic Example
+
+Claude Cowork
 
 <claude cowork example mp4>
 
@@ -99,19 +101,33 @@ Chatbots are also lightweight harnesses. E.g. web search tool.
 
 The Agentic Loop
 
+Give it the Goal. Not steps.
+
+<agentic loop image>
+
 ---
+
+<agentic loop clean v2 image>
+
+---
+
+Agents
 
 What could go wrong?
 
 ---
 
-The Number One Threat is not stealing IP
+The Number One threat is not giving IP to an AI lab
 
-E.g. Antrhopic or OpenAI or China stealing your data and using it to train
+E.g. Anthropic or OpenAI or China stealing your data and using it to train
 
 ---
 
 Data Exfiltration
+
+https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files
+
+<claude cowork exfiltrate image>
 
 ---
 
@@ -119,19 +135,15 @@ Lethal Trifecta
 
 Simon Willison
 
+<image of lethal trifecta>
+
 ---
 
 Content and Instructions are the same.
 
 (Less commonly known as rule of 2)
 
-https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files
-
----
-
-Unintended Consequences
-
-<like deleting a prod database>
+Prompt Injection is your number one enemy.
 
 ---
 
@@ -139,7 +151,7 @@ IP Theft
 
 From model providers
 
-Opinion. Human data is more valuable than gold.
+Opinion. Human data is more valuable than gold to AI labs.
 
 Bartz, et al. v. Anthropic - Class action lawsuit Anthropic lost for using copyrighted books to train their models
 
@@ -153,19 +165,23 @@ How to protect yourself
 
 Reminder 
 
-<Conveniene or Security> pick one
+<convenience or security image>
 
 ---
 
 Human In the Loop
 
-The "best" protection against Lethal Trifecta
+The only protection against Lethal Trifecta
+
+But you risk approval fatigue
 
 ----
 
 Least privileges
 
-Read only 
+Annoying for humans.
+
+Non-negotiable for agents.
 
 ---
 
@@ -179,13 +195,11 @@ https://openai.com/index/hugging-face-incident-and-the-road-ahead/
 
 ---
 
-Tool classifier
+Tool (or prompt) classifier
 
 Defense in depth, not perfect. Claude code auto-mode.
 
----
-
-Evals
+<image of auto mode>
 
 ---
 
@@ -193,7 +207,7 @@ Observability and Audibility
 
 Still immature but improving.
 
-Lanfuse and LangSmith
+Langfuse and Langsmith
 
 Gents:
 https://github.com/source-inc/gents
@@ -211,5 +225,13 @@ OpenAI Agents SDK, Codex, Hermes, Opencode, Pi
 Local AI
 
 Models are just files, not programs.
+
+---
+
+If interested in your own local, private AI:
+
+hello@davidnix.com
+
+Questions?
 
 ---
