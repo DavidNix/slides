@@ -24,10 +24,11 @@
     --font-d:'Tektur',cursive;        /* display */
     --font-b:'Chakra Petch',sans-serif;/* body */
     --font-h:'Space Mono',monospace;  /* HUD */
+    --cursor-finger:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M20 42c-3-3-8-10-10-14-1-3 3-6 6-3l4 4V8c0-5 7-5 7 0v13-5c0-5 7-5 7 0v7-4c0-5 7-5 7 0v11c0 8-5 14-13 14h-3c-2 0-4-1-5-2Z' fill='%23F4D03F' stroke='%230F1B3D' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M27 21v7M34 22v7' stroke='%230F1B3D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") 23 4,pointer;
 
     /* fixed stage scale equivalents (source used clamp()@1920) */
     --t-hero:128px;  --t-display:64px; --t-headline:45px;
-    --t-sub:24px;    --t-stat:56px;    --t-body:23px; --t-quote:25.6px;
+    --t-sub:30px;    --t-stat:68px;    --t-body:34px; --t-quote:32px;
 
     --shadow-hero: 4px 4px 0 var(--yellow), 8px 8px 0 var(--navy);
     --shadow-stat: 3px 3px 0 var(--navy);
@@ -62,7 +63,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%;}
 /* ============================================================
    CURSOR + ATMOSPHERIC OVERLAY STACK (every slide)
    ============================================================ */
-body{cursor:crosshair;}
+body,a,button,.nav-rail i,.edit-hotzone{cursor:var(--cursor-finger);}
 /* grain ::before, scanlines ::after on every slide */
 .slide::before{content:"";position:absolute;inset:0;z-index:49;opacity:.035;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");}
@@ -113,15 +114,17 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
    ============================================================ */
 /* label pill · universal eyebrow */
 .label-pill{display:inline-block;background:var(--navy);color:var(--yellow);
-  font-family:var(--font-h);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  font-family:var(--font-h);font-size:16px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
   padding:8px 16px;line-height:1;margin-bottom:28px;}
 .label-pill.cyan{color:var(--cyan);}
 .label-pill.pink{color:var(--pink);}
 /* eyebrow standalone */
-.eyebrow{font-family:var(--font-h);font-size:13.6px;letter-spacing:.3em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;}
+.eyebrow{font-family:var(--font-h);font-size:17px;letter-spacing:.3em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;}
+.title-eyebrow{position:absolute;top:72px;left:104px;margin:0;font-size:26px;font-weight:700;letter-spacing:.2em;background:rgba(15,27,61,.82);border-left:6px solid var(--yellow);padding:12px 18px;}
+.title-site{color:var(--cyan);margin-left:18px;}
 /* hero badge */
 .hero-badge{display:inline-block;border:2px solid var(--yellow);color:var(--yellow);
-  font-family:var(--font-h);font-size:11.2px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;margin-right:12px;}
+  font-family:var(--font-h);font-size:15px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;margin-right:12px;}
 /* pixel corner brackets */
 .bracket{position:absolute;width:24px;height:24px;border:4px solid var(--cyan);pointer-events:none;}
 .bracket.tl{top:-2px;left:-2px;border-right:0;border-bottom:0;}
@@ -132,7 +135,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
 .stat-block{position:relative;background:rgba(94,220,244,.08);border:2px solid rgba(94,220,244,.2);
   padding:40px 28px;text-align:left;}
 .stat-block .num{font-family:var(--font-d);font-size:var(--t-stat);font-weight:900;color:var(--cyan);text-shadow:var(--shadow-stat);line-height:1;}
-.stat-block .lbl{font-family:var(--font-h);font-size:12px;color:var(--pink);letter-spacing:.15em;text-transform:uppercase;margin-top:16px;line-height:1.4;}
+.stat-block .lbl{font-family:var(--font-h);font-size:16px;color:var(--pink);letter-spacing:.15em;text-transform:uppercase;margin-top:16px;line-height:1.4;}
 /* feature card (on colored surfaces) */
 .feature-card{position:relative;background:rgba(255,255,255,.28);border:2px solid rgba(15,27,61,.16);
   padding:36px 32px;box-shadow:6px 6px 0 rgba(15,27,61,.15);}
@@ -146,10 +149,10 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
 .chip.hot{color:var(--yellow);border-color:var(--yellow);}
 /* pixel button */
 .pixel-btn{display:inline-block;background:var(--cyan);color:var(--navy);padding:16px 36px;
-  font-family:var(--font-d);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:20px;
+  font-family:var(--font-d);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:24px;
   box-shadow:4px 0 0 0 var(--navy),0 4px 0 0 var(--navy),4px 4px 0 0 var(--navy),8px 4px 0 0 var(--yellow),4px 8px 0 0 var(--yellow),8px 8px 0 0 var(--yellow);}
 /* link */
-.hlink{color:var(--cyan);font-family:var(--font-h);font-size:15px;letter-spacing:.05em;text-decoration:none;
+.hlink{color:var(--cyan);font-family:var(--font-h);font-size:18px;letter-spacing:.05em;text-decoration:none;
   border-bottom:2px solid rgba(94,220,244,.4);padding-bottom:2px;}
 .hlink:hover{color:var(--yellow);border-color:var(--yellow);}
 
@@ -199,12 +202,11 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="stars" data-stars></div>
   <div class="particles" data-particles="cyan,pink,yellow"></div>
   <div class="slide-content vcenter">
-    <div class="eyebrow reveal r1">David Nix ▸ Applied AI</div>
+    <div class="eyebrow title-eyebrow reveal r1">David Nix ▸ Applied AI <span class="title-site">davidnix.com</span></div>
     <h1 class="t-hero reveal r2" style="max-width:1560px">AI &amp; Information <span style="color:var(--yellow)">Security</span></h1>
     <div class="quote-line reveal r3"></div>
-    <p class="body-copy reveal r4" style="font-size:30px;max-width:1180px;margin-top:36px;line-height:1.5">
+    <p class="body-copy reveal r4" style="font-size:38px;max-width:1180px;margin-top:36px;line-height:1.5">
       From <b>emerging threats</b> to <b>practical defense</b>: what agents really are, what can go wrong, and how to survive it.</p>
-    <div class="mt48 reveal r5"><span class="hero-badge">agents</span><span class="hero-badge">prompt injection</span><span class="hero-badge">defense</span></div>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -238,7 +240,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">whoami</div>
     <h2 class="t-display reveal r2">David Nix</h2>
-    <p class="body-copy reveal r3" style="font-size:26px;max-width:1280px;margin-top:24px">
+    <p class="body-copy reveal r3" style="font-size:34px;max-width:1280px;margin-top:24px">
       15+ years as a software engineer building <b>backends and distributed systems</b> for companies like
       Kroger, Home Depot, Aetna, United Healthcare, Costco, and the Department of Veteran Affairs. And many more.</p>
     <div class="mt48 reveal r4">
@@ -264,7 +266,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
         <div class="fc-title">Private AI on your own terms</div>
         <div class="fc-body">AI that respects your boundaries, and your secrets.</div></div>
     </div>
-    <div class="mt48 reveal r4"><span class="chip hot" style="font-size:20px">hello@davidnix.com</span></div>
+    <div class="mt48 reveal r4"><span class="chip hot" style="font-size:24px">hello@davidnix.com</span></div>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -278,7 +280,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">hot take</div>
     <h2 class="t-hero reveal r2" style="font-size:112px">Chatbots are <span style="color:var(--pink)">antiques</span></h2>
-    <p class="body-copy reveal r3" style="font-size:30px;margin-top:32px">The era of <b>agents</b> is here. Chatbots are still useful for research and search; they're just not the story anymore.</p>
+    <p class="body-copy reveal r3" style="font-size:38px;margin-top:32px">The era of <b>agents</b> is here. Chatbots are still useful for research and search; they're just not the story anymore.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -298,7 +300,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
         <div class="fc-title">Agent</div>
         <div class="fc-body">Can <b>read all your email, write responses, and send them</b>, without you ever opening an app.</div></div>
     </div>
-    <p class="body-copy reveal r5 mt48" style="font-size:26px">They complete tasks and pursue goals. <b>That's the power.</b></p>
+    <p class="body-copy reveal r5 mt48" style="font-size:34px">They complete tasks and pursue goals. <b>That's the power.</b></p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -339,7 +341,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="media-cap">
     <div class="label-pill cyan reveal r1">anatomy of an agent</div>
     <h2 class="t-display reveal r2" style="color:var(--white);text-shadow:none"><span style="color:var(--cyan)">The model</span> is the brain · <span style="color:var(--pink)">the harness</span> is the body + tools</h2>
-    <p class="body-copy reveal r3 mt24" style="font-size:26px">Together they make an <b>agent</b>.</p>
+    <p class="body-copy reveal r3 mt24" style="font-size:34px">Together they make an <b>agent</b>.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -369,12 +371,12 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
     <div class="col">
       <div class="label-pill cyan reveal r1">under the hood</div>
       <h2 class="t-display reveal r2">What is a model?</h2>
-      <p class="body-copy reveal r3 mt24" style="font-size:26px">GPT-5.6 Sol · Claude Opus 5 · Claude Fable 5.1</p>
-      <p class="body-copy reveal r4 mt32" style="font-size:30px">It's a <b style="color:var(--yellow)">JSON API</b>. That's all it is.</p>
+      <p class="body-copy reveal r3 mt24" style="font-size:34px">GPT-5.6 Sol · Claude Opus 5 · Claude Fable 5.1</p>
+      <p class="body-copy reveal r4 mt32" style="font-size:38px">It's a <b style="color:var(--yellow)">JSON API</b>. That's all it is.</p>
       <p class="body-copy reveal r5 mt32">Tokens in → tokens out. No memory, no self, no intent.</p>
     </div>
     <div class="col reveal r6">
-      <pre style="background:var(--navy);border:2px solid rgba(94,220,244,.3);padding:32px;font-family:var(--font-h);font-size:17px;line-height:1.55;overflow:hidden;box-shadow:8px 8px 0 rgba(94,220,244,.18)"><code>{<span style="color:var(--pink)">"model"</span>: <span style="color:var(--cyan)">"gpt-5.6-sol"</span>,
+      <pre style="background:var(--navy);border:2px solid rgba(94,220,244,.3);padding:32px;font-family:var(--font-h);font-size:21px;line-height:1.55;overflow:hidden;box-shadow:8px 8px 0 rgba(94,220,244,.18)"><code>{<span style="color:var(--pink)">"model"</span>: <span style="color:var(--cyan)">"gpt-5.6-sol"</span>,
   <span style="color:var(--pink)">"choices"</span>: [{
     <span style="color:var(--pink)">"message"</span>: {
       <span style="color:var(--pink)">"role"</span>: <span style="color:var(--cyan)">"assistant"</span>,
@@ -399,10 +401,10 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">key insight</div>
     <h2 class="t-display reveal r2">Models are stateless</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:28px">Frozen in time. Tokens in, tokens out.</p>
-    <p class="body-copy reveal r4 mt24" style="font-size:28px">Models <b style="color:var(--yellow)">cannot distinguish content from instructions</b>.</p>
-    <p class="body-copy reveal r5 mt24" style="color:var(--pink);font-size:24px;font-family:var(--font-h)">// this will become important later</p>
-    <p class="body-copy reveal r6 mt32">The harness injects new data, like a web search, that the model can't tell is untrusted.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:36px">Frozen in time. Tokens in, tokens out.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:36px">Models <b style="color:var(--yellow)">cannot distinguish content from instructions</b>.</p>
+    <p class="body-copy reveal r5 mt24" style="color:var(--pink);font-size:32px;font-family:var(--font-h)">// this will become important later</p>
+    <p class="body-copy reveal r6 mt32">The harness injects new data so it appears it's learning.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -418,7 +420,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
       <span class="chip">Claude CoWork</span><span class="chip">Claude Code</span><span class="chip">Codex</span>
       <span class="chip">Grok Bot</span><span class="chip">Hermes</span><span class="chip">Openclaw</span>
     </div>
-    <p class="body-copy reveal r4 mt48" style="font-size:24px">Chatbots are also lightweight harnesses, e.g. a web search tool bolted onto a model.</p>
+    <p class="body-copy reveal r4 mt48" style="font-size:32px">Chatbots are also lightweight harnesses, e.g. a web search tool bolted onto a model.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -427,22 +429,9 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
      SLIDE 15 · THE AGENTIC LOOP
      ============================================================ -->
 <section class="slide slide-dark">
-  <div class="grid"></div>
-  <div class="slide-content">
-    <div class="label-pill reveal r1">the core pattern</div>
-    <h2 class="t-display reveal r2">The Agentic Loop</h2>
-    <div class="row vcenter mt48">
-      <div class="col">
-        <p class="body-copy reveal r3" style="font-size:30px;line-height:1.4">Give it the <b style="color:var(--yellow)">Goal</b>. Not steps.</p>
-        <p class="body-copy reveal r4 mt32">The agent plans, acts, observes, and repeats until the goal is done.</p>
-      </div>
-      <div class="col media-frame reveal r5" style="height:560px;overflow:hidden">
-        <img src="agentic-loop.jpg" alt="The agentic loop diagram" style="width:100%;height:100%;object-fit:contain">
-        <i class="bracket tl"></i><i class="bracket br"></i>
-      </div>
-    </div>
+  <div class="media-bg">
+    <img src="agentic-loop.jpg" alt="The agentic loop diagram" style="object-fit:contain;background:var(--void)">
   </div>
-  <div class="crt-glow"></div>
 </section>
 
 <!-- ============================================================
@@ -453,7 +442,6 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="media-shade"></div>
   <div class="media-cap">
     <div class="label-pill cyan reveal r1">goal → act → observe → repeat</div>
-    <h2 class="t-display reveal r2" style="color:var(--white);text-shadow:none">The loop runs on its own</h2>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -479,7 +467,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">mythbusting</div>
     <h2 class="t-display reveal r2">The #1 threat is <span style="color:var(--yellow)">not</span> giving your IP to an AI lab</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:28px">Not Anthropic. Not OpenAI. Not China "stealing your data to train."</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:36px">Not Anthropic. Not OpenAI. Not China "stealing your data to train."</p>
     <p class="body-copy reveal r4 mt32">That's a real concern, but it's not the attack you should lose sleep over.</p>
   </div>
   <div class="crt-glow"></div>
@@ -499,8 +487,8 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
         <i class="bracket tl"></i><i class="bracket br"></i>
       </div>
       <div class="col reveal r4">
-        <p class="body-copy" style="font-size:28px;line-height:1.5">An agent with tools and a bit of <b style="color:var(--pink)">untrusted input</b> can quietly ship your files somewhere they shouldn't go.</p>
-        <p class="mt48"><a class="hlink" href="https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files" target="_blank">▸ promptarmor.com · Claude Cowork exfiltrates files</a></p>
+        <p class="body-copy" style="font-size:36px;line-height:1.5">An agent with tools and a bit of <b style="color:var(--pink)">untrusted input</b> can quietly ship your files somewhere they shouldn't go.</p>
+        <p class="mt48"><a class="hlink" href="https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files" target="_blank">https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files</a></p>
       </div>
     </div>
   </div>
@@ -514,7 +502,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="grid"></div>
   <div class="slide-content">
     <div class="label-pill reveal r1">the framework</div>
-    <h2 class="t-display reveal r2">The Lethal Trifecta <span style="font-size:24px;color:var(--pink)">· Simon Willison</span></h2>
+    <h2 class="t-display reveal r2">The Lethal Trifecta <span style="font-size:28px;color:var(--pink)">· Simon Willison</span></h2>
     <div class="media-frame reveal r3 mt48" style="height:520px;overflow:hidden">
       <img src="lethaltrifecta.jpg" alt="The lethal trifecta: untrusted data + prompt injection + agent with tools" style="width:100%;height:100%;object-fit:contain">
       <i class="bracket tl"></i><i class="bracket br"></i>
@@ -532,8 +520,8 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">rule of two</div>
     <h2 class="t-display reveal r2">Content and Instructions are <span style="color:var(--yellow)">the same</span></h2>
-    <p class="body-copy reveal r3 mt24" style="color:var(--pink);font-size:22px;font-family:var(--font-h)">// less commonly known as "the rule of 2"</p>
-    <p class="body-copy reveal r4 mt32" style="font-size:34px;font-weight:600;color:var(--cyan)">Prompt injection is your #1 enemy.</p>
+    <p class="body-copy reveal r3 mt24" style="color:var(--pink);font-size:30px;font-family:var(--font-h)">// less commonly known as "the rule of 2"</p>
+    <p class="body-copy reveal r4 mt32" style="font-size:42px;font-weight:600;color:var(--cyan)">Prompt injection is your #1 enemy.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -545,7 +533,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content">
     <div class="label-pill pink reveal r1">opinion</div>
     <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">IP theft from model providers</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:26px;color:rgba(15,27,61,.85)"><b>Human data is more valuable than gold to AI labs.</b> The pressure exists; it just points somewhere specific.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:34px;color:rgba(15,27,61,.85)"><b>Human data is more valuable than gold to AI labs.</b> The pressure exists; it just points somewhere specific.</p>
     <div class="grid2 mt48">
       <div class="feature-card reveal r4"><i class="bracket tl"></i><i class="bracket br"></i>
         <div class="fc-title">Bartz, et al. v. Anthropic</div>
@@ -567,7 +555,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">the good news</div>
     <h2 class="t-hero reveal r2" style="font-size:112px">How to <span style="color:var(--cyan)">protect</span> yourself</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:26px">Defense in depth, no single magic bullet.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:34px">Defense in depth, no single magic bullet.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -581,7 +569,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
     <div class="col">
       <div class="label-pill reveal r1">reminder</div>
       <h2 class="t-display reveal r2">Convenience or security?</h2>
-      <p class="body-copy reveal r3 mt32" style="font-size:28px">They pull against each other. <b style="color:var(--yellow)">Every defense here is a small tax on convenience.</b> Know what you're paying.</p>
+      <p class="body-copy reveal r3 mt32" style="font-size:36px">They pull against each other. <b style="color:var(--yellow)">Every defense here is a small tax on convenience.</b> Know what you're paying.</p>
     </div>
     <div class="col media-frame reveal r4" style="height:720px;overflow:hidden">
       <img src="security-vs-convenience-scale-labeled.png" alt="The convenience vs security scale" style="width:100%;height:100%;object-fit:contain">
@@ -599,8 +587,8 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">defense #1</div>
     <h2 class="t-display reveal r2">Human In The Loop</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:28px">The <b style="color:var(--yellow)">only</b> protection against the Lethal Trifecta.</p>
-    <p class="body-copy reveal r4 mt32" style="font-size:28px;color:var(--pink)">But you risk approval fatigue, clicking "yes" until you stop reading.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:36px">The <b style="color:var(--yellow)">only</b> protection against the Lethal Trifecta.</p>
+    <p class="body-copy reveal r4 mt32" style="font-size:36px;color:var(--pink)">But you risk approval fatigue, clicking "yes" until you stop reading.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -613,8 +601,8 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">defense #2</div>
     <h2 class="t-display reveal r2">Least privilege</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:28px">Annoying for <b>humans</b>.</p>
-    <p class="body-copy reveal r4 mt24" style="font-size:34px;font-weight:600;color:var(--cyan)">Non-negotiable for <b>agents</b>.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:36px">Annoying for <b>humans</b>.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:42px;font-weight:600;color:var(--cyan)">Non-negotiable for <b>agents</b>.</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -627,34 +615,14 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">defense #3</div>
     <h2 class="t-display reveal r2">Sandbox</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:28px">Assume <b style="color:var(--yellow)">failure will happen</b>. Limit the blast radius.</p>
-    <p class="body-copy reveal r4 mt24" style="font-size:24px;color:var(--pink);font-family:var(--font-h)">// not perfect</p>
-    <p class="mt48 reveal r5"><a class="hlink" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank">▸ openai.com · Hugging Face incident &amp; the road ahead</a></p>
+    <p class="body-copy reveal r3 mt32" style="font-size:36px">Assume <b style="color:var(--yellow)">failure will happen</b>. Limit the blast radius.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:32px;color:var(--pink);font-family:var(--font-h)">// not perfect</p>
+    <p class="mt48 reveal r5"><a class="hlink" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank">https://openai.com/index/hugging-face-incident-and-the-road-ahead/</a></p>
   </div>
   <div class="crt-glow"></div>
 </section>
 
-<!-- ============================================================
-     SLIDE 28 · TOOL / PROMPT CLASSIFIER
-     ============================================================ -->
-<section class="slide slide-dark">
-  <div class="grid"></div>
-  <div class="slide-content">
-    <div class="label-pill cyan reveal r1">defense #4</div>
-    <h2 class="t-display reveal r2">Tool (or prompt) classifier</h2>
-    <div class="row vcenter mt48">
-      <div class="col media-frame reveal r3" style="height:540px;overflow:hidden">
-        <img src="auto-mode.jpg" alt="Claude Code auto-mode" style="width:100%;height:100%;object-fit:contain">
-        <i class="bracket tl"></i><i class="bracket br"></i>
-      </div>
-      <div class="col reveal r4">
-        <p class="body-copy" style="font-size:26px;line-height:1.55">A guard that decides <b style="color:var(--yellow)">which tools an agent may touch</b>, e.g. Claude Code auto-mode gates actions.</p>
-        <p class="body-copy mt24" style="font-size:24px;color:var(--pink)">Defense in depth, not perfect.</p>
-      </div>
-    </div>
-  </div>
-  <div class="crt-glow"></div>
-</section>
+
 
 <!-- ============================================================
      SLIDE 29 · OBSERVABILITY & AUDITABILITY
@@ -663,11 +631,11 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill cyan reveal r1">defense #5</div>
     <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">Observability &amp; auditability</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:26px">Still immature, but improving. You can't defend what you can't see.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:34px">Still immature, but improving. You can't defend what you can't see.</p>
     <div class="mt48 reveal r4">
       <span class="chip">Langfuse</span><span class="chip">Langsmith</span><span class="chip">Gents</span>
     </div>
-    <p class="mt48 reveal r5"><a class="hlink" href="https://github.com/source-inc/gents" target="_blank" style="color:var(--navy);border-color:rgba(15,27,61,.4)">▸ github.com/source-inc/gents</a></p>
+    <p class="mt48 reveal r5"><a class="hlink" href="https://github.com/source-inc/gents" target="_blank" style="color:var(--navy);border-color:rgba(15,27,61,.4)">https://github.com/source-inc/gents</a></p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -680,11 +648,11 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
   <div class="slide-content center">
     <div class="label-pill reveal r1">defense #6</div>
     <h2 class="t-display reveal r2">Build your own harness</h2>
-    <p class="body-copy reveal r3 mt32" style="font-size:26px">Don't trust the black box. Own the loop.</p>
+    <p class="body-copy reveal r3 mt32" style="font-size:34px">Don't trust the black box. Own the loop.</p>
     <div class="mt48 reveal r4">
       <span class="chip">OpenAI Agents SDK</span><span class="chip">Codex</span><span class="chip">Hermes</span><span class="chip">Opencode</span><span class="chip">Pi</span>
     </div>
-    <p class="body-copy reveal r5 mt48" style="font-size:22px;font-family:var(--font-h)">// open source examples</p>
+    <p class="body-copy reveal r5 mt48" style="font-size:30px;font-family:var(--font-h)">// open source examples</p>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -694,25 +662,34 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
      ============================================================ -->
 <section class="slide slide-dark">
   <div class="grid"></div>
-  <div class="slide-content row vcenter">
-    <div class="col">
-      <div class="label-pill cyan reveal r1">the pitch</div>
-      <h2 class="t-display reveal r2">Local AI</h2>
-      <p class="body-copy reveal r3 mt32" style="font-size:32px;line-height:1.4"><b style="color:var(--yellow)">Models are just files</b>, not programs.</p>
-      <p class="body-copy reveal r4 mt32">No cloud. No leaking. Your data stays yours; the agent works where you do.</p>
-    </div>
-    <div class="col reveal r5">
-      <div class="media-frame" style="height:760px;width:540px;margin-left:auto;overflow:hidden">
-        <video src="job-search-example.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;background:#000"></video>
-        <i class="bracket tl"></i><i class="bracket br"></i>
-      </div>
+  <div class="slide-content center">
+    <div class="label-pill cyan reveal r1">defense #7</div>
+    <h2 class="t-display reveal r2">Local AI</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:40px;line-height:1.4"><b style="color:var(--yellow)">Models are just files</b>, not programs.</p>
+    <p class="body-copy reveal r4 mt32">No cloud. No leaking. Your data stays yours; the agent works where you do.</p>
+    <p class="body-copy reveal r5 mt48" style="font-size:32px;color:var(--pink)">Demo on the next page →</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 32 · LOCAL AI + JOB SEARCH DEMO (VIDEO)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill cyan reveal r1">demo</div>
+    <h2 class="t-display reveal r2">Local AI in action</h2>
+    <div class="media-frame reveal r3 mt48" style="height:760px;overflow:hidden">
+      <video src="job-search-example.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;background:#000"></video>
+      <i class="bracket tl"></i><i class="bracket br"></i>
     </div>
   </div>
   <div class="crt-glow"></div>
 </section>
 
 <!-- ============================================================
-     SLIDE 32 · CLOSING / QUESTIONS
+     SLIDE 33 · CLOSING / QUESTIONS
      ============================================================ -->
 <section class="slide slide-dark">
   <div class="grid"></div>
@@ -722,8 +699,8 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
     <div class="label-pill reveal r1">thanks</div>
     <h2 class="t-hero reveal r2" style="font-size:112px">Questions<span style="color:var(--pink)">?</span></h2>
     <div class="quote-line reveal r3"></div>
-    <p class="body-copy reveal r4 mt40" style="font-size:30px">Want your own local, private AI?</p>
-    <div class="mt48 reveal r5"><span class="chip hot" style="font-size:22px">hello@davidnix.com</span></div>
+    <p class="body-copy reveal r4 mt40" style="font-size:38px">Want your own local, private AI?</p>
+    <div class="mt48 reveal r5"><span class="chip hot" style="font-size:26px">hello@davidnix.com</span></div>
   </div>
   <div class="crt-glow"></div>
 </section>
@@ -756,12 +733,12 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
 .nav-rail i{width:12px;height:12px;border:2px solid var(--cyan);position:relative;cursor:pointer;}
 .nav-rail i.on::after{content:"";position:absolute;inset:2px;background:var(--cyan);}
 .counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(15,27,61,.6);
-  color:var(--cyan);font-family:var(--font-h);font-size:12.8px;letter-spacing:.15em;padding:6px 14px;text-align:center;}
-.nav-hint{position:absolute;bottom:24px;right:24px;color:rgba(255,255,255,.5);font-family:var(--font-h);font-size:11px;letter-spacing:.08em;}
+  color:var(--cyan);font-family:var(--font-h);font-size:16px;letter-spacing:.15em;padding:6px 14px;text-align:center;}
+.nav-hint{position:absolute;bottom:24px;right:24px;color:rgba(255,255,255,.5);font-family:var(--font-h);font-size:14px;letter-spacing:.08em;}
 @media print{.deck-chrome{display:none!important;}}
 .edit-hotzone{position:fixed;top:0;left:0;width:80px;height:80px;z-index:10000;cursor:pointer;}
 .edit-toggle{position:fixed;top:8px;left:8px;z-index:10001;background:var(--navy);color:var(--yellow);
-  border:2px solid var(--yellow);font-size:20px;width:44px;height:44px;cursor:pointer;
+  border:2px solid var(--yellow);font-size:24px;width:44px;height:44px;cursor:pointer;
   opacity:0;pointer-events:none;transition:opacity .3s ease;}
 .edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto;}
 [contenteditable]{outline:2px dashed var(--cyan);}
