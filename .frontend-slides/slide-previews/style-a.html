@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Information Security</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;800&family=Chakra+Petch:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== FIXED 16:9 STAGE (viewport-base) ===== */
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#05060f;}
+.deck-viewport{position:fixed;inset:0;overflow:hidden;}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;}
+.slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto;z-index:1;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.2s!important}}
+
+/* ===== STYLE A · 8-BIT ORBIT ===== */
+:root{
+  --void:#0A0E27; --navy:#0F1B3D; --cyan:#5EDCF4; --pink:#F0A6CA;
+  --yellow:#F4D03F; --lav:#E2D5F2; --white:#FFFFFF;
+  --font-d:'Tektur',sans-serif; --font-b:'Chakra Petch',sans-serif; --font-h:'Space Mono',monospace;
+}
+.slide-a{
+  background:radial-gradient(1200px 700px at 75% 18%, rgba(94,220,244,.14), transparent 60%),
+             radial-gradient(900px 600px at 20% 85%, rgba(240,166,202,.12), transparent 60%),
+             var(--void);
+}
+/* etched pixel grid */
+.grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(226,213,242,.05) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(226,213,242,.05) 1px,transparent 1px);
+  background-size:40px 40px;
+  mask-image:radial-gradient(1200px 800px at 50% 45%, #000 40%, transparent 100%);
+  -webkit-mask-image:radial-gradient(1200px 800px at 50% 45%, #000 40%, transparent 100%);
+}
+/* animated starfield */
+.stars{position:absolute;inset:0;overflow:hidden;}
+.stars i{position:absolute;width:4px;height:4px;background:var(--white);opacity:.9;
+  box-shadow:0 0 8px var(--white);animation:tw 3s infinite alternate;}
+@keyframes tw{from{opacity:.2}to{opacity:.95}}
+/* CRT scanlines */
+.crt{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.5;
+  background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,rgba(0,0,0,.18) 4px);}
+/* pixel corner brackets */
+.corner{position:absolute;width:24px;height:24px;border:4px solid var(--cyan);}
+.corner.tl{top:40px;left:40px;border-right:0;border-bottom:0;}
+.corner.tr{top:40px;right:40px;border-left:0;border-bottom:0;}
+.corner.bl{bottom:40px;left:40px;border-right:0;border-top:0;}
+.corner.br{bottom:40px;right:40px;border-left:0;border-top:0;}
+.label{position:absolute;top:52px;left:88px;font:700 20px/1 var(--font-h);color:var(--yellow);
+  letter-spacing:.18em;text-transform:uppercase;}
+.wrap{position:absolute;left:120px;right:120px;top:50%;transform:translateY(-50%);}
+.kicker{font:400 26px var(--font-h);color:var(--pink);letter-spacing:.35em;text-transform:uppercase;
+  margin-bottom:36px;}
+h1{font:800 104px/1.02 var(--font-d);color:var(--white);margin:0;
+  text-shadow:6px 6px 0 var(--navy),12px 12px 0 rgba(94,220,244,.28);}
+h1 .hl{color:var(--cyan);text-shadow:6px 6px 0 var(--navy),12px 12px 0 rgba(240,166,202,.3);}
+.rule{width:320px;height:6px;background:var(--yellow);box-shadow:6px 6px 0 rgba(94,220,244,.5);
+  margin:44px 0 40px;}
+.sub{font:600 40px/1.35 var(--font-b);color:var(--lav);max-width:1200px;}
+.pill{display:inline-block;margin-top:52px;padding:18px 28px;border:3px solid var(--cyan);
+  font:700 26px var(--font-h);color:var(--cyan);letter-spacing:.1em;
+  box-shadow:8px 8px 0 rgba(94,220,244,.35);}
+.pill b{color:var(--yellow);}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.slide.visible .reveal{opacity:1;transform:none;}
+.slide.visible .r1{transition-delay:.05s}.slide.visible .r2{transition-delay:.18s}
+.slide.visible .r3{transition-delay:.32s}.slide.visible .r4{transition-delay:.46s}
+.slide.visible .r5{transition-delay:.6s}
+</style>
+</head>
+<body>
+<div class="deck-viewport"><div class="deck-stage">
+  <section class="slide slide-a active visible">
+    <div class="stars" id="stars"></div>
+    <div class="grid"></div>
+    <span class="label">davidnix.sec</span>
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="wrap">
+      <div class="kicker reveal r1">AI · SECURITY · DEFENSE</div>
+      <h1 class="reveal r2">AI &amp; Information<br><span class="hl">Security</span></h1>
+      <div class="rule reveal r3"></div>
+      <div class="sub reveal r4">From emerging threats to practical defense — what agents really are, what can go wrong, and how to survive it.</div>
+      <div class="pill reveal r5">David Nix <b>▸</b> Applied AI</div>
+    </div>
+    <div class="crt"></div>
+  </section>
+</div></div>
+<script>
+// starfield
+(function(){var s=document.getElementById('stars');for(var n=0;n<90;n++){var i=document.createElement('i');
+var x=Math.random()*1920,y=Math.random()*1080,t=Math.random()*3;var s2=1+Math.random();
+i.style.left=x+'px';i.style.top=y+'px';i.style.animationDuration=(2+t)+'s';i.style.animationDelay=(Math.random()*3)+'s';
+i.style.transform='scale('+s2+')';s.appendChild(i);}})();
+// scale stage
+(function(){var stage=document.querySelector('.deck-stage');function sc(){var f=Math.min(innerWidth/1920,innerHeight/1080);
+var x=(innerWidth-1920*f)/2,y=(innerHeight-1080*f)/2;stage.style.transform='translate('+x+'px,'+y+'px) scale('+f+')';}
+sc();addEventListener('resize',sc);})();
+</script>
+</body>
+</html>
