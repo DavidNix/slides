@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Information Security — David Nix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;900&family=Chakra+Petch:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   THEME TOKENS — 8-BIT ORBIT
+   Change these :root values to retheme the whole deck.
+   ============================================================ */
+:root{
+    --void:#0A0E27;          /* deepest ground */
+    --navy:#0F1B3D;          /* structural / shadow / text-on-neon */
+    --cyan:#5EDCF4;          /* primary glow */
+    --pink:#F0A6CA;          /* warm accent */
+    --yellow:#F4D03F;        /* high-key alert */
+    --lav:#E2D5F2;           /* soft pastel reprieve */
+    --white:#FFFFFF;
+
+    --font-d:'Tektur',cursive;        /* display */
+    --font-b:'Chakra Petch',sans-serif;/* body */
+    --font-h:'Space Mono',monospace;  /* HUD */
+
+    /* fixed stage scale equivalents (source used clamp()@1920) */
+    --t-hero:128px;  --t-display:64px; --t-headline:45px;
+    --t-sub:24px;    --t-stat:56px;    --t-body:18.4px; --t-quote:25.6px;
+
+    --shadow-hero: 4px 4px 0 var(--yellow), 8px 8px 0 var(--navy);
+    --shadow-stat: 3px 3px 0 var(--navy);
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* --- PASTE viewport-base.css (fixed 16:9 stage) --- */
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--void);}
+.deck-viewport{position:fixed;inset:0;overflow:hidden;background:var(--void);}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;background:var(--void);}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;background:var(--void);}
+.slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto;z-index:1;}
+img,video,canvas,svg{max-width:100%;max-height:100%;}
+.deck-controls{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:1000;}
+@media print{
+    html,body{width:1920px;height:auto;overflow:visible;background:#fff;}
+    .deck-viewport{position:static;overflow:visible;background:#fff;}
+    .deck-stage{position:static;width:auto;height:auto;transform:none!important;background:none;}
+    .slide{position:relative;display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;width:1920px;height:1080px;break-after:page;page-break-after:always;}
+    .slide:last-child{break-after:auto;page-break-after:auto;}
+    .deck-controls{display:none!important;}
+}
+@media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms!important;transition-duration:.2s!important;}
+    .stars i{animation:none!important;}.particles i{animation:none!important;}
+}
+
+/* ============================================================
+   CURSOR + ATMOSPHERIC OVERLAY STACK (every slide)
+   ============================================================ */
+body{cursor:crosshair;}
+/* grain ::before, scanlines ::after on every slide */
+.slide::before{content:"";position:absolute;inset:0;z-index:49;opacity:.035;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");}
+.slide::after{content:"";position:absolute;inset:0;z-index:50;pointer-events:none;mix-blend-mode:multiply;opacity:.5;
+  background:repeating-linear-gradient(to bottom,transparent 0,transparent 2px,rgba(10,14,39,.06) 2px,rgba(10,14,39,.06) 4px);}
+.slide .crt-glow{position:absolute;inset:0;z-index:51;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 50%,rgba(10,14,39,.28) 100%);}
+
+/* ============================================================
+   SURFACES + 40px ETCHED GRID
+   ============================================================ */
+.slide-dark{background:var(--void);}
+.slide-dark .grid{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(94,220,244,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(94,220,244,.07) 1px,transparent 1px);
+  background-size:40px 40px;}
+.surf{position:absolute;inset:0;z-index:0;pointer-events:none;background-size:40px 40px;
+  background-image:linear-gradient(rgba(15,27,61,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(15,27,61,.14) 1px,transparent 1px);}
+.surf-pink{background-color:var(--pink);}
+.surf-cyan{background-color:var(--cyan);}
+.surf-lav{background-color:var(--lav);}
+.slide-content{position:relative;z-index:10;height:100%;padding:72px 104px;}
+
+/* ============================================================
+   TYPOGRAPHY (fixed stage sizes)
+   ============================================================ */
+h1,h2,h3{font-family:var(--font-d);line-height:1.08;letter-spacing:.04em;}
+.t-hero{font-size:var(--t-hero);font-weight:900;color:var(--cyan);text-shadow:var(--shadow-hero);}
+.t-display{font-size:var(--t-display);font-weight:700;color:var(--cyan);}
+.t-headline{font-size:var(--t-headline);font-weight:700;color:var(--cyan);}
+.t-sub{font-size:var(--t-sub);font-weight:700;color:var(--cyan);font-family:var(--font-d);}
+.body-copy{font-family:var(--font-b);font-weight:400;font-size:var(--t-body);line-height:1.7;color:rgba(255,255,255,.72);}
+.body-copy b{color:var(--white);font-weight:600;}
+/* colored-surface text variants (navy text on neon grounds) */
+.surf + .slide-content .t-headline,.surf ~ * .t-headline{color:var(--navy);}
+.colored .t-headline,.colored .t-display,.colored h1,.colored h2,.colored h3{color:var(--navy);text-shadow:none;}
+.colored .body-copy{color:rgba(15,27,61,.78);}
+.colored .body-copy b{color:var(--navy);}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
+.slide.visible .reveal{opacity:1;transform:none;}
+.slide.visible .r1{transition-delay:.08s}.slide.visible .r2{transition-delay:.2s}
+.slide.visible .r3{transition-delay:.34s}.slide.visible .r4{transition-delay:.48s}
+.slide.visible .r5{transition-delay:.62s}.slide.visible .r6{transition-delay:.76s}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+/* label pill — universal eyebrow */
+.label-pill{display:inline-block;background:var(--navy);color:var(--yellow);
+  font-family:var(--font-h);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  padding:8px 16px;line-height:1;margin-bottom:28px;}
+.label-pill.cyan{color:var(--cyan);}
+.label-pill.pink{color:var(--pink);}
+/* eyebrow standalone */
+.eyebrow{font-family:var(--font-h);font-size:13.6px;letter-spacing:.3em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;}
+/* hero badge */
+.hero-badge{display:inline-block;border:2px solid var(--yellow);color:var(--yellow);
+  font-family:var(--font-h);font-size:11.2px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;margin-right:12px;}
+/* pixel corner brackets */
+.bracket{position:absolute;width:24px;height:24px;border:4px solid var(--cyan);pointer-events:none;}
+.bracket.tl{top:-2px;left:-2px;border-right:0;border-bottom:0;}
+.bracket.br{bottom:-2px;right:-2px;border-left:0;border-top:0;}
+.bracket.yellow{border-color:var(--yellow);}
+.bracket.pink{border-color:var(--pink);}
+/* stat block */
+.stat-block{position:relative;background:rgba(94,220,244,.08);border:2px solid rgba(94,220,244,.2);
+  padding:40px 28px;text-align:left;}
+.stat-block .num{font-family:var(--font-d);font-size:var(--t-stat);font-weight:900;color:var(--cyan);text-shadow:var(--shadow-stat);line-height:1;}
+.stat-block .lbl{font-family:var(--font-h);font-size:12px;color:var(--pink);letter-spacing:.15em;text-transform:uppercase;margin-top:16px;line-height:1.4;}
+/* feature card (on colored surfaces) */
+.feature-card{position:relative;background:rgba(255,255,255,.28);border:2px solid rgba(15,27,61,.16);
+  padding:36px 32px;box-shadow:6px 6px 0 rgba(15,27,61,.15);}
+.feature-card .fc-title{font-family:var(--font-d);font-size:var(--t-sub);font-weight:700;color:var(--navy);margin-bottom:14px;}
+.feature-card .fc-body{font-family:var(--font-b);font-size:var(--t-body);line-height:1.65;color:rgba(15,27,61,.78);}
+/* quote line */
+.quote-line{width:60px;height:4px;background:var(--yellow);box-shadow:4px 4px 0 var(--navy);margin:32px 0 0;}
+/* chip list */
+.chip{display:inline-block;background:var(--navy);border:2px solid rgba(94,220,244,.35);color:var(--white);
+  font-family:var(--font-b);font-size:var(--t-sub);padding:14px 26px;margin:0 16px 16px 0;line-height:1;}
+.chip.hot{color:var(--yellow);border-color:var(--yellow);}
+/* pixel button */
+.pixel-btn{display:inline-block;background:var(--cyan);color:var(--navy);padding:16px 36px;
+  font-family:var(--font-d);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:20px;
+  box-shadow:4px 0 0 0 var(--navy),0 4px 0 0 var(--navy),4px 4px 0 0 var(--navy),8px 4px 0 0 var(--yellow),4px 8px 0 0 var(--yellow),8px 8px 0 0 var(--yellow);}
+/* link */
+.hlink{color:var(--cyan);font-family:var(--font-h);font-size:15px;letter-spacing:.05em;text-decoration:none;
+  border-bottom:2px solid rgba(94,220,244,.4);padding-bottom:2px;}
+.hlink:hover{color:var(--yellow);border-color:var(--yellow);}
+
+/* ============================================================
+   MEDIA SLIDES (full-bleed images / video)
+   ============================================================ */
+.media-bg{position:absolute;inset:0;z-index:0;}
+.media-bg img{width:100%;height:100%;object-fit:cover;display:block;}
+.media-shade{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(10,14,39,.88) 0%,rgba(10,14,39,.35) 38%,rgba(10,14,39,.15) 100%);}
+.media-cap{position:absolute;left:104px;right:104px;bottom:120px;z-index:2;}
+.media-frame{position:relative;border:2px solid rgba(94,220,244,.35);box-shadow:8px 8px 0 rgba(94,220,244,.18);}
+.media-frame .bracket{top:-2px;left:-2px;bottom:auto;right:auto;border-right:0;border-bottom:0;}
+.media-frame .bracket.br{border-right:4px solid var(--cyan);border-bottom:4px solid var(--cyan);border-left:0;border-top:0;}
+
+/* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+.row{display:flex;gap:40px;}
+.col{flex:1;}
+.center{display:flex;flex-direction:column;justify-content:center;height:100%;}
+.vcenter{display:flex;align-items:center;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;}
+.mt20{margin-top:20px;}.mt32{margin-top:32px;}.mt48{margin-top:48px;}.mt64{margin-top:64px;}
+.mb24{margin-bottom:24px;}
+
+/* starfield + particles */
+.stars{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;}
+.stars i{position:absolute;width:4px;height:4px;background:var(--white);box-shadow:0 0 8px var(--white);
+  animation:tw 3s infinite alternate;}
+@keyframes tw{from{opacity:.15}to{opacity:.95}}
+.particles{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;}
+.particles i{position:absolute;width:8px;height:8px;animation:fl 8s ease-in-out infinite;}
+@keyframes fl{0%{transform:translateY(0)}50%{transform:translateY(-40px)}100%{transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="deck-viewport">
+<div class="deck-stage" id="deckStage">
+
+<!-- ============================================================
+     SLIDE 1 · TITLE
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="particles" data-particles="cyan,pink,yellow"></div>
+  <div class="slide-content vcenter">
+    <div class="eyebrow reveal r1">David Nix ▸ Applied AI</div>
+    <h1 class="t-hero reveal r2" style="max-width:1560px">AI &amp; Information <span style="color:var(--yellow)">Security</span></h1>
+    <div class="quote-line reveal r3"></div>
+    <p class="body-copy reveal r4" style="font-size:30px;max-width:1180px;margin-top:36px;line-height:1.5">
+      From <b>emerging threats</b> to <b>practical defense</b> — what agents really are, what can go wrong, and how to survive it.</p>
+    <div class="mt48 reveal r5"><span class="hero-badge">agents</span><span class="hero-badge">prompt injection</span><span class="hero-badge">defense</span></div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 2 · WHAT WE'LL COVER
+     ============================================================ -->
+<section class="slide surf surf-pink colored">
+  <div class="slide-content">
+    <div class="label-pill cyan reveal r1">Mission brief</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">What we'll cover</h2>
+    <div class="grid2 mt64 reveal r3">
+      <div class="feature-card"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">Chatbots are antiques</div>
+        <div class="fc-body">The era of <b>agents</b> is here — and they actually do work, not just chat.</div></div>
+      <div class="feature-card"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">What's an agent, really?</div>
+        <div class="fc-body">A <b>model</b> (the brain) + a <b>harness</b> (the body &amp; tools).</div></div>
+      <div class="feature-card"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">The #1 threat isn't what you think</div>
+        <div class="fc-body">It's <b>prompt injection</b> and the lethal trifecta — not handing IP to an AI lab.</div></div>
+      <div class="feature-card"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">How to defend yourself</div>
+        <div class="fc-body"><b>Practical, not paranoid.</b> Human-in-the-loop, least privilege, sandboxing.</div></div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 3 · ABOUT ME (BIO)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">whoami</div>
+    <h2 class="t-display reveal r2">David Nix</h2>
+    <p class="body-copy reveal r3" style="font-size:26px;max-width:1280px;margin-top:24px">
+      15+ years as a software engineer building <b>backends and distributed systems</b> for companies like
+      Kroger, Home Depot, Aetna, United Healthcare, Costco, and the Department of Veteran Affairs. And many more.</p>
+    <div class="mt48 reveal r4">
+      <span class="chip">Kroger</span><span class="chip">Home Depot</span><span class="chip">Aetna</span>
+      <span class="chip">United Healthcare</span><span class="chip">Costco</span><span class="chip">Dept. of Veterans Affairs</span>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 4 · ABOUT ME (WHAT I DO NOW)
+     ============================================================ -->
+<section class="slide surf surf-cyan colored">
+  <div class="slide-content">
+    <div class="label-pill pink reveal r1">now</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">Now I specialize in Applied AI for businesses</h2>
+    <div class="grid2 mt64 reveal r3">
+      <div class="feature-card"><i class="bracket tl pink"></i><i class="bracket br pink"></i>
+        <div class="fc-title">Local AI</div>
+        <div class="fc-body">Run models where you control the hardware and the data.</div></div>
+      <div class="feature-card"><i class="bracket tl pink"></i><i class="bracket br pink"></i>
+        <div class="fc-title">Private AI on your own terms</div>
+        <div class="fc-body">AI that respects your boundaries — and your secrets.</div></div>
+    </div>
+    <div class="mt48 reveal r4"><span class="chip hot" style="font-size:20px">hello@davidnix.com</span></div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 5 · CHATBOTS ARE ANTIQUES
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">hot take</div>
+    <h2 class="t-hero reveal r2" style="font-size:112px">Chatbots are <span style="color:var(--pink)">antiques</span></h2>
+    <p class="body-copy reveal r3" style="font-size:30px;margin-top:32px">The era of <b>agents</b> is here. Chatbots are still useful for research and search — they're just not the story anymore.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 6 · CHATGPT BY THE NUMBERS
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill reveal r1">the old guard</div>
+    <h2 class="t-display reveal r2">ChatGPT is replacing Google search</h2>
+    <div class="row mt64">
+      <div class="col reveal r3"><div class="stat-block"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="num">900M</div><div class="lbl">weekly active users</div></div></div>
+      <div class="col reveal r4"><div class="stat-block"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="num">~10%</div><div class="lbl">of the entire human population</div></div></div>
+      <div class="col reveal r5"><div class="stat-block"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="num" style="font-size:46px;line-height:1.15">search → chat</div><div class="lbl">the default starting point</div></div></div>
+    </div>
+    <p class="body-copy reveal r6 mt48">But a chatbot can only <b>talk</b>. The real shift is what comes next.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 7 · CHATBOT vs AGENT
+     ============================================================ -->
+<section class="slide surf surf-lav colored">
+  <div class="slide-content">
+    <div class="label-pill reveal r1">the difference</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">Agents finish the job</h2>
+    <div class="grid2 mt64">
+      <div class="feature-card reveal r3"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">Chatbot</div>
+        <div class="fc-body">Can <b>write</b> an email — if you copy, paste, and send it yourself.</div></div>
+      <div class="feature-card reveal r4"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">Agent</div>
+        <div class="fc-body">Can <b>read all your email, write responses, and send them</b> — without you ever opening an app.</div></div>
+    </div>
+    <p class="body-copy reveal r5 mt48" style="font-size:26px">They complete tasks and pursue goals. <b>That's the power.</b></p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 8 · BUT THERE'S A CATCH
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="slide-content center">
+    <h2 class="t-display reveal r1" style="color:var(--white)">But there's a catch.</h2>
+    <div class="quote-line reveal r2"></div>
+    <h2 class="t-hero reveal r3" style="margin-top:40px">Security<span style="color:var(--pink)">.</span></h2>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 9 · WHAT IS AN AGENT (OLD THERMOSTAT)
+     ============================================================ -->
+<section class="slide media">
+  <div class="media-bg"><img src="agentic-loop-old-thermostat.png" alt="A retro thermostat — an early agent"></div>
+  <div class="media-shade"></div>
+  <div class="media-cap">
+    <div class="label-pill reveal r1">history lesson</div>
+    <h2 class="t-display reveal r2" style="color:var(--white);text-shadow:none">What is an agent? <span style="color:var(--yellow)">They are nothing new.</span></h2>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 10 · MODEL + HARNESS (ROBOT)
+     ============================================================ -->
+<section class="slide media">
+  <div class="media-bg"><img src="agent-harness-vs-model-robot.png" alt="Robot illustration of the model vs the harness"></div>
+  <div class="media-shade"></div>
+  <div class="media-cap">
+    <div class="label-pill cyan reveal r1">anatomy of an agent</div>
+    <h2 class="t-display reveal r2" style="color:var(--white);text-shadow:none"><span style="color:var(--cyan)">The model</span> is the brain · <span style="color:var(--pink)">the harness</span> is the body + tools</h2>
+    <p class="body-copy reveal r3 mt24" style="font-size:26px">Together they make an <b>agent</b>.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 11 · AGENTIC EXAMPLE — CLAUDE COWORK (VIDEO)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill reveal r1">live demo</div>
+    <h2 class="t-display reveal r2">Agentic example · Claude Cowork</h2>
+    <div class="media-frame reveal r3 mt48" style="max-width:1500px;margin:48px auto 0;height:640px;overflow:hidden;position:relative">
+      <video src="claude-cowork-example.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;background:#000"></video>
+      <i class="bracket tl"></i><i class="bracket br"></i>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 12 · WHAT IS A MODEL (JSON)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content row vcenter">
+    <div class="col">
+      <div class="label-pill cyan reveal r1">under the hood</div>
+      <h2 class="t-display reveal r2">What is a model?</h2>
+      <p class="body-copy reveal r3 mt24" style="font-size:26px">GPT-5.6 Sol · Claude Opus 5 · Claude Fable 5.1</p>
+      <p class="body-copy reveal r4 mt32" style="font-size:30px">It's a <b style="color:var(--yellow)">JSON API</b>. That's all it is.</p>
+      <p class="body-copy reveal r5 mt32">Tokens in → tokens out. No memory, no self, no intent.</p>
+    </div>
+    <div class="col reveal r6">
+      <pre style="background:var(--navy);border:2px solid rgba(94,220,244,.3);padding:32px;font-family:var(--font-h);font-size:17px;line-height:1.55;overflow:hidden;box-shadow:8px 8px 0 rgba(94,220,244,.18)"><code>{<span style="color:var(--pink)">"model"</span>: <span style="color:var(--cyan)">"gpt-5.6-sol"</span>,
+  <span style="color:var(--pink)">"choices"</span>: [{
+    <span style="color:var(--pink)">"message"</span>: {
+      <span style="color:var(--pink)">"role"</span>: <span style="color:var(--cyan)">"assistant"</span>,
+      <span style="color:var(--pink)">"content"</span>: <span style="color:var(--cyan)">"Hello! How can I help?"</span>
+    }
+  }],
+  <span style="color:var(--pink)">"usage"</span>: {
+    <span style="color:var(--pink)">"prompt_tokens"</span>: <span style="color:var(--yellow)">24</span>,
+    <span style="color:var(--pink)">"completion_tokens"</span>: <span style="color:var(--yellow)">12</span>
+  }
+}</code></pre>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 13 · MODELS ARE STATELESS
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">key insight</div>
+    <h2 class="t-display reveal r2">Models are stateless</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:28px">Frozen in time. Tokens in, tokens out.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:28px">Models <b style="color:var(--yellow)">cannot distinguish content from instructions</b>.</p>
+    <p class="body-copy reveal r5 mt24" style="color:var(--pink);font-size:24px;font-family:var(--font-h)">// this will become important later</p>
+    <p class="body-copy reveal r6 mt32">The harness injects new data — like a web search — that the model can't tell is untrusted.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 14 · EXAMPLES OF A HARNESS
+     ============================================================ -->
+<section class="slide surf surf-pink colored">
+  <div class="slide-content center">
+    <div class="label-pill cyan reveal r1">examples</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">Examples of a harness</h2>
+    <div class="mt48 reveal r3">
+      <span class="chip">Claude CoWork</span><span class="chip">Claude Code</span><span class="chip">Codex</span>
+      <span class="chip">Grok Bot</span><span class="chip">Hermes</span><span class="chip">Openclaw</span>
+    </div>
+    <p class="body-copy reveal r4 mt48" style="font-size:24px">Chatbots are also lightweight harnesses — e.g. a web search tool bolted onto a model.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 15 · THE AGENTIC LOOP
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill reveal r1">the core pattern</div>
+    <h2 class="t-display reveal r2">The Agentic Loop</h2>
+    <div class="row vcenter mt48">
+      <div class="col">
+        <p class="body-copy reveal r3" style="font-size:30px;line-height:1.4">Give it the <b style="color:var(--yellow)">Goal</b>. Not steps.</p>
+        <p class="body-copy reveal r4 mt32">The agent plans, acts, observes, and repeats until the goal is done.</p>
+      </div>
+      <div class="col media-frame reveal r5" style="height:560px;overflow:hidden">
+        <img src="agentic-loop.jpg" alt="The agentic loop diagram" style="width:100%;height:100%;object-fit:contain">
+        <i class="bracket tl"></i><i class="bracket br"></i>
+      </div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 16 · THE AGENTIC LOOP (CLEAN)
+     ============================================================ -->
+<section class="slide media">
+  <div class="media-bg"><img src="agentic-loop-clean-v2.png" alt="Clean agentic loop diagram"></div>
+  <div class="media-shade"></div>
+  <div class="media-cap">
+    <div class="label-pill cyan reveal r1">goal → act → observe → repeat</div>
+    <h2 class="t-display reveal r2" style="color:var(--white);text-shadow:none">The loop runs on its own</h2>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 17 · WHAT COULD GO WRONG (BEAT)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">reality check</div>
+    <h2 class="t-hero reveal r2" style="font-size:112px">What could go <span style="color:var(--pink)">wrong?</span></h2>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 18 · #1 THREAT MYTH
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">mythbusting</div>
+    <h2 class="t-display reveal r2">The #1 threat is <span style="color:var(--yellow)">not</span> giving your IP to an AI lab</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:28px">Not Anthropic. Not OpenAI. Not China "stealing your data to train."</p>
+    <p class="body-copy reveal r4 mt32">That's a real concern — but it's not the attack you should lose sleep over.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 19 · DATA EXFILTRATION
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill pink reveal r1">real incident</div>
+    <h2 class="t-display reveal r2">Data Exfiltration</h2>
+    <div class="row vcenter mt48">
+      <div class="col media-frame reveal r3" style="height:560px;overflow:hidden">
+        <img src="cowork-exfiltrate.jpg" alt="Claude Cowork exfiltrating files" style="width:100%;height:100%;object-fit:contain">
+        <i class="bracket tl"></i><i class="bracket br"></i>
+      </div>
+      <div class="col reveal r4">
+        <p class="body-copy" style="font-size:28px;line-height:1.5">An agent with tools and a bit of <b style="color:var(--pink)">untrusted input</b> can quietly ship your files somewhere they shouldn't go.</p>
+        <p class="mt48"><a class="hlink" href="https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files" target="_blank">▸ promptarmor.com — Claude Cowork exfiltrates files</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 20 · LETHAL TRIFECTA
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill reveal r1">the framework</div>
+    <h2 class="t-display reveal r2">The Lethal Trifecta <span style="font-size:24px;color:var(--pink)">— Simon Willison</span></h2>
+    <div class="media-frame reveal r3 mt48" style="height:520px;overflow:hidden">
+      <img src="lethaltrifecta.jpg" alt="The lethal trifecta: untrusted data + prompt injection + agent with tools" style="width:100%;height:100%;object-fit:contain">
+      <i class="bracket tl"></i><i class="bracket br"></i>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 21 · CONTENT = INSTRUCTIONS
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">rule of two</div>
+    <h2 class="t-display reveal r2">Content and Instructions are <span style="color:var(--yellow)">the same</span></h2>
+    <p class="body-copy reveal r3 mt24" style="color:var(--pink);font-size:22px;font-family:var(--font-h)">// less commonly known as "the rule of 2"</p>
+    <p class="body-copy reveal r4 mt32" style="font-size:34px;font-weight:600;color:var(--cyan)">Prompt injection is your #1 enemy.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 22 · IP THEFT
+     ============================================================ -->
+<section class="slide surf surf-cyan colored">
+  <div class="slide-content">
+    <div class="label-pill pink reveal r1">opinion</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">IP theft from model providers</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:26px;color:rgba(15,27,61,.85)"><b>Human data is more valuable than gold to AI labs.</b> The pressure exists — it just points somewhere specific.</p>
+    <div class="grid2 mt48">
+      <div class="feature-card reveal r4"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">Bartz, et al. v. Anthropic</div>
+        <div class="fc-body">Class action Anthropic lost for training on copyrighted books.</div></div>
+      <div class="feature-card reveal r5"><i class="bracket tl"></i><i class="bracket br"></i>
+        <div class="fc-title">Sony v. Anthropic</div>
+        <div class="fc-body">Sony sued Anthropic for stealing songs.</div></div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 23 · HOW TO PROTECT YOURSELF (BEAT)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">the good news</div>
+    <h2 class="t-hero reveal r2" style="font-size:112px">How to <span style="color:var(--cyan)">protect</span> yourself</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:26px">Defense in depth — no single magic bullet.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 24 · REMINDER (CONVENIENCE VS SECURITY)
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content row vcenter">
+    <div class="col">
+      <div class="label-pill reveal r1">reminder</div>
+      <h2 class="t-display reveal r2">Convenience or security?</h2>
+      <p class="body-copy reveal r3 mt32" style="font-size:28px">They pull against each other. <b style="color:var(--yellow)">Every defense here is a small tax on convenience.</b> Know what you're paying.</p>
+    </div>
+    <div class="col media-frame reveal r4" style="height:720px;overflow:hidden">
+      <img src="security-vs-convenience-scale-labeled.png" alt="The convenience vs security scale" style="width:100%;height:100%;object-fit:contain">
+      <i class="bracket tl"></i><i class="bracket br"></i>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 25 · HUMAN IN THE LOOP
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">defense #1</div>
+    <h2 class="t-display reveal r2">Human In The Loop</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:28px">The <b style="color:var(--yellow)">only</b> protection against the Lethal Trifecta.</p>
+    <p class="body-copy reveal r4 mt32" style="font-size:28px;color:var(--pink)">But you risk approval fatigue — clicking "yes" until you stop reading.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 26 · LEAST PRIVILEGE
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">defense #2</div>
+    <h2 class="t-display reveal r2">Least privilege</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:28px">Annoying for <b>humans</b>.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:34px;font-weight:600;color:var(--cyan)">Non-negotiable for <b>agents</b>.</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 27 · SANDBOX
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">defense #3</div>
+    <h2 class="t-display reveal r2">Sandbox</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:28px">Assume <b style="color:var(--yellow)">failure will happen</b>. Limit the blast radius.</p>
+    <p class="body-copy reveal r4 mt24" style="font-size:24px;color:var(--pink);font-family:var(--font-h)">// not perfect</p>
+    <p class="mt48 reveal r5"><a class="hlink" href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank">▸ openai.com — Hugging Face incident &amp; the road ahead</a></p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 28 · TOOL / PROMPT CLASSIFIER
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content">
+    <div class="label-pill cyan reveal r1">defense #4</div>
+    <h2 class="t-display reveal r2">Tool (or prompt) classifier</h2>
+    <div class="row vcenter mt48">
+      <div class="col media-frame reveal r3" style="height:540px;overflow:hidden">
+        <img src="auto-mode.jpg" alt="Claude Code auto-mode" style="width:100%;height:100%;object-fit:contain">
+        <i class="bracket tl"></i><i class="bracket br"></i>
+      </div>
+      <div class="col reveal r4">
+        <p class="body-copy" style="font-size:26px;line-height:1.55">A guard that decides <b style="color:var(--yellow)">which tools an agent may touch</b> — e.g. Claude Code auto-mode gates actions.</p>
+        <p class="body-copy mt24" style="font-size:24px;color:var(--pink)">Defense in depth, not perfect.</p>
+      </div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 29 · OBSERVABILITY & AUDITABILITY
+     ============================================================ -->
+<section class="slide surf surf-pink colored">
+  <div class="slide-content center">
+    <div class="label-pill cyan reveal r1">defense #5</div>
+    <h2 class="t-display reveal r2" style="color:var(--navy);text-shadow:none">Observability &amp; auditability</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:26px">Still immature, but improving. You can't defend what you can't see.</p>
+    <div class="mt48 reveal r4">
+      <span class="chip">Langfuse</span><span class="chip">Langsmith</span><span class="chip">Gents</span>
+    </div>
+    <p class="mt48 reveal r5"><a class="hlink" href="https://github.com/source-inc/gents" target="_blank" style="color:var(--navy);border-color:rgba(15,27,61,.4)">▸ github.com/source-inc/gents</a></p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 30 · BUILD YOUR OWN HARNESS
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">defense #6</div>
+    <h2 class="t-display reveal r2">Build your own harness</h2>
+    <p class="body-copy reveal r3 mt32" style="font-size:26px">Don't trust the black box. Own the loop.</p>
+    <div class="mt48 reveal r4">
+      <span class="chip">OpenAI Agents SDK</span><span class="chip">Codex</span><span class="chip">Hermes</span><span class="chip">Opencode</span><span class="chip">Pi</span>
+    </div>
+    <p class="body-copy reveal r5 mt48" style="font-size:22px;font-family:var(--font-h)">// open source examples</p>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 31 · LOCAL AI + JOB SEARCH DEMO
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="slide-content row vcenter">
+    <div class="col">
+      <div class="label-pill cyan reveal r1">the pitch</div>
+      <h2 class="t-display reveal r2">Local AI</h2>
+      <p class="body-copy reveal r3 mt32" style="font-size:32px;line-height:1.4"><b style="color:var(--yellow)">Models are just files</b>, not programs.</p>
+      <p class="body-copy reveal r4 mt32">No cloud. No leaking. Your data stays yours — the agent works where you do.</p>
+    </div>
+    <div class="col reveal r5">
+      <div class="media-frame" style="height:760px;width:540px;margin-left:auto;overflow:hidden">
+        <video src="job-search-example.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:contain;background:#000"></video>
+        <i class="bracket tl"></i><i class="bracket br"></i>
+      </div>
+    </div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     SLIDE 32 · CLOSING / QUESTIONS
+     ============================================================ -->
+<section class="slide slide-dark">
+  <div class="grid"></div>
+  <div class="stars" data-stars></div>
+  <div class="particles" data-particles="cyan,yellow"></div>
+  <div class="slide-content center">
+    <div class="label-pill reveal r1">thanks</div>
+    <h2 class="t-hero reveal r2" style="font-size:112px">Questions<span style="color:var(--pink)">?</span></h2>
+    <div class="quote-line reveal r3"></div>
+    <p class="body-copy reveal r4 mt40" style="font-size:30px">Want your own local, private AI?</p>
+    <div class="mt48 reveal r5"><span class="chip hot" style="font-size:22px">hello@davidnix.com</span></div>
+  </div>
+  <div class="crt-glow"></div>
+</section>
+
+<!-- ============================================================
+     PERSISTENT CHROME (nav rail · counter · hint)
+     ============================================================ -->
+<div class="deck-chrome">
+  <div class="nav-rail" id="navRail"></div>
+  <div class="counter" id="counter">01 / 32</div>
+  <div class="nav-hint">USE KEYS ↑ ↓</div>
+</div>
+
+</div><!-- /deck-stage -->
+</div><!-- /deck-viewport -->
+
+<!-- ============================================================
+     EDIT HOTZONE + TOGGLE (inline editing)
+     ============================================================ -->
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle" title="Edit mode (E)">✎</button>
+
+<script>
+/* ============================================================
+   CHROME STYLES (injected via JS-independent CSS above uses <style>; these need CSS)
+   ============================================================ */
+(function(){var s=document.createElement('style');s.textContent=`
+.deck-chrome{position:absolute;inset:0;z-index:900;pointer-events:none;}
+.nav-rail{position:absolute;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;pointer-events:auto;}
+.nav-rail i{width:12px;height:12px;border:2px solid var(--cyan);position:relative;cursor:pointer;}
+.nav-rail i.on::after{content:"";position:absolute;inset:2px;background:var(--cyan);}
+.counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(15,27,61,.6);
+  color:var(--cyan);font-family:var(--font-h);font-size:12.8px;letter-spacing:.15em;padding:6px 14px;text-align:center;}
+.nav-hint{position:absolute;bottom:24px;right:24px;color:rgba(255,255,255,.5);font-family:var(--font-h);font-size:11px;letter-spacing:.08em;}
+@media print{.deck-chrome{display:none!important;}}
+.edit-hotzone{position:fixed;top:0;left:0;width:80px;height:80px;z-index:10000;cursor:pointer;}
+.edit-toggle{position:fixed;top:8px;left:8px;z-index:10001;background:var(--navy);color:var(--yellow);
+  border:2px solid var(--yellow);font-size:20px;width:44px;height:44px;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;}
+.edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto;}
+[contenteditable]{outline:2px dashed var(--cyan);}
+`;document.head.appendChild(s);})();
+
+/* ============================================================
+   SLIDE PRESENTATION CONTROLLER
+   ============================================================ */
+class SlidePresentation{
+  constructor(){
+    this.slides=document.querySelectorAll('.slide');
+    this.n=this.slides.length;
+    this.cur=0;
+    this.stage=document.getElementById('deckStage');
+    this.rail=document.getElementById('navRail');
+    this.counter=document.getElementById('counter');
+    this.locked=false;
+    this._buildRail();
+    this._scale();
+    this._keys();this._touch();this._wheel();
+    this.show(0);
+  }
+  _buildRail(){
+    for(let i=0;i<this.n;i++){
+      const d=document.createElement('i');
+      d.addEventListener('click',()=>this.show(i));
+      this.rail.appendChild(d);
+    }
+  }
+  _scale(){
+    const f=()=>{const k=Math.min(innerWidth/1920,innerHeight/1080);
+      const x=(innerWidth-1920*k)/2,y=(innerHeight-1080*k)/2;
+      this.stage.style.transform=`translate(${x}px,${y}px) scale(${k})`;};
+    f();addEventListener('resize',f);
+  }
+  show(i){
+    this.cur=Math.max(0,Math.min(i,this.n-1));
+    this.slides.forEach((s,x)=>{s.classList.toggle('active',x===this.cur);
+      s.classList.toggle('visible',x===this.cur);});
+    this.rail.querySelectorAll('i').forEach((d,x)=>d.classList.toggle('on',x===this.cur));
+    const p=String(this.cur+1).padStart(2,'0'),t=String(this.n).padStart(2,'0');
+    this.counter.textContent=`${p} / ${t}`;
+  }
+  _keys(){
+    document.addEventListener('keydown',e=>{
+      if(e.target&&e.target.getAttribute('contenteditable'))return;
+      if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown'||e.key===' '){e.preventDefault();this.show(this.cur+1);}
+      else if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();this.show(this.cur-1);}
+      else if(e.key==='Home'){this.show(0);}
+      else if(e.key==='End'){this.show(this.n-1);}
+    });
+  }
+  _touch(){
+    let x0=null,y0=null;
+    this.stage.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+    this.stage.addEventListener('touchend',e=>{
+      if(x0==null)return;
+      const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+      if(Math.abs(dy)>50&&Math.abs(dy)>Math.abs(dx)){dy<0?this.show(this.cur+1):this.show(this.cur-1);}
+      x0=null;y0=null;
+    },{passive:true});
+  }
+  _wheel(){
+    let last=0;
+    addEventListener('wheel',e=>{
+      const now=Date.now();if(now-last<800)return;last=now;
+      if(e.deltaY>0)this.show(this.cur+1);else this.show(this.cur-1);
+    },{passive:true});
+  }
+}
+
+/* ============================================================
+   STARFIELD + PARTICLES (respects reduced motion via CSS)
+   ============================================================ */
+(function(){
+  const dm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const starColors=['#FFFFFF','#5EDCF4','#F4D03F','#F0A6CA'];
+  document.querySelectorAll('[data-stars]').forEach(box=>{
+    if(dm)return;
+    for(let i=0;i<80;i++){
+      const s=document.createElement('i');
+      s.style.left=(Math.random()*1920)+'px';
+      s.style.top=(Math.random()*1080)+'px';
+      s.style.animationDuration=((2+Math.random()*3))+'s';
+      s.style.animationDelay=(Math.random()*3)+'s';
+      s.style.background=starColors[(Math.random()*starColors.length)|0];
+      box.appendChild(s);
+    }
+  });
+  document.querySelectorAll('[data-particles]').forEach(box=>{
+    if(dm)return;
+    const palette=(box.dataset.particles||'cyan,pink,yellow').split(',')
+      .map(c=>({cyan:'#5EDCF4',pink:'#F0A6CA',yellow:'#F4D03F'}[c]));
+    for(let i=0;i<26;i++){
+      const s=document.createElement('i');
+      s.style.left=(Math.random()*1920)+'px';
+      s.style.top=(100+Math.random()*800)+'px';
+      s.style.background=palette[(Math.random()*palette.length)|0];
+      s.style.opacity=.6;
+      s.style.animationDelay=(Math.random()*8)+'s';
+      box.appendChild(s);
+    }
+  });
+})();
+
+/* ============================================================
+   INLINE EDITING (E key · hotzone · autosave)
+   ============================================================ */
+const editor={isActive:false};
+(function(){
+  const toggle=document.getElementById('editToggle');
+  const hotzone=document.getElementById('editHotzone');
+  let hide=null;
+  function setMode(on){
+    editor.isActive=on;
+    toggle.classList.toggle('active',on);
+    document.querySelectorAll('[contenteditable]').forEach(el=>{if(!on)el.removeAttribute('contenteditable');});
+    if(on){
+      document.querySelectorAll('.slide.visible *').forEach(el=>{
+        if(el.children.length===0&&el.textContent.trim()){el.setAttribute('contenteditable','true');}
+      });
+    }
+  }
+  hotzone.addEventListener('mouseenter',()=>{clearTimeout(hide);toggle.classList.add('show');});
+  hotzone.addEventListener('mouseleave',()=>{hide=setTimeout(()=>{if(!editor.isActive)toggle.classList.remove('show');},400);});
+  toggle.addEventListener('mouseenter',()=>clearTimeout(hide));
+  toggle.addEventListener('mouseleave',()=>{hide=setTimeout(()=>{if(!editor.isActive)toggle.classList.remove('show');},400);});
+  toggle.addEventListener('click',()=>setMode(!editor.isActive));
+  hotzone.addEventListener('click',()=>setMode(!editor.isActive));
+  document.addEventListener('keydown',e=>{
+    if((e.key==='e'||e.key==='E')&&!e.target.getAttribute('contenteditable'))setMode(!editor.isActive);
+    if((e.key==='s'||e.key==='S')&&(e.metaKey||e.ctrlKey)&&editor.isActive){e.preventDefault();setMode(false);}
+  });
+})();
+
+new SlidePresentation();
+</script>
+</body>
+</html>
