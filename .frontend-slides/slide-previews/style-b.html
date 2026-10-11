@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Information Security</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+/* ===== FIXED 16:9 STAGE (viewport-base) ===== */
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#008080;}
+.deck-viewport{position:fixed;inset:0;overflow:hidden;}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;}
+.slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto;z-index:1;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.2s!important}}
+
+/* ===== STYLE B · RETRO WINDOWS ===== */
+:root{
+  --btn:#C0C0C0; --light:#D4D0C8; --dark:#808080; --w:#FFF; --k:#000; --txt:#222; --navy:#000080;
+  --font:'Segoe UI',Tahoma,'MS Sans Serif',sans-serif;
+  --px:'Press Start 2P',monospace; --vtx:'VT323',monospace;
+}
+/* desktop */
+.deck-stage{background:#008080;}
+.slide-b{
+  background:#008080;
+}
+.icon{position:absolute;left:34px;top:30px;width:64px;text-align:center;color:#fff;font:12px/1.3 var(--font);cursor:pointer;}
+.icon .ic{width:56px;height:56px;margin:0 auto 6px;background:linear-gradient(135deg,#fff,#bfd8ff);border:2px outset #fff;}
+.icon span{display:block;text-shadow:1px 1px 0 #000;}
+
+/* window */
+.window{position:absolute;left:150px;right:150px;top:140px;bottom:150px;background:var(--btn);
+  box-shadow:inset 0 0 0 2px var(--w),inset 3px 3px 0 rgba(0,0,0,.35),10px 12px 0 rgba(0,0,0,.25);}
+.titlebar{height:46px;background:linear-gradient(90deg,var(--navy),#1084d0);display:flex;align-items:center;
+  padding:0 12px;color:#fff;font:700 19px/1 var(--font);}
+.titlebar .tt{flex:1;font-family:var(--px);font-size:14px;letter-spacing:.5px;}
+.sys{display:flex;gap:6px;}
+.sys i{width:30px;height:24px;background:var(--btn);color:var(--k);font:700 14px/1 var(--font);font-style:normal;
+  display:flex;align-items:center;justify-content:center;box-shadow:inset -2px -2px 0 var(--dark),inset 2px 2px 0 var(--w);}
+.body{position:absolute;top:46px;left:0;right:0;bottom:0;padding:46px 64px;}
+.kicker{font:400 30px var(--vtx);color:#000080;letter-spacing:.5px;margin-bottom:30px;}
+h1{font:700 92px/1.05 var(--font);color:var(--k);margin:0 0 34px;text-transform:uppercase;}
+h1 .hl{color:var(--navy);}
+.rule{height:4px;background:linear-gradient(90deg,#008000,#c0c000,#c00000);width:760px;margin-bottom:40px;
+  box-shadow:0 4px 0 rgba(0,0,0,.18);}
+.sub{font:600 40px/1.35 var(--font);color:#111;max-width:1180px;}
+.status{margin-top:50px;display:flex;gap:22px;align-items:center;}
+.status .box{background:var(--w);color:var(--navy);padding:16px 26px;font:700 24px var(--vtx);
+  box-shadow:inset 2px 2px 0 var(--dark),inset -2px -2px 0 var(--w);}
+.status .box b{color:#c00000;}
+/* bevel groups */
+.gbox{margin-top:44px;padding:24px 30px;background:var(--light);
+  box-shadow:inset 2px 2px 0 var(--dark),inset -2px -2px 0 var(--w);}
+.gbox span{font:600 26px var(--font);color:var(--k);}
+.gbox span b{color:#008000;font-family:var(--vtx);font-size:30px;}
+/* CRT scanline */
+.crt{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.05;
+  background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,#000 4px);}
+/* start bar */
+.taskbar{position:absolute;left:0;right:0;bottom:0;height:64px;background:var(--btn);
+  box-shadow:inset 0 2px 0 var(--w),inset 0 3px 0 rgba(0,0,0,.35);
+  display:flex;align-items:center;padding:0 12px;gap:12px;z-index:5;}
+.start{display:flex;align-items:center;gap:10px;padding:6px 18px;background:var(--btn);
+  font:700 22px var(--vtx);box-shadow:inset -2px -2px 0 var(--dark),inset 2px 2px 0 var(--w);}
+.start b{color:#008000;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease-out,transform .6s ease-out;}
+.slide.visible .reveal{opacity:1;transform:none;}
+.slide.visible .r1{transition-delay:.08s}.slide.visible .r2{transition-delay:.2s}
+.slide.visible .r3{transition-delay:.34s}.slide.visible .r4{transition-delay:.5s}
+.slide.visible .r5{transition-delay:.66s}
+</style>
+</head>
+<body>
+<div class="deck-viewport"><div class="deck-stage">
+  <div class="icon" style="left:30px"><div class="ic" style="background:linear-gradient(135deg,#fff,#aef0c8)"></div><span>README.TXT</span></div>
+  <div class="icon" style="left:120px;top:170px"><div class="ic" style="background:linear-gradient(135deg,#fff,#f0c0a0)"></div><span>AGENTS.EXE</span></div>
+  <section class="slide slide-b active visible">
+    <div class="window">
+      <div class="titlebar">
+        <span class="tt">TALK.TXT — SECURITY BRIEFING</span>
+        <span class="sys"><i>_</i><i>□</i><i>✕</i></span>
+      </div>
+      <div class="body">
+        <div class="kicker reveal r1">█ SECURITY.PRG  v9.2026</div>
+        <h1 class="reveal r2">AI &amp; Information<br><span class="hl">Security</span></h1>
+        <div class="rule reveal r3"></div>
+        <div class="sub reveal r4">From emerging threats to practical defense. Insert witty hack here ▸ no, really — it's not that kind of talk.</div>
+        <div class="status reveal r5"><div class="box">USER: <b>David Nix</b></div><div class="box">ROLE: <b>Applied AI</b></div></div>
+        <div class="gbox reveal r5"><span>STATUS: <b>SYSTEM OK</b> — but your agents are not</span></div>
+      </div>
+    </div>
+    <div class="taskbar"><div class="start"><b>■</b> Start</div></div>
+    <div class="crt"></div>
+  </section>
+</div></div>
+<script>
+(function(){var stage=document.querySelector('.deck-stage');function sc(){var f=Math.min(innerWidth/1920,innerHeight/1080);
+var x=(innerWidth-1920*f)/2,y=(innerHeight-1080*f)/2;stage.style.transform='translate('+x+'px,'+y+'px) scale('+f+')';}
+sc();addEventListener('resize',sc);})();
+</script>
+</body>
+</html>
