@@ -48,12 +48,12 @@ Each section ends with an optional Q&A slide. The pauses below include one minut
 | 1:21–1:31 | Break |
 | 1:31–1:49 | Using corporate AI and context engineering |
 | 1:49–2:05 | Verification: evidence, calculations, and decisions |
-| 2:05–2:36 | Convenience, security, and practical defenses |
-| 2:36–2:46 | Break |
-| 2:46–3:12 | Inference engines, gateways, and local AI |
-| 3:12–3:31 | Where the market is going: models, data, decision models, and always-on agents |
-| 3:31–3:47 | AIA opportunities and pilot exercise |
-| 3:47–3:55 | Takeaways and questions |
+| 2:05–2:38 | Convenience, security, and practical defenses |
+| 2:38–2:48 | Break |
+| 2:48–3:14 | Inference engines, gateways, and local AI |
+| 3:14–3:33 | Where the market is going: models, data, decision models, and always-on agents |
+| 3:33–3:49 | AIA opportunities and pilot exercise |
+| 3:49–3:57 | Takeaways and questions |
 
 ## Sources
 

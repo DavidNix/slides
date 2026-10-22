@@ -40,4 +40,4 @@ Restate the core tradeoff in plain language: “Every time we say ‘just handle
 
 For product-specific or Microsoft configuration questions outside your experience, state that directly and connect the question to the underlying principle. Capture the implementation detail for AIA's technical team to confirm.
 
-Finish by encouraging a small, owned, measurable pilot based on the exercise. This slide ends the session at elapsed time 3:55.
+Finish by encouraging a small, owned, measurable pilot based on the exercise. This slide ends the session at elapsed time 3:57.
