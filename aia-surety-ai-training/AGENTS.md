@@ -8,7 +8,7 @@ A presenter-led training for AIA Surety staff: use AI well and reason about its 
 
 Emphasis: **agents over LLM internals**. LLM mechanics get intuition-level treatment only. Verification is brief guidance inside Security and Practical, not its own section.
 
-Length: **3 to 3.5 hours**, including two 10-minute breaks and room for Q&A at each section boundary.
+Length: **3 to 3.5 hours**, including two 10-minute breaks, with questions taken throughout the presentation.
 
 Deck order:
 
@@ -54,9 +54,9 @@ Write for that room: anchor examples in familiar office workflows (email, claims
   ```
 
 - **Sequential numbering.** Slides are numbered `001`–`NNN` with no gaps. When inserting or removing slides, renumber every later file and update its `slide:` frontmatter to match. Update any in-text references to slide numbers.
-- **One Q&A slide per section.** Every section ends with a "questions" slide as an optional pause. It is a reminder for the presenter to take questions and a signal to the audience that questions are welcome at each section boundary. Pause briefly; if the room is quiet, move on. The wrap-up slide (`questions-and-next-steps`) serves as the final section's Q&A.
+- **Questions throughout.** There are no separate Q&A pause slides. The opening slide invites questions at any point during the presentation; the presenter takes them at natural boundaries. The wrap-up slide (`takeaways-and-next-steps`) closes the session and serves as the final question opportunity.
 - **Speaker notes are mandatory.** Each slide includes presenter notes: what to say, what to demonstrate, and what to caveat. Write notes so a substitute presenter could deliver the slide.
 - **Cite sources.** Product claims get links in `## Sources` to official documentation or primary material where possible.
-- **Breaks are sections too.** `Break one` and `Break two` slides carry the break timing in `duration_minutes` and get no Q&A slide.
-- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, including one minute per Q&A pause. Keep it in sync when durations change.
+- **Breaks are sections too.** `Break one` and `Break two` slides carry the break timing in `duration_minutes`.
+- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations. Keep it in sync when durations change.
 - **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes.
