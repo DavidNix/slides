@@ -8,14 +8,17 @@ A presenter-led training for AIA Surety staff: use AI well and reason about its 
 
 Emphasis: **agents over LLM internals**. LLM mechanics get intuition-level treatment only. Verification is brief guidance inside Security and Practical, not its own section.
 
-Length: **3 to 3.5 hours**, including two 10-minute breaks, with questions taken throughout the presentation.
+Length: **up to 4 hours**, including two 10-minute breaks, with questions taken throughout the presentation.
 
 Deck order:
 
-1. **How AI works** — brief and intuition-level; the goal is to show models are **not magic**: text in, token probabilities out, abilities learned from data. The section's main takeaway: model output is **probabilistic by nature**, which is why verification comes later. Ends by handing off to agents.
-2. **Agents** — the core: model + harness, agent loop, tools, MCP.
-3. **Security** — tradeoffs, prompt injection, blast radius, review.
-4. **Practical** — company-managed AI, clear briefs, reusable instructions, workflows.
+1. **Demystify AI** — brief and intuition-level; the goal is to show models are **not magic**: a JSON API, stateless, tokens in and tokens out, abilities learned from data. Plant the seed that models **cannot distinguish content from instructions** — it is paid off in Security. The section's main takeaway: model output is **probabilistic by nature**, which is why verification comes later. Ends by handing off to agents.
+2. **Agents** — the core: model + harness, agent loop, tools, MCP. Give it the goal, not the steps.
+3. **Start the demo early** — kick off the long-running demo here, before the theory sections, because it may take a while to run. It executes in the background while the talk continues.
+4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, memory, retrieval, tool output); skills as packaged expertise; connectors (MCP).
+5. **Demo results** — return to what the agent produced and tie it back to the concepts just covered.
+6. **Security** — **each danger is paired with its mitigation, problem first, mitigation immediately after.** Explicitly *not* "all problems first, then all mitigations": the audience never sits in a pile of doom. Pairs: prompt injection → human-in-the-loop and least privilege; data exfiltration → sandboxing, blast radius, observability; provider and IP data handling → deployment choices, local AI; overconfidence and familiar fraud → verification in the workflow.
+7. **Practical** — company-managed AI, clear briefs, reusable instructions, workflows.
 
 Short tail sections follow: Deployment, Where the market is going, Business opportunities. Demos are woven throughout the deck, not one demo block.
 
@@ -58,5 +61,5 @@ Write for that room: anchor examples in familiar office workflows (email, claims
 - **Speaker notes are mandatory.** Each slide includes presenter notes: what to say, what to demonstrate, and what to caveat. Write notes so a substitute presenter could deliver the slide.
 - **Cite sources.** Product claims get links in `## Sources` to official documentation or primary material where possible.
 - **Breaks are sections too.** `Break one` and `Break two` slides carry the break timing in `duration_minutes`.
-- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations. Keep it in sync when durations change.
-- **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes.
+- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 4 hours**. Keep it in sync when durations change.
+- **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes. Long-running demos are **started early in the deck** (see Deck order) so they execute in the background while later sections are presented; a later results slide returns to the output.
