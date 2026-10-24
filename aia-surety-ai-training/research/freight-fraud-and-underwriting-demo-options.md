@@ -2,14 +2,14 @@
 
 Research date: October 24, 2026. Prepared from [AIA/ACC's staff usage notes](../ai_usage.md), AIA's public material, regulators, industry research, and enforcement cases. This is a research and rehearsal brief; the fictional examples are not AIA procedures or actual claims.
 
-**Recommendation: choose the freight-claim document review for the training.** It answers an explicit request from Claims, has a compelling story, and demonstrates a useful output within eight minutes. The bail-collateral review is a strong alternative for AST and underwriting staff. Both concepts include fictional packets, prompts, expected findings, and a timed presentation. They are ready for rehearsal; no live model rehearsal or production integration has been performed.
+**Historical comparison — use the newer freight guide for rehearsal.** This file records the first freight and bail concepts. The selected freight scenario has since been developed into [claim review and follow-up](../demo-freight-fraud-review.md), with an evidence workbook, individual draft requests, staged replies, and a missing-attachment follow-up. The [deeper research](freight-fraud-deep-dive.md) documents the stronger bond-claims evidence and assesses whether this is a good agentic use case. No live Cowork rehearsal or production integration has been performed.
 
 | Choice | What the audience sees | Main reveal | Planned time |
 | --- | --- | --- | --- |
 | Freight claim: “One load, two stories” | AI compares a claim, booking record, delivery record, and emails | The actual carrier may be an unpaid victim of identity misuse; the documents tell conflicting stories | 8 minutes |
 | Bail underwriting: “How much collateral is really available?” | AI reconciles a property report, debt statements, and a fictional checklist | Claimed equity of $250,000 becomes $50,000 under the supplied exercise rule | 8 minutes |
 
-**Why these fit AIA.** Claims/Legal specifically lists freight-load research, claim summaries, and scanning documents for fraud indicators. AST reports using AI to analyze SiteX reports and determine equity. Those are direct connections to existing work, rather than guesses about what employees might find useful. [Staff usage notes](../ai_usage.md).
+**Connection to AIA's notes.** Claims/Legal specifically lists freight-load research, claim summaries, and scanning documents for fraud indicators. AST reports existing AI use to analyze SiteX reports and determine equity. That second observation does not establish a bail-specific complaint or validate the discrepancies invented for the collateral demo. [Staff usage notes](../ai_usage.md).
 
 AIA describes itself as a managing general agency supporting surety and bail agents, with commercial, contract, and bail products. The insurance companies issue the underlying guarantees; AIA is not the freight brokerage moving the shipment. Allegheny Casualty's public claims entry specifically links to a BMC-84 freight broker claim process. [AIA overview](https://www.aiasurety.com/), [ACC claims entry](https://www.alleghenycasualty.com/file-a-claim/).
 
@@ -66,7 +66,7 @@ The fictional Mesa Hauling requests $4,800 under a bond issued for Aster Freight
 
 The visible result is an evidence table: issue, source IDs, possible explanation, and next verification. The key inference is **possible identity misuse or unauthorized re-brokering, with the actual carrier potentially a victim**. Neither fraud by a named party nor bond liability is established by the initial packet.
 
-Use the [freight packet](demo-packets/freight-claim-packet.md), then reveal the [follow-up evidence](demo-packets/freight-claim-follow-up.md). All names, identifiers, communications, and verification notes are invented. The follow-up represents calls by a fictional examiner; the model never makes those calls.
+The original input files for this early sketch were retired. Use the [current freight guide](../demo-freight-fraud-review.md) and its linked packet and answer key for rehearsal. The IDs and prompts below describe the earlier version and should not be mixed with the current packet. All names, identifiers, communications, and verification notes are invented.
 
 | Time | Presenter action | Purpose |
 | --- | --- | --- |

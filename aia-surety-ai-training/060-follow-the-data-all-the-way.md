@@ -1,6 +1,6 @@
 ---
 slide: 60
-section: "Deployment"
+section: "Security"
 duration_minutes: 2
 ---
 
@@ -25,4 +25,4 @@ Add side paths verbally: logs, caches, document extraction, embeddings, analytic
 
 Convenience features such as persistent memory, automatic synchronization, and provider fallback deserve the same data-flow questions. More copies and broader access can increase exposure.
 
-Transition to the opportunity exercise: we now have enough vocabulary to discuss a useful task, its verification method, its access requirements, and where it should run.
+This closes the Security section. Recap the pattern: every danger came with its mitigation. Transition to the break; afterwards we look at where the market is going and where the opportunities are.

@@ -12,7 +12,7 @@ Research date: October 24, 2026. Prepared from [AIA/ACC's staff usage notes](ai_
 
 **What this demo shows.** The audience sees documents become inputs, formulas produce a result they can independently verify, new evidence change that result, and an unresolved requirement stay flagged throughout. That is the whole argument for using AI on this work: less time assembling evidence and arithmetic, with a human able to inspect every step.
 
-**Why this fits AIA.** AST reports using AI to analyze SiteX reports and determine equity. This demo is that workflow made visible and repeatable: documents in, sourced calculation out. AIA's own staff usage notes list collateral and equity analysis among current and emerging uses. [Staff usage notes](ai_usage.md).
+**Connection to AIA's notes.** AST reports existing AI use to analyze SiteX reports and determine equity. The notes do not identify a bail-specific complaint, establish that the SiteX use concerns bail, or report the discrepancies constructed for this demo. This is a possible extension of the reported use, not a validated AIA pain point. The currently selected option is the [freight claim review and follow-up demo](demo-freight-fraud-review.md). [Staff usage notes](ai_usage.md).
 
 AIA describes itself as a managing general agency supporting surety and bail agents, with commercial, contract, and bail products. The insurance companies issue the underlying guarantees; AIA is not the party performing the underlying obligation. [AIA overview](https://www.aiasurety.com/).
 

@@ -1,0 +1,5 @@
+source_id,training_status,record_type,load_id,party,amount_usd,email,details
+F2.1,FICTIONAL,booking,L-1042,Cedar Motor,4200,,"Aster Freight booking export dated October 19: carrier assigned Cedar Motor; pickup September 8 from Northline Fixtures Denver; delivery September 9 to Summit Office Warehouse Salt Lake City; office furniture. This entry records the booking and does not authenticate who accepted it."
+F2.2,FICTIONAL,established_contact,,Aster Freight,,claims@asterfreight.example,"Fictional examiner's existing verified business contact; use this record for the demo's broker draft. It is not a live directory result."
+F2.3,FICTIONAL,established_contact,,Cedar Motor,,operations@cedarmotor.example,"Fictional examiner's existing verified business contact; use this record for the demo's booked-carrier draft. It is not a live directory result."
+F2.4,FICTIONAL,established_contact,,Summit Office Warehouse,,receiving@summitoffice.example,"Fictional examiner's existing verified business contact; use this record for the demo's receiver draft. It is not a live directory result."
