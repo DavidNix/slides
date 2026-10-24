@@ -18,7 +18,7 @@ Deck order:
 4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, memory, retrieval, tool output); skills as packaged expertise; connectors (MCP).
 5. **Demo results** — return to what the agent produced and tie it back to the concepts just covered.
 6. **Security** — **each danger is paired with its mitigation, problem first, mitigation immediately after.** Explicitly *not* "all problems first, then all mitigations": the audience never sits in a pile of doom. Pairs: prompt injection → meaningful review plus automated prompt and tool-call classification; blast radius → sandboxing; lethal trifecta → least privilege; data exfiltration → an AI gateway as choke point (classifier, prompt logging, agent review); familiar fraud → out-of-band verification; agent red teams → use AI to defend and scan custom software (Claude Security/Mythos, Daybreak); provider and IP data handling → ZDR or local AI.
-7. **Practical** — company-managed AI, clear briefs, reusable instructions, workflows.
+7. **Practical** — company-managed AI, costs (they rise — OpenAI Pro-tier allowance cuts as the example), clear briefs, reusable instructions, workflows.
 
 A short tail follows: Where the market is going, Business opportunities. There is no standalone Deployment or local-AI section: local AI appears only as an IP-theft mitigation, and gateway content lives inside Security. Demos are woven throughout the deck, not one demo block.
 
