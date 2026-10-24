@@ -10,6 +10,17 @@ The Claims team explicitly expressed interest in scanning documents for fraud in
 
 **What the audience should remember:** “It didn't just summarize the claim. It prepared the next work, checked what came back, and kept the case record up to date.”
 
+**Include two premade skills.** Use Anthropic's built-in **Excel (`xlsx`)** skill for the evidence workbook and **Word (`docx`)** skill for the examiner's case note. Claude applies its document skills when relevant and file creation is enabled. Confirm availability in the actual demo account before rehearsal. [Anthropic's skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+| Premade skill | Visible contribution |
+| --- | --- |
+| Excel / `xlsx` | Creates and updates `claim-review.xlsx`, with readable evidence and follow-up tables |
+| Word / `docx` | Creates and updates a short, formatted `case-note.docx` for the examiner |
+
+The exercise brief supplies the claim-review rules. The document skills supply reusable instructions for producing the files; they do not supply specialized freight-surety judgment. A PDF skill becomes useful if the packet is later converted to PDFs, but the current text inputs do not need that extra step.
+
+Spend about 20 seconds explaining the distinction while the task runs: **“Skills tell the agent how to do a kind of work. Connectors let it access a system. The agent uses those capabilities to pursue the task.”** Anthropic publishes an [Excel skill example](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md) that can illustrate packaged instructions. It is an example, not proof of the exact version running in the demo account. Show actual skill activity if the interface exposes it; do not invent an execution trace.
+
 **Placement in the training.** The current deck starts agent work early and returns to the results after the intervening concepts. Launch the first prompt in that early slot, then use the later results slot for the workbook, drafts, and reply/update cycle. Keep the combined time spent presenting the demo within 5–10 minutes; background processing can continue while other material is presented. The continuous eight-minute schedule below is an alternative for a standalone demonstration if rehearsal confirms the generation time fits.
 
 **The minimum background to explain.** A broker arranges a shipment; a carrier operates the truck. A broker's surety bond can respond to covered payment obligations. Whether this particular claim qualifies remains a human decision. A real delivery does not, by itself, establish which business owes the bill. [49 CFR 387.307](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-387/subpart-C/section-387.307).
@@ -36,7 +47,9 @@ The Claims team explicitly expressed interest in scanning documents for fraud in
 
 The [presenter answer key](research/demo-packets/freight-identity-review/presenter/answer-key.md) contains expected findings and a fallback draft. Three staged replies sit in `research/demo-packets/freight-identity-review/presenter/replies/`. Keep that entire presenter folder outside the agent's initial access.
 
-**How to set up Cowork.** Use a company-approved account and a fresh task. Anthropic documents direct file access and creation of Excel and document outputs; availability and the interface depend on the account. These capabilities support the proposed demo, but this packet has not been run in Cowork here. [Cowork getting-started documentation](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork).
+**Recommended connector enhancement.** Use the Microsoft 365 connector to retrieve staged Outlook replies and, if draft tools are enabled, create the follow-up drafts in Outlook. Keep the workbook and Word note local for the first run. The [connector runbook](research/demo-packets/freight-identity-review/presenter/connector-runbook.md) gives preparation, exact prompt additions, and a Gmail alternative. This makes the connector visible without requiring an AIA claims-system integration. The file-only setup below remains the fallback.
+
+**How to set up Cowork.** Use a company-approved account and a fresh task. Enable file creation and confirm the built-in Excel and Word skills are available. Anthropic documents direct file access and creation of Excel and document outputs; availability and the interface depend on the account. These capabilities support the proposed demo, but this packet has not been run in Cowork here. [Cowork getting-started documentation](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork).
 
 1. Make a new local folder named `AIA-Freight-Live`, containing `input/` and an empty `output/`.
 2. Copy the seven files from the prepared `initial/` directory into `input/`.
@@ -45,7 +58,7 @@ The [presenter answer key](research/demo-packets/freight-identity-review/present
 5. Keep the three reply files ready in a separate presenter window. At the reveal, copy them into `input/`.
 6. Save both prompts below and open the presenter answer key separately. After a successful rehearsal, retain the generated output and a short recording as a fallback.
 
-The live demo uses no actual claims system, external lookup, or mailbox connection. Drafts are saved as files, and incoming replies are staged by the presenter. The fictional examiner's stated verification is part of the exercise. Do not describe it as a call or identity check performed by Cowork.
+The file-only version uses local drafts and staged reply files. The connector version uses a dedicated demo mailbox containing synthetic correspondence. Neither version needs an actual claims system or external research about the invented businesses. The fictional examiner's stated verification is part of the exercise. Do not describe it as a call or identity check performed by Cowork.
 
 **First prompt: give the agent the whole preparation task.**
 
@@ -59,7 +72,9 @@ Follow the exercise brief. Create these actual files in output/v1/:
 1. claim-review.xlsx, built from scratch, with Evidence and Follow-ups sheets.
 2. Three short, targeted follow-up drafts under drafts/, using the established
    contacts for the broker, the carrier named in its booking, and the receiver.
-3. case-note.md, no more than 150 words, with source item IDs.
+3. case-note.docx, no more than 150 words, with source item IDs.
+
+Use the premade Excel and Word skills for these document outputs.
 
 Use the documents to decide what needs clarification. Separate observations,
 possible explanations, and unanswered questions. Include differences that
@@ -78,7 +93,7 @@ paths and a short description of the next work.
 | `claim-review.xlsx` → `Evidence` | A few concise rows comparing identities, contacts, rates, delivery evidence, and the explained payee difference, with source IDs |
 | `claim-review.xlsx` → `Follow-ups` | The specific requests and draft status, rather than a generic instruction to “investigate” |
 | Three files under `drafts/` | Separate questions addressed to the correct established contacts |
-| `case-note.md` | A short examiner handoff distinguishing suspicion from established facts |
+| `case-note.docx` | A formatted examiner handoff distinguishing suspicion from established facts |
 
 The workbook is created from an empty output folder. Its value is traceability and tracking; it does not need a decorative chart or a made-up risk score. A formula-driven financial model would add little to this case. The $4,800 claim and $4,200 booking describe different accounts of the same load; summing them would be misleading.
 
@@ -100,7 +115,7 @@ files that actually arrived. Continue the review under the same exercise brief.
 
 Create updated work in output/v2/ and preserve output/v1/:
 - Update claim-review.xlsx, including response source IDs and what remains open.
-- Update case-note.md to reflect what changed and what is still uncertain.
+- Update case-note.docx to reflect what changed and what is still uncertain.
 - Save any necessary next follow-up as a new DRAFT — NOT SENT file in drafts/.
 
 Match each reply to the questions it answers. Distinguish a reported fact
@@ -134,8 +149,8 @@ At five minutes, use the clearly labeled output from a prior rehearsal for the f
 
 **What makes the follow-up genuinely useful.** A request should identify the exact load and missing record, go to the appropriate established contact, and explain what needs reconciliation. When a reply arrives, the agent should close only the questions that the evidence answers. It should retain the original version and prepare the next request without requiring the presenter to restate the entire case. These are observable actions, not claims about the model's private reasoning.
 
-**Rehearsal checks.** Open both generated workbooks and the individual draft files. Confirm the source IDs support the findings, Canyon's assignment is treated correctly, v1 is preserved, the receiver's reply changes delivery status, and the absent remittance creates a new request. Confirm no output says a message was sent or a payment verified. Time the complete presentation in fresh sessions; use the five-minute fallback if generation routinely exceeds the allotted windows.
+**Rehearsal checks.** Open both generated workbooks, the Word case notes, and the individual drafts. Confirm the source IDs support the findings, Canyon's assignment is treated correctly, v1 is preserved, the receiver's reply changes delivery status, and the absent remittance creates a new request. Confirm no output says a message was sent or a payment verified. For the connector version, also verify the mailbox draft IDs and the attachment information the connector actually returns. Time the complete presentation in fresh sessions; use the five-minute fallback if generation routinely exceeds the allotted windows.
 
-Prepared inputs and the answer key have been checked for consistency. **No live Cowork rehearsal or production accuracy test has been performed.** The demo shows a possible workflow on constructed evidence. To evaluate business value later, Claims should review representative real cases and measure time saved after checking the agent's work, missed issues, and unnecessary questions.
+Prepared inputs and the answer key have been checked for consistency. **No live Cowork rehearsal, connector configuration, or production accuracy test has been performed.** The demo shows a possible workflow on constructed evidence. To evaluate business value later, Claims should review representative real cases and measure time saved after checking the agent's work, missed issues, and unnecessary questions.
 
 **A useful way to pitch this to the contact:** “We can show an AI assistant take a freight claim folder, build the examiner's evidence spreadsheet, draft the questions needed to move it forward, and update the case when replies come back—including catching an attachment that was promised but never supplied.”
