@@ -1,5 +1,5 @@
 ---
-slide: 5
+slide: 4
 section: "How AI works"
 duration_minutes: 3
 ---

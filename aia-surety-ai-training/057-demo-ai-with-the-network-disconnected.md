@@ -23,7 +23,7 @@ The demonstration establishes that this tested inference path can work offline. 
 
 1. Show the model name, local endpoint, and relevant hardware information.
 2. Disconnect external networking for the demo machine.
-3. Paste the fixture from [slide 005](005-demo-same-question-better-context.md), adding a fresh fictional sentence suggested in the room so the output is not simply a replay.
+3. Paste the fixture from the [S-1042 fixture](research/demo-packets/s-1042-chat-context.md), adding a fresh fictional sentence suggested in the room so the output is not simply a replay.
 4. Ask for the missing-document summary and a draft under 100 words.
 5. Show observed response time and memory use, then verify the missing document against the checklist.
 

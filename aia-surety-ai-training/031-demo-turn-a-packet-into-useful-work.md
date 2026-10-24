@@ -23,7 +23,7 @@ Show one product live and use a prepared comparison for the other so the demonst
 
 ## Demo guide
 
-**Preparation:** Put the fictional text from [slide 005](005-demo-same-question-better-context.md) into three clearly named demo documents: agent inquiry, submission record, and demo checklist. Prepare a project in the selected account with the instructions below. Confirm its visibility before showing the screen.
+**Preparation:** Put the fictional text from the [S-1042 fixture](research/demo-packets/s-1042-chat-context.md) into three clearly named demo documents: agent inquiry, submission record, and demo checklist. Prepare a project in the selected account with the instructions below. Confirm its visibility before showing the screen.
 
 **Reusable instructions:**
 
