@@ -43,17 +43,16 @@ Each section ends with an optional Q&A slide. The pauses below include one minut
 | 0:00–0:05 | Introductions and goals |
 | 0:05–0:14 | Chatbots and a first demonstration |
 | 0:14–0:21 | How AI works: tokens, probability, and training |
-| 0:21–0:32 | Jailbreaking and instruction boundaries |
-| 0:32–1:19 | Agents, harnesses, JSON, skills, and tool calls |
-| 1:19–1:29 | Break |
-| 1:29–1:47 | Using corporate AI and context engineering |
-| 1:47–2:03 | Verification: evidence, calculations, and decisions |
-| 2:03–2:36 | Convenience, security, and practical defenses |
-| 2:36–2:46 | Break |
-| 2:46–3:12 | Inference engines, gateways, and local AI |
-| 3:12–3:31 | Where the market is going: models, data, decision models, and always-on agents |
-| 3:31–3:47 | AIA opportunities and pilot exercise |
-| 3:47–3:55 | Takeaways and questions |
+| 0:21–1:08 | Agents, harnesses, JSON, skills, and tool calls |
+| 1:08–1:18 | Break |
+| 1:18–1:36 | Using corporate AI and context engineering |
+| 1:36–1:52 | Verification: evidence, calculations, and decisions |
+| 1:52–2:25 | Convenience, security, and practical defenses |
+| 2:25–2:35 | Break |
+| 2:35–3:01 | Inference engines, gateways, and local AI |
+| 3:01–3:20 | Where the market is going: models, data, decision models, and always-on agents |
+| 3:20–3:36 | AIA opportunities and pilot exercise |
+| 3:36–3:44 | Takeaways and questions |
 
 ## Sources
 

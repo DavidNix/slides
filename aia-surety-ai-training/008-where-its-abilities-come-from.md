@@ -22,7 +22,7 @@ Training: explain self-supervised pretraining briefly — the training text supp
 
 The one distinction worth pausing on: training updates the learned parameters; ordinary use does not. Uploading a checklist gives the application reference material for this task — it does not retrain the model. That distinction returns in the deployment and data sections.
 
-Transition: training encourages instruction following, but it does not create an unbreakable instruction boundary. Next, we test one.
+Transition: so far, the model only answers. Next: what changes when software turns answers into actions.
 
 ## Sources
 
