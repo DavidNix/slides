@@ -4,9 +4,9 @@ section: "Welcome"
 duration_minutes: 1
 ---
 
-# AI at AIA Surety
+# AI at Work: Agents & Information Security
 
-**Business opportunities. Practical skills. Security.**
+**What agents can do, what can go wrong, and how to put them to work safely.**
 
 David Nix · Applied AI for businesses
 

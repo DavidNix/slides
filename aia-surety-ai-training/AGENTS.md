@@ -1,6 +1,6 @@
 # AGENTS.md — aia-surety-ai-training
 
-The numbered markdown files in this folder are the **source of truth** for the "AI at AIA Surety" training deck. Every other artifact (PDF exports, preview builds, handouts) is generated from them and is not authoritative.
+The numbered markdown files in this folder are the **source of truth** for the "AI at Work: Agents & Information Security" training deck (delivered for AIA Surety). Every other artifact (PDF exports, preview builds, handouts) is generated from them and is not authoritative.
 
 ## Purpose
 
