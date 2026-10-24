@@ -12,12 +12,22 @@ Length: **3 to 3.5 hours**, including two 10-minute breaks and room for Q&A at e
 
 Deck order:
 
-1. **Demystifying AI and LLMs** — brief and intuition-level; ends by handing off to agents.
+1. **How AI works** — brief and intuition-level; the goal is to show models are **not magic**: text in, token probabilities out, abilities learned from data. The section's main takeaway: model output is **probabilistic by nature**, which is why verification comes later. Ends by handing off to agents.
 2. **Agents** — the core: model + harness, agent loop, tools, MCP.
 3. **Security** — tradeoffs, prompt injection, blast radius, review.
 4. **Practical** — company-managed AI, clear briefs, reusable instructions, workflows.
 
 Short tail sections follow: Deployment, Where the market is going, Business opportunities. Demos are woven throughout the deck, not one demo block.
+
+## Audience
+
+The room is **AIA Surety staff, not software developers**. Departments represented: HR, Finance, Shipping/Fulfillment, IT Operations, Claims, Legal, Account Management, and Marketing/Communications. A staff survey (`ai_usage.md`) shows:
+
+- Most attendees already use ChatGPT, Microsoft Copilot, or search-embedded AI (e.g., Gemini in Google Search) for everyday work: rewording emails and letters, research, summarizing long documents such as claim files, carrier contracts, and proposed legislation, and drafting replies.
+- IT Operations uses AI (Grok, ChatGPT) for troubleshooting, system design, and script generation; Claims and Legal summarize documents and research regulations; Marketing drafts and outlines content.
+- LLM internals — tokens, attention, training — are **new material** for most of the room. Define every term on first use, and keep the "not magic — probabilistic" framing as the throughline.
+
+Write for that room: anchor examples in familiar office workflows (email, claims documents, contracts, research summaries) rather than developer artifacts such as code repositories; one idea per slide; plain language.
 
 ## Conventions
 
