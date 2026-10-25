@@ -27,7 +27,7 @@ description: Review a brokered freight claim for mismatches
 5. Write a one-page case note for the examiner.
 ```
 
-**Like a library book: the catalog card is always visible, but you borrow the book only when the task calls for it.**
+**Like a library book: the spine stays visible on the shelf, but the book comes off only when the task calls for it.**
 
 ## Speaker notes
 
