@@ -11,7 +11,7 @@ duration_minutes: 2
 - The loop needs limits on time, cost, and actions.
 - Completion needs a clear definition.
 
-**For this task: a checked draft, with nothing sent.**
+**For this task: an accurate answer, with nothing changed.**
 
 ## Speaker notes
 

@@ -8,9 +8,9 @@ duration_minutes: 1
 
 ```json
 {
-  "submission_id": "S-1042",
-  "applicant": "Cedar Bridge Services",
-  "received_documents": ["signed_application"]
+  "order_id": "4471",
+  "status": "shipped",
+  "items": ["running shoes"]
 }
 ```
 
@@ -22,7 +22,7 @@ duration_minutes: 1
 
 ## Speaker notes
 
-Read the example aloud in ordinary language. “The submission ID is S-1042. The applicant is Cedar Bridge Services. We received one document.”
+Read the example aloud in ordinary language. “The order ID is 4471. It has shipped. It holds one item: running shoes.”
 
 JSON is a data format. It does not execute an action by itself. Software has to interpret it and perform the operation.
 

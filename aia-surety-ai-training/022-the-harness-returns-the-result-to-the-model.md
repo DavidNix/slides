@@ -15,7 +15,7 @@ duration_minutes: 3
     {
       "type": "tool_result",
       "tool_use_id": "toolu_demo_01",
-      "content": "S-1042: Cedar Bridge Services. Received: signed_application. Checklist: DEMO-COMMERCIAL-01."
+      "content": "Order 4471: running shoes. Status: shipped. Tracking number: 1Z-88X."
     }
   ]
 }

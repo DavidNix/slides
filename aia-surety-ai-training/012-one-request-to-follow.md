@@ -6,19 +6,19 @@ duration_minutes: 2
 
 # One request to follow
 
-> “For submission S-1042, check the demo checklist and draft a request for missing documents. Do not send it.”
+> “Where is my order 4471? When will it arrive?”
 
-1. Retrieve the submission.
-2. Retrieve its checklist.
-3. Compare what is required with what was received.
-4. Draft a response for review.
+1. Look up the order.
+2. Find its tracking number.
+3. Track the package.
+4. Answer with where it is and when it arrives.
 
 *Fictional training scenario.*
 
 ## Speaker notes
 
-Reuse Cedar Bridge Services from the opening demonstration. Explain that this is a proposed teaching workflow, not an integration with AIA's systems.
+This is a general online-shopping example, so the mechanics are easy to follow. It is a teaching workflow, not an integration with a real store. The S-1042 packet returns in the demos.
 
-The task needs two read-only tools: `get_submission` and `get_checklist`. The final email can be generated as text. It needs no sending permission and no access to unrelated submissions.
+The task needs two read-only tools: `get_order` and `track_package`. The answer is plain text. It needs no permission to change the order and no access to other customers' orders.
 
-Ask what would become more convenient if sending were added. Then ask what could go wrong if the recipient or attachment were wrong. Leave that question open for the security section.
+Ask what would become more convenient if the agent could also change the order or issue a refund. Then ask what could go wrong if it changed the wrong order. Leave that question open for the security section.

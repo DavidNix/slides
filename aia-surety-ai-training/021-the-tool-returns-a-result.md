@@ -16,7 +16,7 @@ duration_minutes: 2
     "content": [
       {
         "type": "text",
-        "text": "S-1042: Cedar Bridge Services. Received: signed_application. Checklist: DEMO-COMMERCIAL-01."
+        "text": "Order 4471: running shoes. Status: shipped. Tracking number: 1Z-88X."
       }
     ],
     "isError": false
@@ -28,11 +28,11 @@ duration_minutes: 2
 
 ## Speaker notes
 
-The tool has now looked up the fictional record. This response supplies information the model did not have in the original request.
+The tool has now looked up the fictional order. This response supplies information the model did not have in the original request.
 
 Results may contain text or structured data. This example uses a text content block for readability.
 
-Distinguish a successful lookup from a correct final business conclusion: the returned record might still be incomplete or out of date. The model must also retrieve the relevant checklist before comparing the documents.
+Distinguish a successful lookup from a correct final business conclusion: the returned record might still be incomplete or out of date. The model must also track the package before it can say when it arrives.
 
 Point to the exact data that would leave the company if the harness forwards this result to a hosted model. A local tool does not automatically make the entire workflow local.
 

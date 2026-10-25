@@ -14,8 +14,8 @@ duration_minutes: 3
     {
       "type": "tool_use",
       "id": "toolu_demo_01",
-      "name": "get_submission",
-      "input": { "submission_id": "S-1042" }
+      "name": "get_order",
+      "input": { "order_id": "4471" }
     }
   ],
   "stop_reason": "tool_use"

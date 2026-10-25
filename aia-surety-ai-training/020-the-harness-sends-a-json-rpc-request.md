@@ -14,13 +14,13 @@ duration_minutes: 2
   "id": 42,
   "method": "tools/call",
   "params": {
-    "name": "get_submission",
-    "arguments": { "submission_id": "S-1042" }
+    "name": "get_order",
+    "arguments": { "order_id": "4471" }
   }
 }
 ```
 
-**Operation: call a tool. Tool: get a submission. Input: S-1042.**
+**Operation: call a tool. Tool: get an order. Input: 4471.**
 
 ## Speaker notes
 
@@ -30,7 +30,7 @@ The request ID, `42`, identifies this MCP exchange. It is different from the mod
 
 RPC means remote procedure call. “Remote” can mean another process on the same computer or a service on another machine; it does not necessarily mean public cloud.
 
-The receiving service runs its implementation with configured credentials and permissions. A request for a different submission must still pass authorization.
+The receiving service runs its implementation with configured credentials and permissions. A request for another customer's order must still pass authorization.
 
 ## Sources
 

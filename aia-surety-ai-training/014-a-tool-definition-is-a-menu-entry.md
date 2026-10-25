@@ -10,14 +10,14 @@ duration_minutes: 3
 
 ```json
 {
-  "name": "get_submission",
-  "description": "Read a fictional submission by ID. Makes no changes.",
+  "name": "get_order",
+  "description": "Read a fictional order by ID. Makes no changes.",
   "input_schema": {
     "type": "object",
     "properties": {
-      "submission_id": { "type": "string" }
+      "order_id": { "type": "string" }
     },
-    "required": ["submission_id"],
+    "required": ["order_id"],
     "additionalProperties": false
   }
 }
@@ -33,7 +33,7 @@ A schema describes the shape of valid input. Correctly shaped input does not est
 
 The words “makes no changes” describe intended behavior. The implementation must actually be read-only.
 
-Our second tool has the same shape: `get_checklist` takes a required string called `checklist_id` and returns a fictional checklist. Both definitions are available to the model in this example.
+Our second tool has the same shape: `track_package` takes a required string called `tracking_number` and returns a fictional delivery status. Both definitions are available to the model in this example.
 
 If the harness discovers a tool through MCP, it translates the server's tool definition into the model provider's expected format. MCP uses `inputSchema`; this Claude API example uses `input_schema`.
 
