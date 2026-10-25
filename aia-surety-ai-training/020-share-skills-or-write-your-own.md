@@ -22,7 +22,7 @@ The light part matters more than it sounds. Skills use progressive disclosure: w
 
 Plain version: like an intranet SOP library. A shelf of binders costs nothing until someone opens one. The agent keeps the shelf — the card catalog, one line per binder — in view all the time, and opens a binder only when the work calls for it.
 
-Transition: "That is the assembly craft. Next: putting it to work on real data."
+Transition: "That is the assembly craft. Here is what one looks like."
 
 ## Sources
 
