@@ -27,7 +27,7 @@ description: Review a brokered freight claim for mismatches
 5. Write a one-page case note for the examiner.
 ```
 
-**The description is the shelf label; the steps are the binder.**
+**Like a library book: the catalog card is always visible, but you borrow the book only when the task calls for it.**
 
 ## Speaker notes
 
