@@ -8,14 +8,14 @@ A presenter-led training for AIA Surety staff: use AI well and reason about its 
 
 Emphasis: **agents over LLM internals**. LLM mechanics get intuition-level treatment only. Verification is brief guidance inside Security and Practical, not its own section.
 
-Length: **up to 4 hours**, including two 10-minute breaks, with questions taken throughout the presentation.
+Length: **up to 4 hours**, with questions taken throughout the presentation.
 
 Deck order:
 
 1. **Demystify AI** — brief and intuition-level; the goal is to show models are **not magic**: a JSON API, stateless, tokens in and tokens out, abilities learned from data. Plant the seed that models **cannot distinguish content from instructions** — it is paid off in Security. The section's main takeaway: model output is **probabilistic by nature**, which is why verification comes later. Ends by handing off to agents.
 2. **Agents** — the core: model + harness, tools. The thermostat shows the agent loop with no AI; ChatGPT web search shows the harness making a model look smarter. Give it the goal, not the steps.
 3. **Start the demo early** — kick off the long-running demo here, before the theory sections, because it may take a while to run. It executes in the background while the talk continues.
-4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, memory, retrieval, tool output).
+4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, reference material, retrieval, tool output), then Agent Skills as packaged procedures — SOPs the agent loads on demand, shared like circulated SOPs or written per person.
 5. **Demo results** — return to what the agent produced and tie it back to the concepts just covered.
 6. **Security** — **each danger is paired with its mitigation, problem first, mitigation immediately after.** Explicitly *not* "all problems first, then all mitigations": the audience never sits in a pile of doom. Pairs: prompt injection → meaningful review plus automated prompt and tool-call classification; blast radius → sandboxing; lethal trifecta → least privilege; data exfiltration → an AI gateway as choke point (classifier, prompt logging, agent review); familiar fraud → out-of-band verification; agent red teams → use AI to defend and scan custom software (Claude Security/Mythos, Daybreak); provider and IP data handling → ZDR or local AI.
 7. **Practical** — company-managed AI, costs (they rise — OpenAI Pro-tier allowance cuts as the example), clear briefs, reusable instructions, workflows.
@@ -60,6 +60,5 @@ Write for that room: anchor examples in familiar office workflows (email, claims
 - **Questions throughout.** There are no separate Q&A pause slides. The opening slide invites questions at any point during the presentation; the presenter takes them at natural boundaries. The wrap-up slide (`takeaways-and-next-steps`) closes the session and serves as the final question opportunity.
 - **Speaker notes are mandatory.** Each slide includes presenter notes: what to say, what to demonstrate, and what to caveat. Write notes so a substitute presenter could deliver the slide.
 - **Cite sources.** Product claims get links in `## Sources` to official documentation or primary material where possible.
-- **Breaks are sections too.** `Break one` and `Break two` slides carry the break timing in `duration_minutes`.
 - **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 4 hours**. Keep it in sync when durations change.
 - **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes. Long-running demos are **started early in the deck** (see Deck order) so they execute in the background while later sections are presented; a later results slide returns to the output.

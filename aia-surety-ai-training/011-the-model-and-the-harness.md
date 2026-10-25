@@ -18,7 +18,7 @@ The harness is ordinary software. It assembles the model request, maintains conv
 
 Tools are pieces of software that do something concrete: read a file, query a record, run a calculation, or send a message. They may run locally, on a company server, or at a provider.
 
-In the next example — ChatGPT answering a question about current news — the model produces a request, the application searches the web, and the results travel back to the model. Some products also provide provider-hosted tools; the same question still applies: which software executes the operation, and with whose authority?
+Next, watch the whole loop in motion: one tool call, from your request to the final answer. Right after that comes the everyday version — ChatGPT answering a question about current news. Some products also provide provider-hosted tools; the same question still applies: which software executes the operation, and with whose authority?
 
 ## Sources
 

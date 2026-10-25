@@ -22,6 +22,8 @@ This is what the tools in this section do. Projects assemble instructions and re
 
 "Context engineering" is the term used in Anthropic's engineering writing and across the industry. The practical version for staff: give the AI a clear brief, attach the right material, and remove what does not belong — more context is not automatically better context.
 
+Transition: "Let's make 'assembling the window' concrete — what goes in it, and what it does to the model's odds."
+
 ## Sources
 
 - [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents).
