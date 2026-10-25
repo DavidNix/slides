@@ -175,8 +175,7 @@ const contentFor = (id: Beat['id']): Content => {
 				tag: 'Your request',
 				body: (
 					<Appear at={1} style={{fontSize: 44, lineHeight: 1.35}}>
-						“For submission S-1042, check the demo checklist and draft a request for missing
-						documents. Do not send it.”
+						“Where is my order 4471? When will it arrive?”
 					</Appear>
 				),
 			};
@@ -188,10 +187,10 @@ const contentFor = (id: Beat['id']): Content => {
 					<>
 						<Code
 							lines={[
-								'{ "system": "Use the tools. Draft only. Do not send.",',
+								'{ "system": "Help shoppers. Look things up. Change nothing.",',
 								'  "messages": [{ "role": "user",',
-								'                 "content": "For S-1042, check the checklist…" }],',
-								'  "tools": ["get_submission", "get_checklist"] }',
+								'                 "content": "Where is my order 4471?…" }],',
+								'  "tools": ["get_order", "track_package"] }',
 							]}
 							highlight={3}
 							highlightAt={2.5}
@@ -210,15 +209,15 @@ const contentFor = (id: Beat['id']): Content => {
 							lines={[
 								'{ "type": "tool_use",',
 								'  "id": "toolu_demo_01",',
-								'  "name": "get_submission",',
-								'  "input": { "submission_id": "S-1042" } }',
+								'  "name": "get_order",',
+								'  "input": { "order_id": "4471" } }',
 								'',
 								'"stop_reason": "tool_use"',
 							]}
 							highlight={5}
 							highlightAt={4}
 						/>
-						<Plain at={2}>please run get_submission for S-1042, then come back.</Plain>
+						<Plain at={2}>please run get_order for order 4471, then come back.</Plain>
 					</>
 				),
 			};
@@ -229,13 +228,13 @@ const contentFor = (id: Beat['id']): Content => {
 				body: (
 					<div style={{display: 'flex', flexDirection: 'column', gap: 22}}>
 						<Row at={0.5} mark="✓" markColor="#06d6a0">
-							<Mono>get_submission</Mono> is on the allowed tool list.
+							<Mono>get_order</Mono> is on the allowed tool list.
 						</Row>
 						<Row at={1.4} mark="✓" markColor="#06d6a0">
 							It only reads data. It changes nothing.
 						</Row>
 						<Row at={2.3} mark="✓" markColor="#06d6a0">
-							The input is a valid submission ID.
+							The input is a valid order number.
 						</Row>
 						<Row at={3.2} mark="✓" markColor="#06d6a0">
 							A read-only lookup needs no approval from a person.
@@ -254,13 +253,13 @@ const contentFor = (id: Beat['id']): Content => {
 								'{ "jsonrpc": "2.0",',
 								'  "id": 42,',
 								'  "method": "tools/call",',
-								'  "params": { "name": "get_submission",',
-								'              "arguments": { "submission_id": "S-1042" } } }',
+								'  "params": { "name": "get_order",',
+								'              "arguments": { "order_id": "4471" } } }',
 							]}
 							highlight={1}
 							highlightAt={2.5}
 						/>
-						<Plain at={2}>run get_submission with S-1042. This is call number 42.</Plain>
+						<Plain at={2}>run get_order with 4471. This is call number 42.</Plain>
 					</>
 				),
 			};
@@ -273,9 +272,9 @@ const contentFor = (id: Beat['id']): Content => {
 						<Code
 							lines={[
 								'{ "id": 42,',
-								'  "result": { "text": "S-1042: Cedar Bridge Services.',
-								'                       Received: signed_application.',
-								'                       Checklist: DEMO-COMMERCIAL-01." } }',
+								'  "result": { "text": "Order 4471: running shoes.',
+								'                       Status: shipped.',
+								'                       Tracking number: 1Z-88X." } }',
 							]}
 							highlight={0}
 							highlightAt={2.5}
@@ -295,12 +294,12 @@ const contentFor = (id: Beat['id']): Content => {
 								'{ "role": "user",',
 								'  "content": [{ "type": "tool_result",',
 								'                "tool_use_id": "toolu_demo_01",',
-								'                "content": "S-1042: Cedar Bridge Services. …" }] }',
+								'                "content": "Order 4471: running shoes. Shipped. …" }] }',
 							]}
 							highlight={2}
 							highlightAt={2.5}
 						/>
-						<Plain at={3}>here is what get_submission returned. What next?</Plain>
+						<Plain at={3}>here is what get_order returned. What next?</Plain>
 					</>
 				),
 			};
@@ -310,13 +309,13 @@ const contentFor = (id: Beat['id']): Content => {
 				body: (
 					<>
 						<LogRow at={0.3} from="model" to="harness">
-							tool_use: get_checklist(&quot;DEMO-COMMERCIAL-01&quot;)
+							tool_use: track_package(&quot;1Z-88X&quot;)
 						</LogRow>
 						<LogRow at={2.3} from="harness" to="tools">
-							tools/call get_checklist, id 43
+							tools/call track_package, id 43
 						</LogRow>
 						<LogRow at={4.3} from="tools" to="harness">
-							Required: signed_application, current_financial_statement
+							At the Memphis hub. Arrives Thursday.
 						</LogRow>
 						<LogRow at={6.3} from="harness" to="model">
 							tool_result for toolu_demo_02
@@ -333,8 +332,8 @@ const contentFor = (id: Beat['id']): Content => {
 						<Code
 							lines={[
 								'{ "type": "text",',
-								'  "text": "Draft: Please send the current financial',
-								'           statement for submission S-1042." }',
+								'  "text": "Your running shoes are at the Memphis hub.',
+								'           They should arrive Thursday." }',
 								'',
 								'"stop_reason": "end_turn"',
 							]}
@@ -343,7 +342,7 @@ const contentFor = (id: Beat['id']): Content => {
 						/>
 						<Appear at={4.5} style={{marginTop: 18, fontSize: 34, fontWeight: 600}}>
 							<span style={{color: C.accent}}>Harness:</span> no tool request and{' '}
-							<Mono>end_turn</Mono>, so stop the loop. Show the draft. Nothing is sent.
+							<Mono>end_turn</Mono>, so stop the loop and show you the answer.
 						</Appear>
 					</>
 				),

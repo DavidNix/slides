@@ -53,7 +53,7 @@ const NODES: Record<NodeId, NodeBox> = {
 		w: 340,
 		h: 180,
 		title: 'Tools',
-		lines: ['get_submission', 'get_checklist'],
+		lines: ['get_order', 'track_package'],
 		mono: true,
 		color: NODE_COLORS.tools,
 	},

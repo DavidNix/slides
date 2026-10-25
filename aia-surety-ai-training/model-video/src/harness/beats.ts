@@ -1,4 +1,4 @@
-// The tool-call walkthrough from slides 012 to 024, split into beats.
+// One order-status question, from request to stop, split into beats.
 // Times are in seconds, local to the beat.
 
 export type NodeId = 'you' | 'harness' | 'model' | 'tools';
@@ -95,7 +95,7 @@ export const BEATS: readonly Beat[] = [
 			{from: 'harness', to: 'model', at: 6.3, dur: 0.7},
 		],
 		captions: [
-			{text: 'The loop repeats. Now the model asks for the checklist.', from: 0},
+			{text: 'The loop repeats. Now the model tracks the package.', from: 0},
 			{text: 'Each result shapes the model’s next step.', from: 5},
 		],
 	},
