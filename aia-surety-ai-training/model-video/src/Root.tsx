@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {HARNESS_FRAMES, HarnessVideo} from './harness/HarnessVideo';
 import {ModelVideo} from './ModelVideo';
+import {PROMPT_FRAMES, PromptVideo} from './prompt/PromptVideo';
 
 export const RemotionRoot = () => (
 	<>
@@ -17,6 +18,14 @@ export const RemotionRoot = () => (
 			id="HarnessToolCall"
 			component={HarnessVideo}
 			durationInFrames={HARNESS_FRAMES}
+			fps={30}
+			width={1920}
+			height={1080}
+		/>
+		<Composition
+			id="PromptShiftsOdds"
+			component={PromptVideo}
+			durationInFrames={PROMPT_FRAMES}
 			fps={30}
 			width={1920}
 			height={1080}
