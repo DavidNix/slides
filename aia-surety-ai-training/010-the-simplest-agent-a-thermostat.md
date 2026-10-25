@@ -4,7 +4,9 @@ section: "Agents"
 duration_minutes: 2
 ---
 
-# The simplest agent: a thermostat
+# Agents are nothing new
+
+![A thermostat loop: sense the room, decide against the goal, act on the furnace, repeat.](../2026-09-ai-security/agentic-loop-old-thermostat.png)
 
 **Goal → sense → decide → act → repeat. That loop is what makes it an agent.**
 
