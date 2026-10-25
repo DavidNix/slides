@@ -17,7 +17,7 @@ duration_minutes: 2
 
 ## Speaker notes
 
-This is a general online-shopping example, so the mechanics are easy to follow. It is a teaching workflow, not an integration with a real store. The S-1042 packet returns in the demos.
+This is a general online-shopping example, so the mechanics are easy to follow. It is a teaching workflow, not an integration with a real store.
 
 The task needs two read-only tools: `get_order` and `track_package`. The answer is plain text. It needs no permission to change the order and no access to other customers' orders.
 
