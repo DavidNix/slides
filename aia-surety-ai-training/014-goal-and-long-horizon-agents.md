@@ -16,6 +16,8 @@ Give the harness a goal, not just a prompt:
 
 ## Speaker notes
 
+Also mention subagents.
+
 Make a number go up or down. Optimizing a score. Number of requests per second or make an operation take less time.
 
 ## Sources
