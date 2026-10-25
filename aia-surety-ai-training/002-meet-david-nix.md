@@ -19,4 +19,8 @@ Say this not to brag, but show I have a lot of experience with security.
 
 PHI fines up to $73k per violation.
 
-Millions of dollars secured on blockchains.
+Millions of dollars secured on blockchains. Exchange that does billions in volumes.
+
+AI has transformed software development. I use it everyday often for hours. 
+
+I run AI out of my basement. Don't have to rely on the cloud. 90% of this presentation was aided by AI in my basement.
