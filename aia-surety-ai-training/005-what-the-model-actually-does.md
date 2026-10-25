@@ -6,6 +6,8 @@ duration_minutes: 3
 
 # What the model actually does
 
+<video src="what-the-model-actually-does.mp4" controls width="100%" aria-label="Tokens go in, pass through attention and the transformer layers, and softmax picks the next token."></video>
+
 **Text → tokens → probabilities → next token → repeat**
 
 - **Tokens:** chunks of text the model reads and writes — not whole words.
@@ -17,6 +19,8 @@ duration_minutes: 3
 Expand LLM as large language model. Tokens can be words, parts of words, punctuation, or other units depending on the tokenizer. Avoid implying that every word is one token.
 
 The point of this section: the model is not magic. It is a prediction machine. Give the audience one concrete mechanism they can hold onto — the model ranks every possible next token by likelihood, given what came before, picks one, and repeats. That is the entire trick, run at enormous scale and speed.
+
+Play the video first. It runs 57 seconds and has no sound, so narrate over it or let the captions carry it. It shows five steps: text becomes tokens, attention connects each token to earlier tokens, the tokens flow through the transformer layers, softmax turns scores into probabilities and picks "statements", and the loop repeats one token at a time. The attention weights and scores are teaching values, not measured output. The softmax math is real. To edit or re-render the video, see the Remotion project in `model-video/`.
 
 Use a familiar completion: "Please send the missing financial …" Invite suggestions. Explain that a model assigns probabilities across its vocabulary using the preceding context. This is a teaching example, not a display of measured token probabilities.
 
