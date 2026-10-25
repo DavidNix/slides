@@ -22,7 +22,10 @@ export const ModelVideo = () => {
 	return (
 		<TransitionSeries>
 			<TransitionSeries.Sequence name="Title" durationInFrames={4 * fps}>
-				<TitleScene />
+				<TitleScene
+					title="What the model actually does"
+					subtitle="How an AI model picks its next word"
+				/>
 			</TransitionSeries.Sequence>
 			{crossfade}
 			<TransitionSeries.Sequence name="Tokenize" durationInFrames={9 * fps}>

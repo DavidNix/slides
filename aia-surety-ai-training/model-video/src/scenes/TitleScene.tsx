@@ -2,7 +2,10 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {SceneFrame} from '../components';
 import {C, clamp, ease} from '../theme';
 
-export const TitleScene = () => {
+export const TitleScene: React.FC<{
+	readonly title: string;
+	readonly subtitle: string;
+}> = ({title, subtitle}) => {
 	const frame = useCurrentFrame();
 	return (
 		<SceneFrame>
@@ -28,7 +31,7 @@ export const TitleScene = () => {
 						}),
 					}}
 				>
-					What the model actually does
+					{title}
 				</div>
 				<div
 					style={{
@@ -37,7 +40,7 @@ export const TitleScene = () => {
 						opacity: interpolate(frame, [20, 40], [0, 1], clamp),
 					}}
 				>
-					How an AI model picks its next word
+					{subtitle}
 				</div>
 			</div>
 		</SceneFrame>
