@@ -6,7 +6,7 @@ duration_minutes: 3
 
 # Two hard limits
 
-- **Frozen knowledge:** everything the model "knows" was learned during training. It knows nothing about events after its training data ends — not yesterday's news, not this morning's rates.
+- **Frozen in time:** everything the model "knows" was learned during training. It knows nothing about events after its training data ends — not yesterday's news, not this morning's rates.
 - **Context window:** the model's working memory — everything it can use for this response. It is finite, it can be exceeded, and recall weakens in very long contexts.
 
 Current facts come from outside the model: web search, attached documents, and retrieved records. Those are inputs, not things the model knows on its own.
