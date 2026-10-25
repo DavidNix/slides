@@ -12,8 +12,6 @@ duration_minutes: 3
 - **Context:** the information available for this response.
 - **Generation:** pick a likely next token, add it, and continue. Simple math, repeated at enormous scale — no magic.
 
-**A likely continuation is not a certificate of truth.**
-
 ## Speaker notes
 
 Expand LLM as large language model. Tokens can be words, parts of words, punctuation, or other units depending on the tokenizer. Avoid implying that every word is one token.
