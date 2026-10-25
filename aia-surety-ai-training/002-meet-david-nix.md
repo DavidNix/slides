@@ -11,7 +11,7 @@ duration_minutes: 3
 - Industry experience: Alcohol / Beverage, Healthcare, Advertising and Marketing, Cryptocurrency, and Traditional Finance
 - Today: applied AI for businesses, including local and private AI.
 
-**hello@davidnix.com**
+**davidnix.com**
 
 ## Speaker notes
 
