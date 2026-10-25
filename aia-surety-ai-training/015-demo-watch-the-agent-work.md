@@ -15,13 +15,13 @@ Give the agent the review task:
 - Draft questions for the people involved.
 - Prepare a short case note for the examiner.
 
-**Start the work now. Return to the results after context and skills.**
+**Start the work now. Return to the results after verification.**
 
 ## Speaker notes
 
 This is the session's one demo: the [freight-claim review](demo-freight-fraud-review.md). A broker arranges the shipment; a carrier operates the truck. Explain those roles and the disputed invoice before showing the files. All businesses and records in the exercise are fictional.
 
-Allow three minutes to introduce and launch the task, then five minutes to return to the results on slide 023. Let the agent work in the background during the intervening slides.
+Allow three minutes to introduce and launch the task, then five minutes to return to the results on slide 027. Let the agent work in the background during the intervening slides.
 
 ## Demo guide
 
@@ -32,7 +32,7 @@ Allow three minutes to introduce and launch the task, then five minutes to retur
 1. Explain the story and show the input folder and empty output folder.
 2. Submit the guide's first prompt, which requests a workbook, three unsent follow-up drafts, and a short Word case note.
 3. Point out one visible file read or creation step. Connect it to the model requesting an action and the harness carrying it out. Describe only activity the interface actually shows.
-4. Leave the task running and continue the presentation. Return to the same task on slide 023.
+4. Leave the task running and continue the presentation. Return to the same task on slide 027.
 
 **Expected result:** Files in `output/v1/` that compare the evidence, identify unanswered questions, and prepare the examiner's next work. Drafts remain unsent; the examiner decides the claim.
 
