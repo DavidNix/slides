@@ -19,11 +19,11 @@ Watch for:
 
 ## Speaker notes
 
-Run the full sequence now that the room understands each message. Show the user-facing task alongside the request/result trace. Pause at meaningful boundaries rather than scrolling through raw logs at speed.
+The walkthrough used a simple order example. This demo runs the same mechanics on a work task: the fictional S-1042 packet. Run the full sequence now that the room understands each message. Show the user-facing task alongside the request/result trace. Pause at meaningful boundaries rather than scrolling through raw logs at speed.
 
 ## Demo guide
 
-**Preparation:** Prepare a small demonstration harness or an API-playground walkthrough using the two read-only tools defined in this section. The tools read fictional fixtures only. For the JSON-RPC portion, connect through an MCP server exposing those tools; if presenting captured messages instead, label them as a walkthrough.
+**Preparation:** Prepare a small demonstration harness or an API-playground walkthrough using two read-only tools, `get_submission` and `get_checklist`. They have the same shape as `get_order` and `track_package` from the walkthrough. The tools read fictional fixtures only. For the JSON-RPC portion, connect through an MCP server exposing those tools; if presenting captured messages instead, label them as a walkthrough.
 
 **Fixture contract:**
 
@@ -34,7 +34,7 @@ Run the full sequence now that the room understands each message. Show the user-
 
 **Run of show:**
 
-1. Submit the request from slide 012. Ask the audience to predict the first call.
+1. Submit this request: “For submission S-1042, check the demo checklist and draft a request for missing documents. Do not send it.” Ask the audience to predict the first call.
 2. Pause at `tool_use`; highlight name, input, and model call ID.
 3. Show the authorization check and corresponding MCP `tools/call` request.
 4. Show the result traveling back through the harness to the model.
@@ -43,6 +43,6 @@ Run the full sequence now that the room understands each message. Show the user-
 
 **Expected result:** A draft asking for the current financial statement, no promised completion date, and no sending action.
 
-**Fallback:** Use the illustrative messages on slides 023–030 or a labeled recording. A recording of another agent, such as the existing [Claude Cowork example](../2026-09-ai-security/claude-cowork-example.mp4), can illustrate capabilities but should not be presented as this workflow's execution trace.
+**Fallback:** Use a labeled recording of this run, or walk back through the order example on slides 016–023 and explain that the S-1042 run follows the same steps. A recording of another agent, such as the existing [Claude Cowork example](../2026-09-ai-security/claude-cowork-example.mp4), can illustrate capabilities but should not be presented as this workflow's execution trace.
 
 **Debrief:** Ask what additional capability would be required to send the draft. More convenience would require additional authority and a decision about review.
