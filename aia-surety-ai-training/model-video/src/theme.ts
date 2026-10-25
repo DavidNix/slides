@@ -1,5 +1,6 @@
 import {Easing} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/Inter';
+import {loadFont as loadMono} from '@remotion/google-fonts/JetBrainsMono';
 
 export const {fontFamily} = loadFont('normal', {
 	weights: ['400', '600', '800'],
@@ -34,3 +35,8 @@ export const alpha = (hex: string, a: number) =>
 	`${hex}${Math.round(Math.min(1, Math.max(0, a)) * 255)
 		.toString(16)
 		.padStart(2, '0')}`;
+
+export const {fontFamily: monoFamily} = loadMono('normal', {
+	weights: ['400', '700'],
+	subsets: ['latin'],
+});
