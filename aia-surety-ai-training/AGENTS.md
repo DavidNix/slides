@@ -13,9 +13,9 @@ Length: **up to 4 hours**, including two 10-minute breaks, with questions taken 
 Deck order:
 
 1. **Demystify AI** — brief and intuition-level; the goal is to show models are **not magic**: a JSON API, stateless, tokens in and tokens out, abilities learned from data. Plant the seed that models **cannot distinguish content from instructions** — it is paid off in Security. The section's main takeaway: model output is **probabilistic by nature**, which is why verification comes later. Ends by handing off to agents.
-2. **Agents** — the core: model + harness, agent loop, tools, MCP. Give it the goal, not the steps.
+2. **Agents** — the core: model + harness, tools. The thermostat shows the agent loop with no AI; ChatGPT web search shows the harness making a model look smarter. Give it the goal, not the steps.
 3. **Start the demo early** — kick off the long-running demo here, before the theory sections, because it may take a while to run. It executes in the background while the talk continues.
-4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, memory, retrieval, tool output); skills as packaged expertise; connectors (MCP).
+4. **While the demo runs** — prompt engineering → context engineering (from one-off prompt crafting to assembling the full context: instructions, memory, retrieval, tool output).
 5. **Demo results** — return to what the agent produced and tie it back to the concepts just covered.
 6. **Security** — **each danger is paired with its mitigation, problem first, mitigation immediately after.** Explicitly *not* "all problems first, then all mitigations": the audience never sits in a pile of doom. Pairs: prompt injection → meaningful review plus automated prompt and tool-call classification; blast radius → sandboxing; lethal trifecta → least privilege; data exfiltration → an AI gateway as choke point (classifier, prompt logging, agent review); familiar fraud → out-of-band verification; agent red teams → use AI to defend and scan custom software (Claude Security/Mythos, Daybreak); provider and IP data handling → ZDR or local AI.
 7. **Practical** — company-managed AI, costs (they rise — OpenAI Pro-tier allowance cuts as the example), clear briefs, reusable instructions, workflows.
