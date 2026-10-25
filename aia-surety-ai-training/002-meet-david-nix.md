@@ -13,14 +13,6 @@ duration_minutes: 3
 
 **hello@davidnix.com**
 
-What you will take away:
-
-1. Understand how LLMs are built, trained, and used in agents.
-2. See how tool calls turn requests into actions.
-3. Verify probabilistic output against evidence.
-4. Choose the convenience–security tradeoff deliberately.
-5. Identify one useful AI opportunity for your team.
-
 ## Speaker notes
 
 Say this not to brag, but show I have a lot of experience with security.
