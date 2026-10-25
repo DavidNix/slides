@@ -19,7 +19,7 @@ The fear is common: everyone else is using AI to the fullest, and your team is f
 
 Address the room's anxiety directly. Headlines, vendor pitches, and surveys make it feel like every other company has an AI success story. Falling behind usually comes from ignoring recurring work, not from missing the newest model release.
 
-Give the counterweight: a checklist, a saved template, or a two-lookup agent like the S-1042 example is a legitimate outcome. Simple automation with verification is often exactly what the task needs, and it is easier to own, audit, and explain to management.
+Give the counterweight: a checklist, a saved template, or a two-lookup agent like the order-status example is a legitimate outcome. Simple automation with verification is often exactly what the task needs, and it is easier to own, audit, and explain to management.
 
 Connect back to the measurement slide mindset: value is time per completed task including review and rework, accuracy, and cost per verified result — not how advanced the tool sounds.
 

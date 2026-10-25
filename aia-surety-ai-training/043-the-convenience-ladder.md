@@ -17,7 +17,7 @@ duration_minutes: 3
 
 ## Speaker notes
 
-Walk through the same S-1042 task at each level. First a person chooses the text. Next the agent finds the record. Then it sends the follow-up. Finally it handles every new submission without a person watching.
+Walk through the order-status task from the agent section at each level. First a person chooses the text. Next the agent looks up the order. Then it emails the customer. Finally it answers every customer without a person watching.
 
 Risk depends on the data, permissions, actions, and controls; these rows are not a universal numerical risk score. A draft containing sensitive information can already be high consequence.
 

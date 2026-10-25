@@ -19,7 +19,7 @@ At every step, ask:
 
 ## Speaker notes
 
-Trace S-1042 through the deployment being considered. A gateway is optional, and components may be combined; the point is to identify the actual recipients and copies of the information.
+Trace the S-1042 demo packet through the deployment being considered. A gateway is optional, and components may be combined; the point is to identify the actual recipients and copies of the information.
 
 Add side paths verbally: logs, caches, document extraction, embeddings, analytics, backups, and shared outputs. These can matter even when the main model path is local.
 

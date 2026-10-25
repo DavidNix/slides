@@ -37,4 +37,4 @@ Run this in pairs or small groups. It works without laptops or AI accounts.
 | Owner and success measure | Who operates it, and how will useful results be measured? |
 | Stop condition | Which errors or incidents cause a pause? |
 
-Encourage a narrow first version. The S-1042 example needs two lookups and a draft, not unrestricted control over an entire account.
+Encourage a narrow first version. The order-status example needs two read-only lookups and a short answer, not unrestricted control over an entire account.
