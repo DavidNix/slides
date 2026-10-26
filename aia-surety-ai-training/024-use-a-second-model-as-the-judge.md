@@ -1,5 +1,5 @@
 ---
-slide: 25
+slide: 24
 section: "Verification"
 duration_minutes: 2
 ---

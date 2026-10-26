@@ -23,7 +23,7 @@ This slide is the verification section made live: the agent's output is probable
 
 ## Results walkthrough
 
-1. Open `output/v1/claim-review.xlsx` and `case-note.docx`. Ask someone to check one evidence row against its source — the same habit as the verify-against-the-source slide. Show one targeted follow-up draft.
+1. Open `output/v1/claim-review.xlsx` and `case-note.docx`. Ask someone to check one evidence row against its source record. Show one targeted follow-up draft.
 2. Explain that the three replies were written for the exercise. Copy them from the separate presenter folder into `input/` and submit the guide's second prompt.
 3. While the agent updates the work, read the broker's reply aloud: it reports payment and refers to an attachment. Show that the file is absent from the supplied materials. A confident reply is not evidence — this is the checks-that-can-fail slide in action.
 4. Open `output/v2/`. Check that the receiver's reply resolves the delivery question in the exercise, while payment remains unverified. Show the new draft requesting the missing payment evidence and confirm that the original files remain in `output/v1/`.
