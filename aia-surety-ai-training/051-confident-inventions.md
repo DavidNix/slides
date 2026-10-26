@@ -23,7 +23,9 @@ Why this lands hard in surety work: Legal and Claims cite regulations, statutes,
 
 The Mata case is the canonical warning: the fabricated opinions even had invented quotes and docket numbers, and opposing counsel could not find them — because they did not exist. The court sanctioned the attorneys, not the tool.
 
-Caveat to keep fair: tools with built-in search and retrieval reduce this — grounded answers cite real documents. But grounding changes the failure mode, not the rule: you still check that the cited source says what it is claimed to say.
+Caveat to keep fair: tools with built-in search and retrieval reduce this — grounded answers cite real documents. But grounding changes the failure mode, not the rule: you still check that the cited source says what it is claimed to say. That check is the whole defense — open the source, confirm the quote, every time.
+
+Transition: "Invented sources were one hazard. The next pair asks where your prompts themselves travel."
 
 ## Sources
 

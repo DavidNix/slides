@@ -1,5 +1,5 @@
 ---
-slide: 70
+slide: 69
 section: "Wrap-up"
 duration_minutes: 8
 ---

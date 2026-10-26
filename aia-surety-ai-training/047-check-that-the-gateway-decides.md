@@ -11,8 +11,6 @@ duration_minutes: 2
 - **Without a gateway:** every tool connects on its own terms — scattered, inconsistent rules.
 - **With one gateway:** the same rules apply to every request, and every decision leaves a record.
 
-**A control should be visible in what the system actually allows.**
-
 ## Speaker notes
 
 Walk the two panels. On top: each harness connecting on its own — one connection locked down, one wide open, and nobody can say which is which without checking each one. Below: the same requests all pass one gate, so the same rules and the same records apply everywhere. Governance becomes one place to set policy and one place to look.
