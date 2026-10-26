@@ -1,5 +1,5 @@
 ---
-slide: 71
+slide: 72
 section: "Business opportunities"
 duration_minutes: 3
 ---
