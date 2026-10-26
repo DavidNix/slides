@@ -16,7 +16,7 @@ Three useful capabilities. **Any two together are ordinary software. All three t
 
 An agent that can read a claim file, process an emailed attachment, and send email holds all three. A hidden instruction in the attachment can then move private data out — with nobody approving the transfer.
 
-**Three ordinary capabilities, combined, are a data-theft path.** — Simon Willison
+**“…an attacker can easily trick it into accessing your private data and sending it to that attacker.”** — Simon Willison
 
 ## Speaker notes
 
