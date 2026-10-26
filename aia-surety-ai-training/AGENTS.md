@@ -30,7 +30,7 @@ Deck order:
    The agent-red-team pair (OpenAI evaluation swarm, Mythos/Daybreak scanning) was removed in the 2026-10 revision; the Hugging Face breach slide later reintroduced the OpenAI evaluation story in a deliberately scoped form (incident summary plus why it is not the room's risk). Classification guidance lives in section 1, not here.
 7. **Practical** — prompt engineering → context engineering → Agent Skills, including a worked example skill.
 
-A short tail follows: Where the market is going, Business opportunities. There is no standalone Deployment or local-AI section: local AI appears only as an IP-theft mitigation (followed by a costs interlude that also covers local AI's own bill), and gateway content lives inside Security. Demos are woven throughout the deck, not one demo block.
+A short tail follows: Where the market is going, Business opportunities (closing with the skills.sh registry as the practical source for finding skills — review or AI-scan before installing), and the wrap-up. There is no standalone Deployment or local-AI section: local AI appears only as an IP-theft mitigation (followed by a costs interlude that also covers local AI's own bill), and gateway content lives inside Security. Demos are woven throughout the deck, not one demo block.
 
 ## Audience
 
