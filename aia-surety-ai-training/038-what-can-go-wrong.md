@@ -23,4 +23,4 @@ Use examples relevant to AIA's work without implying knowledge of its internal p
 
 Privacy exposure to a service provider and attacker-driven data theft are different risks. They deserve separate questions and controls; neither can be dismissed merely because the other exists.
 
-Preview the mapping — each failure mode gets its own defense, in order: wrong access → least privilege; wrong influence → review and classification; wrong action → permissions and the gateway. Wrong output was the verification section's subject and returns at the end with the agent's own claims. Transition: "Now the defenses, in the same order as the problems."
+Preview the mapping — each failure mode gets its own defense, in order: wrong access → least privilege; wrong influence → approval and classification; wrong action → permissions and the gateway. Wrong output was the verification section's subject and returns at the end with the agent's own claims. Transition: "Now the defenses, in the same order as the problems."

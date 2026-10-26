@@ -24,7 +24,7 @@ The display problem is worse: the approval dialog shows what the tool *requests*
 
 Attackers count on both: craft urgency, generate volume, and rely on the fact that a busy person will skim.
 
-So where does that leave the human? Still in the loop — but with the loop redesigned: approval tied to the exact action and recipient, human attention reserved for consequential decisions, and automated layers around the human. That is the next slide.
+So where does that leave the human? Still in the loop — but with the loop redesigned: approval tied to the exact action and recipient, human attention reserved for consequential decisions, and automated layers around the human to reduce how much ever reaches a person. That is the next slide.
 
 ## Sources
 

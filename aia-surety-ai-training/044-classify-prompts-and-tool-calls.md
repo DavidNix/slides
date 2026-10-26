@@ -1,5 +1,5 @@
 ---
-slide: 45
+slide: 44
 section: "Security"
 duration_minutes: 2
 ---
@@ -15,7 +15,7 @@ Two automated checkpoints around the model:
 
 ## Speaker notes
 
-Position this as defense in depth between the two human controls already discussed: meaningful review decides consequential actions, and classification reduces how many requests ever reach a human.
+Position this as defense in depth next to the human control just discussed: human approval decides consequential actions, and classification reduces how many requests ever reach a person.
 
 Describe the two checkpoints in plain language. Content classification looks at what enters the system and asks whether it contains instructions that do not belong. Tool-call classification looks at each action the model requests and applies a policy: run it, ask a human, or block it. Claude Code's auto mode classifies every tool call this way and only escalates the ones a policy does not clearly permit.
 

@@ -1,5 +1,5 @@
 ---
-slide: 59
+slide: 58
 section: "Security"
 duration_minutes: 2
 ---
@@ -17,7 +17,7 @@ For each new capability, ask:
 
 ## Speaker notes
 
-This slide closes the section on purpose: after the threats and the layered defenses, this is the decision procedure staff carry out of the room. Every defense just presented — least privilege, review, classification, gateways — exists to make the answers to these four questions honest.
+This slide closes the section on purpose: after the threats and the layered defenses, this is the decision procedure staff carry out of the room. Every defense just presented — least privilege, approval, classification, gateways — exists to make the answers to these four questions honest.
 
 Use sending a missing-document email as the example. The benefit is fewer clicks. The exposure includes the recipient address, message body, and any attachment. A boundary could limit recipients to the authorized agent and require approval of the exact message.
 
