@@ -30,7 +30,9 @@ Walk the bullets:
 - vLex: the model itself rendered the fake login screen; anything the assistant displays can be attacker-shaped.
 - Claude Cowork: connected file access is the blast radius; the demo evidence here is PromptArmor's published reproduction, not something shown live in this session.
 
-Common thread: in every case malicious content arrived through normal work — a channel message, an import, a résumé, a document. None required breaking into the company; the business itself fed the material to the tool. Name the pattern (indirect prompt injection) only briefly here; slide 034 defines it.
+Common thread: in every case malicious content arrived through normal work — a channel message, an import, a résumé, a document. None required breaking into the company; the business itself fed the material to the tool. Name the pattern (indirect prompt injection) only briefly here; slide 035 defines it.
+
+This is also the moment people bring up the Hugging Face breach — the next slide takes it on directly.
 
 Bridge: the rest of this section is about keeping the convenience while narrowing what a mistake or attack can reach — starting with the tradeoff between security and convenience.
 
