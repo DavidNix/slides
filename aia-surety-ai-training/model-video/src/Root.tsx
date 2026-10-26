@@ -1,5 +1,6 @@
 import {Composition} from 'remotion';
 import {EXFIL_FRAMES, ExfilVideo} from './exfil/ExfilVideo';
+import {GATEWAY_FRAMES, GatewayVideo} from './gateway/GatewayVideo';
 import {HARNESS_FRAMES, HarnessVideo} from './harness/HarnessVideo';
 import {McpVideo, MCP_FRAMES} from './mcp/McpVideo';
 import {ModelVideo} from './ModelVideo';
@@ -62,6 +63,14 @@ export const RemotionRoot = () => (
 			id="AgentMcp"
 			component={McpVideo}
 			durationInFrames={MCP_FRAMES}
+			fps={30}
+			width={1920}
+			height={1080}
+		/>
+		<Composition
+			id="AiGateway"
+			component={GatewayVideo}
+			durationInFrames={GATEWAY_FRAMES}
 			fps={30}
 			width={1920}
 			height={1080}
