@@ -11,30 +11,26 @@ duration_minutes: 3
 - Drafting before sending.
 - Scoped credentials before a master key.
 
-Today this usually means reviewing **MCP — Model Context Protocol**, the standard plug-in system for connecting agents to tools and data:
+*Illustrative example: a document asks the agent to send internal records.*
 
-- Each MCP server you connect grants a bundle of capabilities — email, files, records, payments.
-- Every connection is an access grant: connect only what the task needs.
-- Review what each server can read and do **before** approving it, and disable what you no longer use.
+| Check | Outcome |
+| --- | --- |
+| User's task | Review the records and prepare drafts |
+| Document's instruction | Send the records to an outside address |
+| Application permission | Read files and save drafts; sending is unavailable |
+| Result if sending is requested | The application cannot execute it |
 
-**Enforce permissions in the application and tools — every connection is a grant.**
+**A model request is not permission.**
 
 ## Speaker notes
 
-Define least privilege as the smallest set of permissions needed to perform the task. This is an established security principle, not a new AI invention.
+Define least privilege as the smallest set of permissions needed to perform the task. This is an established security principle, not a new AI invention. The table is a designed permission boundary — an illustrative mitigation for the hostile document from the injection slides, not a recorded attack or a result from the freight demo.
 
-MCP, in one line for this room: an open standard — introduced by Anthropic, now adopted across the industry — that lets agent applications connect to external tools and data sources through plug-in "servers." Think of it as the USB port for AI tools: one connector, thousands of devices.
+The convenient shortcut is to give an agent the same broad access as its operator. An employee's account may reach many systems unrelated to this particular job. Tool services should check the caller, authorized records, permitted operations, and allowed destinations. Validate arguments even when they match a schema — a well-formed request can still request the wrong record or recipient.
 
-The security point is that the convenience of connecting is exactly how an agent quietly accumulates capabilities 1 and 3 of the trifecta — private data access and external communication, one approved server at a time. Each approved server is a standing grant, and an idle connection is still an open door. Review before connecting, not after.
-
-The convenient shortcut is to give an agent the same broad access as its operator. An employee's account may reach many systems unrelated to this particular job.
-
-Tool services should check the caller, authorized records, permitted operations, and allowed destinations. Validate arguments even when they match a schema. A well-formed request can still request the wrong record or recipient.
-
-Read-only access reduces modification risk but can still expose sensitive data. Keep the accessible data set narrow, and control where results can go.
+Walk the table slowly: the model might ignore, report, or follow the document's instruction — but a sending restriction enforced by the application does not depend on which response the model chooses. Even a prompt saying "draft only" still needs that external enforcement. Removing sending authority closes this sending path; other tools and network access need their own controls.
 
 If time allows, ask the room which of the two lookup tools needs a sending credential. Neither does.
 
-## Sources
+Transition: "Here is what that looks like inside the harness."
 
-- [Anthropic: Model Context Protocol](https://www.anthropic.com/news/model-context-protocol).
