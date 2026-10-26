@@ -6,6 +6,8 @@ duration_minutes: 2
 
 # An AI gateway is a choke point
 
+![Every request from the app passes through the gateway — classifier, logs, and reviewer — before reaching the approved model services.](ai-gateway-choke-point.png)
+
 **Application → gateway → approved model service**
 
 - Layer in a classifier for prompts and tool calls.
@@ -18,6 +20,8 @@ duration_minutes: 2
 ## Speaker notes
 
 Explain a gateway as a managed entry point for applications using model APIs: requests pass through it instead of reaching a provider directly. Bifrost is a working example — routing, virtual keys, budgets, rate limits, fallbacks, and observability.
+
+Walk the picture left to right: the application's requests all pass through the single gatehouse — nothing reaches a model service without going through it — and only then continue to the approved models. The three badges are the three options on this slide: the classifier inspecting what passes, the logs recording it, and the reviewer agent judging suspicious traffic.
 
 For this room the security value is the three options on the slide. A gateway can run a classifier on everything passing through, record every prompt and tool call so analysts can review them after the fact, or hand suspicious traffic to a second AI that judges it. Control and evidence live in one place instead of being scattered across tools.
 
