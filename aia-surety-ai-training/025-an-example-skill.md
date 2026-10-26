@@ -39,7 +39,7 @@ Connect it to the demo: the running freight task uses the same shape — the pre
 
 This is the shared tier: written once by whoever owns the freight process, shared with the team, one place to update.
 
-Transition: "Next: putting it to work on real data."
+Transition: "And here is the good part: you never write that file yourself."
 
 ## Sources
 
