@@ -20,7 +20,7 @@ duration_minutes: 2
 
 ## Speaker notes
 
-Explain a gateway as a managed entry point for applications using model APIs: requests pass through it instead of reaching a provider directly. Bifrost is a working example — routing, virtual keys, budgets, rate limits, fallbacks, and observability.
+Explain a gateway as a managed entry point for applications using model APIs: requests pass through it instead of reaching a provider directly. Two working examples: Bifrost — routing, virtual keys, budgets, rate limits, fallbacks, and observability — and Kong's AI Gateway — access control, prompt guardrails, PII sanitization, and MCP traffic governance with audit logs.
 
 Walk the picture left to right: the application's requests all pass through the single gatehouse — nothing reaches a model service without going through it — and only then continue to the approved models. The three badges are the three options on this slide: the classifier inspecting what passes, the logs recording it, and the reviewer agent judging suspicious traffic.
 
@@ -39,3 +39,5 @@ Transition: demonstrate the gateway making and recording a decision.
 - [Bifrost overview and feature list](https://www.getbifrost.ai/docs).
 - [Bifrost budgets and limits](https://docs.getbifrost.ai/features/governance/budget-and-limits).
 - [Bifrost: Govern MCP servers](https://docs.getbifrost.ai/edge/mcp-governance).
+- [Kong Gateway](https://konghq.com/products/kong-gateway) — the AI Gateway variant governs LLM and MCP traffic.
+- [Kong: MCP Traffic Gateway](https://developer.konghq.com/ai-gateway/mcp).
