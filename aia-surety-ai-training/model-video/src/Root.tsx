@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {EXFIL_FRAMES, ExfilVideo} from './exfil/ExfilVideo';
 import {HARNESS_FRAMES, HarnessVideo} from './harness/HarnessVideo';
 import {ModelVideo} from './ModelVideo';
 import {PROMPT_FRAMES, PromptVideo} from './prompt/PromptVideo';
@@ -26,6 +27,14 @@ export const RemotionRoot = () => (
 			id="PromptShiftsOdds"
 			component={PromptVideo}
 			durationInFrames={PROMPT_FRAMES}
+			fps={30}
+			width={1920}
+			height={1080}
+		/>
+		<Composition
+			id="CoworkExfiltration"
+			component={ExfilVideo}
+			durationInFrames={EXFIL_FRAMES}
 			fps={30}
 			width={1920}
 			height={1080}
