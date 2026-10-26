@@ -6,6 +6,8 @@ duration_minutes: 2
 
 # Classify prompts and tool calls
 
+![Claude Code switched to auto permissions mode: Claude will make changes without asking, and only a policy decides which tool calls need a human.](claude-code-auto-mode.png)
+
 Two automated checkpoints around the model:
 
 - **Classify incoming content:** flag instructions hiding in documents, emails, and web pages.
@@ -21,7 +23,7 @@ Describe the two checkpoints in plain language. Content classification looks at 
 
 Set expectations honestly. Classifiers miss attacks and occasionally block legitimate work — the same tradeoff as spam filters. That is why they combine with permissions and isolation rather than replacing them.
 
-The auto mode image from the earlier deck makes this concrete: watch a tool request get classified and either run or escalate.
+The screenshot makes this concrete: the agent has been switched to auto permissions mode — it will make changes without asking, because every tool call is classified against policy and only the ones no policy clearly permits escalate to a human.
 
 Transition: even with review and classification, assume something gets through — which is why the next pair limits how much any single failure can matter.
 
