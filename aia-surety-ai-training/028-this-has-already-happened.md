@@ -4,7 +4,7 @@ section: "Security"
 duration_minutes: 3
 ---
 
-# This has already happened
+# Security: this has already happened
 
 Published security demonstrations against tools many businesses use daily.
 
@@ -30,9 +30,9 @@ Walk the bullets:
 - vLex: the model itself rendered the fake login screen; anything the assistant displays can be attacker-shaped.
 - Claude Cowork: connected file access is the blast radius; the demo evidence here is PromptArmor's published reproduction, not something shown live in this session.
 
-Common thread: in every case malicious content arrived through normal work — a channel message, an import, a résumé, a document. None required breaking into the company; the business itself fed the material to the tool. Name the pattern (indirect prompt injection) only briefly here; slide 033 defines it.
+Common thread: in every case malicious content arrived through normal work — a channel message, an import, a résumé, a document. None required breaking into the company; the business itself fed the material to the tool. Name the pattern (indirect prompt injection) only briefly here; slide 032 defines it.
 
-Bridge: the rest of this section is about keeping the convenience while narrowing what a mistake or attack can reach — starting with the convenience ladder.
+Bridge: the rest of this section is about keeping the convenience while narrowing what a mistake or attack can reach — starting with the tradeoff between security and convenience.
 
 ## Sources
 
