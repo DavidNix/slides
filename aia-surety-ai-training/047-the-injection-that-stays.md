@@ -24,7 +24,9 @@ Contrast with what the room just saw: document injection is stateless — the at
 
 Research published in 2026 shows poisoning is persistent: planted memories survive across sessions and keep influencing agent behavior long after the original document is gone. Attack studies report substantial success rates against agents with long-term memory.
 
-Connect to the trifecta: memory strengthens capability 2 — untrusted content now reaches the agent on every future task without a new delivery.
+Connect to the trifecta: memory strengthens capability 2 — untrusted content now reaches the agent on every future task without a new delivery. The defense habit — treat saved memory as untrusted content, re-verify it like anything else — lands in the review guidance later; here the takeaway is the persistence itself.
+
+Transition: "Persistence was one way an agent goes wrong on its own. Next: an agent that succeeds in the wrong way."
 
 ## Sources
 
