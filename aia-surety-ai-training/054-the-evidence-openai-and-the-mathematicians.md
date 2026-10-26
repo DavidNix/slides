@@ -8,7 +8,7 @@ duration_minutes: 2
 
 - **September 2026:** OpenAI announces an internal system proved the **Navier–Stokes blowup** — a Millennium Prize problem.
 - Mathematicians **Tristan Buckmaster and Levent Alpöge** had private drafts of closely related results — and had been placing them **in Codex** throughout the project.
-- Asked whether the model had trained on those sessions, OpenAI did not answer at the time. Buckmaster: **"I do not know whether our data was used."**
+- Asked whether the model had trained on those sessions, OpenAI did not answer at the time. 
 - After an investigation, OpenAI said the sessions could not have influenced the system and acknowledged the pair's priority — **but that is OpenAI's own account, not an independent audit.**
 
 **Work-in-progress typed into someone else's tool is out of your hands.**
@@ -21,7 +21,7 @@ Two days later, OpenAI updated its announcement: an investigation had confirmed 
 
 The lesson does not depend on how it resolves. Two researchers doing the most sensitive thing in their field — unpublished breakthrough work — put it into a hosted AI tool as a matter of course. Once typed, it lives on someone else's servers under someone else's policy. For your own work in progress — drafts, client matters, deal terms — the moment it is typed into a consumer tool, treat it as material the vendor could hold.
 
-Transition: "Why would a lab even want that data? Because data is the gold."
+Transition: "Why would a lab even want that data? Because public data is mined out — and the next source is you."
 
 ## Sources
 
