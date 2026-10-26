@@ -1,5 +1,5 @@
 ---
-slide: 52
+slide: 55
 section: "Security"
 duration_minutes: 3
 ---
@@ -12,7 +12,7 @@ Default settings may put your conversations to work:
 - **Claude:** consumer plans train on conversations by default as of September 2025. Opt out in settings ("Help improve Claude").
 - Prompts are retained for abuse review — roughly 30 days, longer when a conversation is flagged.
 
-The training-data fights show how labs value human data: Anthropic settled the *Bartz v. Anthropic* class action for training on books, and Sony Music sued Anthropic over song lyrics. Human data is more valuable than gold to AI labs.
+The courtroom record from the previous slides shows what human data is worth to AI labs. Human data is more valuable than gold.
 
 **Your data is an asset — decide who gets value from it.**
 
@@ -20,7 +20,7 @@ The training-data fights show how labs value human data: Anthropic settled the *
 
 Two distinct exposures here, and both matter. The first is default data handling: consumer plans commonly train on what you type, and prompts are retained for abuse review even when training is off — flagged conversations can be held much longer, and "deleted" is not always immediate.
 
-The second is the IP angle. The courtroom record shows what human data is worth to AI labs: Anthropic settled *Bartz v. Anthropic* — the class action over training on copyrighted books — for a reported $1.5 billion, and Sony Music is suing Anthropic over the use of song lyrics. Whether a court calls it theft or fair use, the labs' appetite for data is the point: everything typed into a consumer chatbot is material someone else wants.
+The second is the IP angle. The evidence slides just covered the courtroom record; the short version is the closing line: human data is more valuable than gold to AI labs. Whether a court calls it theft or fair use, the labs' appetite for data is the point: everything typed into a consumer chatbot is material someone else wants.
 
 These are consumer-plan defaults, not business or API terms; enterprise agreements typically exclude training. The point for this room: know which plan you are on, find the opt-outs on every account, and treat free or consumer tiers as public-adjacent.
 

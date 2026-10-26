@@ -25,7 +25,7 @@ The Mata case is the canonical warning: the fabricated opinions even had invente
 
 Caveat to keep fair: tools with built-in search and retrieval reduce this — grounded answers cite real documents. But grounding changes the failure mode, not the rule: you still check that the cited source says what it is claimed to say. That check is the whole defense — open the source, confirm the quote, every time.
 
-Transition: "Invented sources were one hazard. The next pair asks where your prompts themselves travel."
+Transition: "Next: the courtroom evidence of what human data is worth."
 
 ## Sources
 
