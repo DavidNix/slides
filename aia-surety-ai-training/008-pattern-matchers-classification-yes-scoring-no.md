@@ -24,3 +24,5 @@ Why scoring fails: an LLM has no calibrated internal scale. It generates a plaus
 The practical workaround when leadership wants a number: define the rubric yourself, have the model classify into rubric bands (low/medium/high), aggregate many classified items into a real measurement, and spot-check the classifications. The number becomes trustworthy because it comes from counting verified categories, not from the model's feel for the question.
 
 Tie forward: trusting an LLM score you have never verified is exactly the unexamined convenience the security section warns about. And keep the deeper point alive — models cannot tell content from instructions; that seed gets paid off in the Security section.
+
+Transition: "Here is what the workaround looks like in practice."
