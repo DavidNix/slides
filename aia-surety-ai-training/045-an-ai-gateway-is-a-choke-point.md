@@ -14,6 +14,7 @@ duration_minutes: 2
 - Capture and log every prompt for later analysis.
 - Let another agent review the traffic.
 - Route, budget, and limit what goes where.
+- Govern **MCP servers** too: see every server apps connect to, allow or deny each one, and filter which tools are available.
 
 **One place to enforce and observe every model request.**
 
@@ -22,6 +23,8 @@ duration_minutes: 2
 Explain a gateway as a managed entry point for applications using model APIs: requests pass through it instead of reaching a provider directly. Bifrost is a working example — routing, virtual keys, budgets, rate limits, fallbacks, and observability.
 
 Walk the picture left to right: the application's requests all pass through the single gatehouse — nothing reaches a model service without going through it — and only then continue to the approved models. The three badges are the three options on this slide: the classifier inspecting what passes, the logs recording it, and the reviewer agent judging suspicious traffic.
+
+The same choke point extends to the connectors from earlier in the section: a gateway can inventory every MCP server configured across the organization's apps, let an administrator allow or deny each one, and filter which tools are available per team. The connectors slide gave each person a review habit; the gateway makes the same review an organizational control — and on some platforms the denial is enforced on the device, so a blocked server cannot be used even by an app that has it.
 
 For this room the security value is the three options on the slide. A gateway can run a classifier on everything passing through, record every prompt and tool call so analysts can review them after the fact, or hand suspicious traffic to a second AI that judges it. Control and evidence live in one place instead of being scattered across tools.
 
@@ -35,3 +38,4 @@ Transition: demonstrate the gateway making and recording a decision.
 
 - [Bifrost overview and feature list](https://www.getbifrost.ai/docs).
 - [Bifrost budgets and limits](https://docs.getbifrost.ai/features/governance/budget-and-limits).
+- [Bifrost: Govern MCP servers](https://docs.getbifrost.ai/edge/mcp-governance).
