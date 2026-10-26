@@ -16,7 +16,7 @@ duration_minutes: 3
 
 ## Speaker notes
 
-This is where the job loss fear comes from. Agents take autonomous actions. I'll say later why you shouldn't fear this.
+This is where the job loss fear comes from. Agents take autonomous actions. The next slide takes this head-on.
 
 Define an agent from scratch. It is a software system, not a person living inside a computer. Its behavior comes from a model working with surrounding software, instructions, tools, and state.
 
