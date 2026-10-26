@@ -5,6 +5,7 @@ import {McpVideo, MCP_FRAMES} from './mcp/McpVideo';
 import {ModelVideo} from './ModelVideo';
 import {PROMPT_FRAMES, PromptVideo} from './prompt/PromptVideo';
 import {SKILL_FRAMES, SkillVideo} from './skill/SkillVideo';
+import {TRIFECTA_FRAMES, TrifectaVideo} from './trifecta/TrifectaVideo';
 
 export const RemotionRoot = () => (
 	<>
@@ -45,6 +46,14 @@ export const RemotionRoot = () => (
 			id="SkillLoadsOnDemand"
 			component={SkillVideo}
 			durationInFrames={SKILL_FRAMES}
+			fps={30}
+			width={1920}
+			height={1080}
+		/>
+		<Composition
+			id="LethalTrifecta"
+			component={TrifectaVideo}
+			durationInFrames={TRIFECTA_FRAMES}
 			fps={30}
 			width={1920}
 			height={1080}
