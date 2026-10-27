@@ -4,7 +4,7 @@ section: "Business opportunities"
 duration_minutes: 2
 ---
 
-# Don't put the solution before the problem
+# Fall in love with problems, not solutions 
 
 The fear is common: everyone else is using AI to the fullest, and your team is falling behind.
 
