@@ -14,6 +14,8 @@ Ask ChatGPT about this week's news and it answers. The same question a couple of
 
 **It looks like the model got smarter. Much of the new ability is the harness working.**
 
+*Meet the part of AI nobody talks about: the harness.*
+
 ## Speaker notes
 
 Live demo: ask ChatGPT about a recent story. Point at the search step. That is a tool call, like the thermostat's furnace switch. Fallback: show a captured answer with citations.

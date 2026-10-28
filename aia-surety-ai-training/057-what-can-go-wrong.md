@@ -13,6 +13,8 @@ duration_minutes: 2
 
 **Impact depends on what the system can reach and do.**
 
+*Now the good news: every one of these has a defense.*
+
 ## Speaker notes
 
 This closes the problems. Defenses start next.

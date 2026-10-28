@@ -13,6 +13,8 @@ Don't write skills from scratch. Let the agent do it.
 - Run it on one real task, note what it missed, and have the agent revise its own draft.
 - Anthropic even ships a **skill-creator** skill, a skill whose job is writing skills.
 
+*The agent can write the procedure. Can you trust what it produces?*
+
 ## Speaker notes
 
 Writing a file with frontmatter is not office work. The agent writes it. You never touch the format.

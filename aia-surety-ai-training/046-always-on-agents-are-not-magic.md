@@ -19,6 +19,8 @@ duration_minutes: 2
 
 **Definitely worth a look for businesses but not any of the personal assistants**
 
+*It reads your mail, browses the web, and sends messages. What could go wrong?*
+
 ## Speaker notes
 
 An always-on agent does not decide to help. A timer fires or a message arrives, and the harness starts it. Same as the thermostat, or an Outlook email rule.

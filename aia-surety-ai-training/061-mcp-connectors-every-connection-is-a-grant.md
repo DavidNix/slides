@@ -18,6 +18,8 @@ In ChatGPT you may have seen **connectors**: switches in Settings that let the a
 
 **Every connector you enable is an access grant.**
 
+*And what if the connector itself is lying?*
+
 ## Speaker notes
 
 MCP is an open standard from Anthropic, now used across the industry. ChatGPT calls them connectors or apps.

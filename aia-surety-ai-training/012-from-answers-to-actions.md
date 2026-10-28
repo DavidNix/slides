@@ -14,6 +14,8 @@ An agent with the right tools could read the ticket itself, reset the password o
 
 **The difference is permission to act.**
 
+*So, is it coming for your job?*
+
 ## Speaker notes
 
 This is where the job loss fear comes from. Agents take autonomous actions. The next slide takes this head-on.

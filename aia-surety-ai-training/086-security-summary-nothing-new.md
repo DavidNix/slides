@@ -34,7 +34,7 @@ When an agent uses your sign-in, the logs show your name. "The AI did it" is not
 
 "What could go wrong?" opened the section. This question closes it. If the answer is "it emails a client file to a stranger," cut access or add a check. If it is "a bad draft I delete," go ahead.
 
-Transition: "Now my recommendations."
+Hook: "You know the risks. Now: what I actually use."
 
 ## Sources
 

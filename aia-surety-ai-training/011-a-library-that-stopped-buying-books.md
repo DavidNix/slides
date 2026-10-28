@@ -12,6 +12,8 @@ duration_minutes: 2
 - **A librarian can hand you documents:** today's news clipping, a downloaded report, a fresh spreadsheet. Those arrive from outside — web search, attached files, retrieved records.
 - **The reading desk is small:** only a few documents fit at a time, and a desk piled too high loses track of what's underneath. That is the context window.
 
+*So far it only talks. What happens when it can act?*
+
 ## Speaker notes
 
 You can models when it's trainig cutoff date was. Often it's months behind.

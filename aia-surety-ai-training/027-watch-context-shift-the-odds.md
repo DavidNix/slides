@@ -10,6 +10,8 @@ duration_minutes: 3
 
 **Context sets the odds. Likely is not certain. Check the output.**
 
+*There is one kind of answer you should never take from a model.*
+
 ## Speaker notes
 
 Play the video first. It runs about 30 seconds with no sound, so narrate. The bars show next-word odds for "Your bond is ___".

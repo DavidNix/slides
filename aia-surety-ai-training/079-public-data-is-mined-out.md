@@ -12,6 +12,8 @@ duration_minutes: 2
 
 **The internet was the easy ore. Now labs are digging into user conversations, including yours.**
 
+*Next: You are the product.*
+
 ## Speaker notes
 
 Machine learning has always learned from collected examples. LLMs changed the scale: they trained on a huge slice of the public internet. Remove that text and there is no GPT.

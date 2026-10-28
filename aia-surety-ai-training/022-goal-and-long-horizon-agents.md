@@ -13,6 +13,8 @@ Give the harness a goal, not just a prompt:
 
 **Modern harnesses can sustain useful work far longer than a single chat turn.**
 
+*Enough theory. Let's hand an agent a real claim.*
+
 ## Speaker notes
 
 Also mention subagents.

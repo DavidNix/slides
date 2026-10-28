@@ -14,4 +14,6 @@ duration_minutes: 3
 - **Context:** the information available for this response.
 - **Generation:** pick a likely next token, add it, and continue. Simple math, repeated at enormous scale — no magic.
 
+*If it only predicts the next word, where do wrong answers come from?*
+
 ## Speaker notes

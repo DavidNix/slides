@@ -14,6 +14,8 @@ duration_minutes: 3
 
 **The toggle stops training; the contract stops retention.**
 
+*What if your data never left the building?*
+
 ## Speaker notes
 
 More companies are changing their terms because they see dollar signs in selling data to AI labs. Just be careful of their terms. 

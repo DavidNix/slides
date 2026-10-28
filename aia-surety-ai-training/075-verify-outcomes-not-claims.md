@@ -13,6 +13,8 @@ duration_minutes: 2
 
 **The work product is the evidence; the report is just another claim.**
 
+*So far, the threats came from outside. What about the AI company itself?*
+
 ## Speaker notes
 
 Reward hacking adds a reason to verify. The agent's self-report is generated text. It can be confidently wrong.

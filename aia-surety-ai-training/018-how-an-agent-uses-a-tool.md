@@ -8,6 +8,8 @@ duration_minutes: 3
 
 **A tool request is not permission. The harness decides.**
 
+*How does one agent plug into hundreds of tools?*
+
 ## Speaker notes
 
 Play the video first. It runs about 90 seconds with no sound, so narrate. The example is a package-status question.

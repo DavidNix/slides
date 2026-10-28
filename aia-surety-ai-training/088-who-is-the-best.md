@@ -13,6 +13,8 @@ The honest answer is a non-answer:
 
 **Pick the model for the job, not the logo.**
 
+*For the most leverage, stop using chatbots.*
+
 ## Speaker notes
 
 As of this training, Claude and GPT lead on general work, coding, and agents. Gemini has not caught up.

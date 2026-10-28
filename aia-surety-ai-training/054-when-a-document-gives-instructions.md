@@ -16,6 +16,8 @@ An attachment says:
 
 **The document is evidence to inspect, not authority to act.**
 
+*Does this work on a real product? Watch.*
+
 ## Speaker notes
 
 This is indirect prompt injection. The user did not ask for the extra action. It arrived inside the material.

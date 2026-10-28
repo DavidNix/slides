@@ -10,6 +10,8 @@ duration_minutes: 0
 
 **Scattered rules on top; one gate, the same rules, and one record below.**
 
+*Most attacks have to succeed every time. One kind only needs to win once.*
+
 ## Speaker notes
 
 Top: each harness connects on its own, some locked, some open. Bottom: one gate, the same rules and records everywhere.

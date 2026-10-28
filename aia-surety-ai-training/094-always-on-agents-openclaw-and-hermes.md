@@ -13,6 +13,8 @@ Open-source agents that run all day and take requests from your chat apps:
 
 **Always-on agents are useful for business. Hermes is the one I recommend.**
 
+*The big labs sell always-on agents too. They have exactly one good use.*
+
 ## Speaker notes
 
 An always-on agent wakes on a schedule or trigger and reports to your chat app. Business uses: a morning briefing, a weekly status report, draft replies a person approves.

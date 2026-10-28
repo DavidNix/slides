@@ -14,6 +14,8 @@ Requiring a person to approve each agent action *sounds* like the complete fix. 
 
 **Human approval is one layer, never the whole defense.**
 
+*Next: a second set of eyes that never gets tired.*
+
 ## Speaker notes
 
 Human approval is necessary for consequential actions. It also fails in documented ways.

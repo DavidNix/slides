@@ -23,6 +23,8 @@ Same prices as Anthropic. US-only processing adds 10%. A 20-page claim file cost
 
 **Same models, your cloud contract, your retention rules.**
 
+*China without the China problem.*
+
 ## Speaker notes
 
 ZDR is usually a contract term you trust. On Bedrock it is a setting IT can enforce.

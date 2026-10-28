@@ -12,6 +12,8 @@ duration_minutes: 3
 - **There is no silver bullet.** Controls are layered, and every layer is a tradeoff.
 - The goal is not to eliminate risk — that is impossible. The goal is to **minimize it, deliberately**.
 
+*Next: the three capabilities you never want in one agent.*
+
 ## Speaker notes
 
 Insurance is no stranger to risk.

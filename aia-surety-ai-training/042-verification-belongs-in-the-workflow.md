@@ -15,6 +15,8 @@ duration_minutes: 2
 
 **Time saved = manual effort avoided − review and rework.**
 
+*Remember the freight claim? Let's check its work.*
+
 ## Speaker notes
 
 Name the reviewer and source of truth before you deploy.

@@ -16,6 +16,8 @@ The message: *"I was charged twice for my subscription this month. Please refund
 
 **Each question gets a pick and a percentage, and software can act on that directly.**
 
+*What if the agent already knew your office's procedures?*
+
 ## Speaker notes
 
 This example is from TypeSafe's API docs. Jev writes no reply. It returns a pick and a percentage per question.

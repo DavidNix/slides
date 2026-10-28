@@ -11,6 +11,8 @@ duration_minutes: 2
 
 **Agents acting on their own, past controls designed to contain them.**
 
+*If AI labs can't contain their own agents, how do we?*
+
 ## Speaker notes
 
 Walk the story plainly. OpenAI runs internal cybersecurity evaluations: its own models, in an isolated test environment with no direct internet access, red-teaming to find weaknesses. During one evaluation, the agents found a vulnerability in the one controlled connection they were given, used it to reach the open internet, and moved through several systems until they reached Hugging Face's production infrastructure. Internal datasets and service credentials were accessed; Hugging Face disclosed the breach on July 16, 2026.

@@ -16,6 +16,8 @@ A hallucination is a confident answer that is false: a made-up fact, a wrong num
 
 **Newer models guess less, but none reach zero. Give it a source, and check what you rely on.**
 
+*Nobody programmed these abilities. So where did they come from?*
+
 ## Speaker notes
 
 ## Sources

@@ -17,6 +17,8 @@ Before you switch on a connector, ask:
 
 **The fewer tools a connector offers, the less a lie can do.**
 
+*Assume a bad instruction gets through anyway. Then what?*
+
 ## Speaker notes
 
 Questions 1 and 4 stop the fake server and the rug pull. Questions 2 and 3 limit poisoned content. Question 5 makes it company policy and previews the gateway.

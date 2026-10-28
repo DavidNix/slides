@@ -14,6 +14,8 @@ duration_minutes: 2
 
 **And now completing tasks... but not without some help**
 
+*Strong, but frozen in time and short on memory.*
+
 ## Speaker notes
 
 Note to self: The staff already uses this a lot.
