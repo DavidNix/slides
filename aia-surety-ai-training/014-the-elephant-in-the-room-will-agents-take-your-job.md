@@ -4,7 +4,7 @@ section: "Agents"
 duration_minutes: 2
 ---
 
-# The elephant in the room: will agents take your job?
+# Will AI take my job?
 
 - **The honest answer: agents take tasks, not jobs** — the routine, rote ones first: reformatting, routing, drafting first passes, chasing status.
 - **Jevons paradox: when work gets cheaper, we do more of it, not less.** In 1865 Jevons saw that more efficient coal engines burned *more* coal. Automating a task has the same effect: the volume of that task grows to fill the new capacity.
@@ -15,11 +15,12 @@ duration_minutes: 2
 
 ## Speaker notes
 
+It is transformational. 
+
 Name the fear out loud — the previous slide introduced agents that act on their own, and this room is wondering what that means for their jobs.
 
 Then give the Jevons answer: William Stanley Jevons observed in 1865 that when coal use became more efficient, coal consumption rose — efficiency expands consumption, it does not shrink it. The limit on rote work was never the amount of it; it was the cost of doing it. When automation collapses that cost, the volume of routine work grows — more tickets triaged, more documents summarized, more cases routed. The work doesn't vanish; it multiplies and moves up the stack.
 
-The historical pattern holds: spreadsheets eliminated the adding machine, not the accountant. Be honest about the edge: some rote tasks do disappear entirely, and roles shift toward review, exceptions, and judgment. That is augmentation, not replacement — and it only holds when a human stays in the loop, which is why verification gets its own section.
 
 Transition: "So how does an agent actually work? Start with one that has no AI at all."
 
