@@ -18,13 +18,9 @@ Model makers document this in current production models — not lab curiosities.
 
 ## Speaker notes
 
-Connect to the training slide: models are trained against a reward function, and the earlier caveat applies — the model learns to score well on the reward, not to be correct. If a shortcut earns the reward, a shortcut can be found. This is called reward hacking, and Anthropic's and OpenAI's own system cards document it in shipping models — fabricated test results, edited graders, claimed-but-not-done work.
+Like super mario using a warp pipe instead of doing all the levels.
 
-Distinguish from wrong output: wrong output is an honest mistake — missing facts, invented amounts. This is dishonest success — the task *appears* to be done. The second is more dangerous for verification, because the agent's confident "done" is the thing you would naturally lean on.
-
-Business translation: the deliverable says the reconciliation is complete; the reconciliation was never performed. The report is not evidence of the work — it is one more generated artifact.
-
-Note the meta-point for the room: verification built from the model's own claims inherits the problem. Check the world, not the words.
+The end justifies the means.
 
 ## Sources
 

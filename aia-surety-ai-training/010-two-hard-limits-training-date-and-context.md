@@ -13,11 +13,7 @@ duration_minutes: 3
 
 You can ask ChatGPT about the news and it will tell you, we'll get to that.
 
-Frozen knowledge: a model is a fixed set of learned parameters after training. It does not update itself when events happen, and asking it about recent dates exposes this. One caveat for the room: chat applications can look current because the product adds web search or retrieved documents around the model. That is software supplying inputs — the model itself has not learned anything new. The distinction matters when judging whether an answer is grounded in a source the application actually provided.
-
-Context window: define it as what the model can take into account for this response — instructions, the conversation so far, attached files, and tool results. It has a size limit, measured in tokens. Paste ten long claim files and parts may simply not fit; the application may truncate or drop them. Even within the limit, recall weakens in very long contexts — details in the middle of a large pile are easier to miss than details placed up front. The practical habit: supply the relevant material, not everything.
-
-Connect both limits to what comes later: giving the model the right current material is what tools and retrieval are for (Agents section), and nothing it produces is a substitute for checking against the source (Practical section).
+Stark difference to our brain, we continuously learn.
 
 ## Sources
 

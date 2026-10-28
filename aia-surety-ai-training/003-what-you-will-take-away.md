@@ -8,7 +8,7 @@ duration_minutes: 1
 
 1. See how AI isn't magic. 
 2. Why AI agents are the future.
-3. How to secure AI agents so they don't go beserk.
+3. How to secure AI agents so they don't put you out of business.
 4. Recommended AI tools and technologies. 
 
 ## Speaker notes
