@@ -23,7 +23,7 @@ Two details worth pausing on:
 
 This is the thermostat loop from earlier, with a real model doing the proposing. Tie back to the recurring question: every step the harness takes — checking, calling, deciding to stop — is software a company controls, not the model.
 
-Transition: "Now the same machinery from the user's chair — why ChatGPT suddenly seems to know this week's news."
+Transition: "The video said the harness calls the tool over MCP. What is that?"
 
 ## Sources
 
