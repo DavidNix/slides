@@ -22,7 +22,7 @@ Introduce the recurring question: **What convenience are we gaining, and what ac
 ## Presenter preparation
 
 - Each numbered Markdown file represents one slide. The material above `## Speaker notes` is audience-facing; subsequent sections support delivery.
-- `duration_minutes` includes discussion or demonstration on that slide. The planned durations total 188 minutes; trim demos and discussions to fit the room.
+- `duration_minutes` includes discussion or demonstration on that slide. The planned durations total 190 minutes; trim demos and discussions to fit the room.
 - Use the fictional submission throughout. All requirements in its demo checklist are invented teaching fixtures, not AIA procedures or underwriting advice.
 - Record the freight demo as two videos from its guide: `demo-freight-part-1.mp4` and `demo-freight-part-2.mp4`. The deck links to these placeholder names until the recordings exist.
 - Check current product features, account terms, model availability, and hardware quotes before delivery. Product sources were consulted on October 11, 2026.

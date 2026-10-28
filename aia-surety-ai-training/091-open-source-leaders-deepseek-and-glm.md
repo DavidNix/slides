@@ -19,6 +19,8 @@ Up to 60x cheaper.
 
 Many everyday tasks, such as summarization, classification, drafting, and extraction, run well on open-weight models. Work that needs frontier reasoning still justifies Claude or GPT. Choose per task, not per brand. The AI gateway from the Security section makes it routine to switch providers or keep a fallback.
 
+Transition: "Open weight means you can run it yourself. You don't have to. The next slide shows where to host it."
+
 ## Sources
 
 - [DeepSeek-R1: reinforcement learning, curated data, and distillation](https://arxiv.org/abs/2501.12948).
