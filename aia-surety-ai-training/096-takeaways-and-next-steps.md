@@ -6,15 +6,13 @@ duration_minutes: 8
 
 # Takeaways and next steps
 
-The five things to remember:
+1. **AI predicts. It does not know.** Check anything that matters against the source.
+2. **An agent is a model with hands.** Give it the goal, not the steps.
+3. **Context is the job.** Your sources and your skills decide the quality of the result.
+4. **The agent uses your access, so you are on the hook.** Always ask: "What's the worst that could happen?"
+5. **Start in Cowork, not a chat window.** One folder, read-only connectors, and a person approving anything that leaves.
 
-1. LLMs use learned computations and probabilities; attention gives context.
-2. Training improves behavior, and important outputs still need verification.
-3. Agents combine models, harnesses, tools, and repeated actions.
-4. Broader access and fewer checkpoints buy convenience at increased risk.
-5. Start with a useful task, a clear boundary, and a measurable result.
-
-**One task to improve. One way to verify it. One boundary to keep.**
+**This week: one task to hand off. One way to check it. One boundary to keep.**
 
 David Nix
 
@@ -32,7 +30,7 @@ Walk the five takeaways, then take questions and invite two brief takeaways from
 - Which convenience would be worth additional access, and which would not?
 - What would determine whether the work belongs in a managed service or a local system?
 
-Ask someone to explain who actually executes a tool call. Ask another person what evidence would establish that an AI-generated statement is correct.
+Ask someone what evidence would establish that an AI-generated statement is correct.
 
 Revisit the repetitive tasks named at the start. Participants should now be able to describe both an opportunity and the controls needed to pursue it.
 
