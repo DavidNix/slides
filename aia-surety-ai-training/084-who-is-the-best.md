@@ -1,6 +1,6 @@
 ---
-slide: 83
-section: "Where the market is going"
+slide: 84
+section: "Recommendations"
 duration_minutes: 2
 ---
 
@@ -19,7 +19,7 @@ Say it plainly: as of this training, Claude (Anthropic) and GPT (OpenAI) lead on
 
 Then immediately give the nuance: "best" shifts with every release, and the leader for a specific task — cheap summarization, extraction, local deployment — is often not the overall leader. Benchmarks move quarterly; the evaluation habit matters more than today's ranking.
 
-This section exists because the two leaders are not the only serious options. The next slides widen the choice.
+Transition: the model matters less than how you use it. The next slide covers the biggest gain available to this room.
 
 ## Sources
 

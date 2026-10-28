@@ -25,4 +25,4 @@ Add side paths verbally: logs, caches, document extraction, embeddings, analytic
 
 Convenience features such as persistent memory, automatic synchronization, and provider fallback deserve the same data-flow questions. More copies and broader access can increase exposure.
 
-This closes the Security section. Recap the pattern: every danger came with its mitigation. Transition to where the market is going and where the opportunities are.
+This closes the Security section. Recap the pattern: every danger came with its mitigation. Transition to the recommendations: the specific tools I suggest, now that you know what to watch for.

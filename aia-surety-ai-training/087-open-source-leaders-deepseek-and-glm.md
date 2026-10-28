@@ -1,6 +1,6 @@
 ---
-slide: 86
-section: "Where the market is going"
+slide: 87
+section: "Recommendations"
 duration_minutes: 2
 ---
 
@@ -16,6 +16,8 @@ Two open-weight providers lead the field:
 ## Speaker notes
 
 Up to 60x cheaper.
+
+Many everyday tasks, such as summarization, classification, drafting, and extraction, run well on open-weight models. Work that needs frontier reasoning still justifies Claude or GPT. Choose per task, not per brand. The AI gateway from the Security section makes it routine to switch providers or keep a fallback.
 
 ## Sources
 

@@ -1,12 +1,12 @@
 ---
-slide: 84
-section: "Where the market is going"
+slide: 86
+section: "Recommendations"
 duration_minutes: 2
 ---
 
 # Who is the best at design?
 
-The previous slide said "pick the model for the job" — for design, the job has a leader:
+"Pick the model for the job" — for design, the job has a leader:
 
 - **Claude is the best at design**, and Anthropic backs it with a dedicated product, **Claude Design**.
 - Claude Design turns a chat into **polished visual work**: designs, interactive prototypes, slides, and one-pagers.
@@ -23,7 +23,7 @@ Name the uses that matter to this room: Marketing can draft one-pagers and socia
 
 Caveats to say out loud: it started as a research preview and is still evolving; treat every output as a first draft to verify, per the verification habits from the Security section — a design can look polished and still contain wrong facts or invented text. And the "best" label can shift with any release; re-check before betting a workflow on it.
 
-Transition: "Design is one lane. The next slides widen back out — you don't have to use OpenAI or Claude at all."
+Transition: "Design is one lane. You also don't have to use OpenAI or Claude at all."
 
 ## Sources
 

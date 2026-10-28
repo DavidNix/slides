@@ -1,5 +1,5 @@
 ---
-slide: 91
+slide: 90
 section: "Wrap-up"
 duration_minutes: 8
 ---
@@ -40,4 +40,4 @@ Restate the core tradeoff in plain language: “Every time we say ‘just handle
 
 For product-specific or Microsoft configuration questions outside your experience, state that directly and connect the question to the underlying principle. Capture the implementation detail for AIA's technical team to confirm.
 
-Finish by encouraging a small, owned, measurable pilot. This slide ends the session at elapsed time 3:36.
+Finish by encouraging a small, owned, measurable pilot. With the planned durations, this slide ends at 178 minutes of speaking time. With the 15-minute break, that is about 4:13 PM, which leaves time for questions before 4:30 PM.

@@ -1,6 +1,6 @@
 ---
-slide: 89
-section: "Business opportunities"
+slide: 88
+section: "Recommendations"
 duration_minutes: 2
 ---
 
