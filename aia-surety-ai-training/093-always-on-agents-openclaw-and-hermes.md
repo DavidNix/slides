@@ -9,7 +9,6 @@ duration_minutes: 2
 Open-source agents that run all day and take requests from your chat apps:
 
 - **OpenClaw.** Launched in November 2025 and passed React's GitHub stars within four months. It works from WhatsApp, Slack, Telegram, and 20+ other channels.
-- Its popularity drew attackers. Hundreds of malicious skills reached its skill store, and tens of thousands of installs sat open on the internet.
 - **Hermes Agent (Nous Research).** Runs jobs on a schedule, remembers your work, and writes its own skills. A business tier and a self-hosted enterprise edition launched in October 2026.
 
 **Always-on agents are useful for business. Hermes is the one I recommend.**

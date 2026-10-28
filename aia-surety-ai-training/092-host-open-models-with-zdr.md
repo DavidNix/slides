@@ -4,7 +4,7 @@ section: "Recommendations"
 duration_minutes: 2
 ---
 
-# Host open models with ZDR: Fireworks and OpenRouter
+# Hosted open models with ZDR: Fireworks and OpenRouter
 
 You do not need your own servers to use open models. Use a US host that does not keep your data.
 
