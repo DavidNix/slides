@@ -1,5 +1,5 @@
 ---
-slide: 92
+slide: 93
 section: "Recommendations"
 duration_minutes: 2
 ---
@@ -15,7 +15,7 @@ You do not need your own servers to use open models. Use a US host that does not
 
 ## Speaker notes
 
-Connect to the previous slide. DeepSeek and GLM are open-weight models, so anyone can run them. The model is the same. The host decides where your data goes. DeepSeek's own API stores data in China and uses it for training by default. Fireworks runs the same model in the US and keeps nothing.
+Connect back to the DeepSeek and GLM slide. They are open-weight models, so anyone can run them. The model is the same. The host decides where your data goes. DeepSeek's own API stores data in China and uses it for training by default. Fireworks runs the same model in the US and keeps nothing.
 
 Fireworks: it runs open models on its own servers, and speed is its strength. ZDR is the default for open models. One caution for whoever sets it up: its Responses API keeps conversations for 30 days unless the developer turns storage off. Enterprise admins can block every feature that stores content for the whole account.
 
