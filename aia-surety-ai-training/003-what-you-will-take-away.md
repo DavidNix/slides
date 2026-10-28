@@ -13,6 +13,8 @@ duration_minutes: 1
 
 ## Speaker notes
 
-Present this list as the roadmap for the session. Each point maps to a section of the deck: how models work, how agents turn requests into actions, verifying output against evidence, the convenience–security tradeoff, and the closing opportunity exercises.
+I am not microsoft expert, but everything here is agnostic.
 
-Tell the room you will return to these five points on the final slide, where each becomes a concrete next step.
+The audience is for non-technical
+
+Going to cover a lot of information. Content will be shared later.

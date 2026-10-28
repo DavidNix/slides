@@ -21,7 +21,12 @@ The exercise brief supplies the claim-review rules. The document skills supply r
 
 Spend about 20 seconds explaining the distinction while the task runs: **“Skills tell the agent how to do a kind of work. Connectors let it access a system. The agent uses those capabilities to pursue the task.”** Anthropic publishes an [Excel skill example](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md) that can illustrate packaged instructions. It is an example, not proof of the exact version running in the demo account. Show actual skill activity if the interface exposes it; do not invent an execution trace.
 
-**Placement in the training.** The current deck starts agent work early and returns to the results after the intervening concepts. Launch the first prompt in that early slot, then use the later results slot for the workbook, drafts, and reply/update cycle. Keep the combined time spent presenting the demo within 5–10 minutes; background processing can continue while other material is presented. The continuous eight-minute schedule below is an alternative for a standalone demonstration if rehearsal confirms the generation time fits.
+**Placement in the training.** The deck shows this demo as a recorded video in two parts. Use this guide as the script for the recording.
+
+- **Part 1 (`demo-freight-part-1.mp4`, about one minute):** the input folder, the empty output folder, the first prompt, and the agent starting to read files. It plays on the "Video: watch the agent work" slide in the Agents section.
+- **Part 2 (`demo-freight-part-2.mp4`):** the workbook, drafts, and case note, then the staged replies and the reply/update cycle. It plays on the "Checking on the demo" slide after Verification, where the presenter pauses it so the room can check the work.
+
+Keep the two parts together within 5–10 minutes of screen time. Cut the waiting time out of the recording. The continuous eight-minute schedule below shows the order of the recording.
 
 **The minimum background to explain.** A broker arranges a shipment; a carrier operates the truck. A broker's surety bond can respond to covered payment obligations. Whether this particular claim qualifies remains a human decision. A real delivery does not, by itself, establish which business owes the bill. [49 CFR 387.307](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-387/subpart-C/section-387.307).
 
@@ -50,6 +55,8 @@ The [presenter answer key](research/demo-packets/freight-identity-review/present
 **Recommended connector enhancement.** Use the Microsoft 365 connector to retrieve staged Outlook replies and, if draft tools are enabled, create the follow-up drafts in Outlook. Keep the workbook and Word note local for the first run. The [connector runbook](research/demo-packets/freight-identity-review/presenter/connector-runbook.md) gives preparation, exact prompt additions, and a Gmail alternative. This makes the connector visible without requiring an AIA claims-system integration. The file-only setup below remains the fallback.
 
 **How to set up Cowork.** Use a company-approved account and a fresh task. Enable file creation and confirm the built-in Excel and Word skills are available. Anthropic documents direct file access and creation of Excel and document outputs; availability and the interface depend on the account. These capabilities support the proposed demo, but this packet has not been run in Cowork here. [Cowork getting-started documentation](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork).
+
+Run [`stage-cowork.sh`](research/demo-packets/freight-identity-review/stage-cowork.sh) to do steps 1, 2, 5, and 6. It creates `~/Documents/AIA-Freight-Live` for Cowork and a separate `~/Documents/AIA-Freight-Presenter` with the prompts, replies, answer key, and the [recording checklist](research/demo-packets/freight-identity-review/presenter/recording-checklist.md). Run it with `replies` at the reveal, and with `reset` before each new take.
 
 1. Make a new local folder named `AIA-Freight-Live`, containing `input/` and an empty `output/`.
 2. Copy the seven files from the prepared `initial/` directory into `input/`.
