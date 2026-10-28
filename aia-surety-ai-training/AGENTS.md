@@ -8,7 +8,7 @@ A presenter-led training for AIA Surety staff: use AI well and reason about its 
 
 Emphasis: **agents over LLM internals**. LLM mechanics get intuition-level treatment only. Verification is brief guidance inside Security and Practical, not its own section.
 
-Schedule: **1:00 to 4:30 PM, with a 15-minute break at 3:00 PM**. That leaves 195 minutes for slides and questions, which the presenter takes throughout. With the planned durations, 3:00 PM falls in the Security mitigations, near slide 63 (human approval). Questions move that point earlier, so the presenter breaks at the nearest slide boundary.
+Schedule: **1:00 to 4:30 PM, with a 15-minute break at 3:00 PM**. Questions are taken throughout.
 
 Deck order:
 
@@ -30,7 +30,7 @@ Deck order:
    The agent-red-team pair (OpenAI evaluation swarm, Mythos/Daybreak scanning) was removed in the 2026-10 revision; the Hugging Face breach slide later reintroduced the OpenAI evaluation story in a deliberately scoped form (incident summary plus why it is not the room's risk). Classification guidance lives in section 1, not here.
 8. **Practical** — prompt engineering → context engineering → the classification/scoring warning with its example rubric → Agent Skills, including a worked example skill and a slide on having the agent author the skill (you describe the procedure; the agent writes the file).
 
-A short tail follows: Recommendations, then the wrap-up. Recommendations opens with a title-only divider slide, like the Security section. After it, the section holds only opinionated picks of concrete technologies, one per slide: Claude and GPT as the best general models, Claude Cowork over chat windows for the most leverage (with care about which folders and connectors it gets, since Cowork is the exfiltration demo tool), Claude for design, DeepSeek and GLM as open-weight options, Hermes as the always-on agent, and skills.sh as the place to find skills (review or AI-scan before installing). General advice slides ("fall in love with problems", "automation is not new", "you don't have to use OpenAI or Claude") were cut in the 2026-10 revision. There is no standalone Deployment or local-AI section: local AI appears only as an IP-theft mitigation (followed by a costs interlude that also covers local AI's own bill), and gateway content lives inside Security. Demos are woven throughout the deck, not one demo block.
+A short tail follows: Recommendations (a title-only divider, then opinionated picks of concrete technologies, one per slide), then the wrap-up. There is no standalone Deployment or local-AI section: local AI appears only as an IP-theft mitigation (followed by a costs interlude that also covers local AI's own bill), and gateway content lives inside Security. Demos are woven throughout the deck, not one demo block.
 
 ## Audience
 
@@ -70,5 +70,5 @@ Write for that room: anchor examples in familiar office workflows (email, claims
 - **Questions throughout.** There are no separate Q&A pause slides. The opening slide invites questions at any point during the presentation; the presenter takes them at natural boundaries. The wrap-up slide (`takeaways-and-next-steps`) closes the session and serves as the final question opportunity.
 - **Speaker notes are mandatory.** Each slide includes presenter notes: what to say, what to demonstrate, and what to caveat. Write notes so a substitute presenter could deliver the slide.
 - **Cite sources.** Product claims get links in `## Sources` to official documentation or primary material where possible.
-- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 195 minutes** (the 3.5-hour session less the 15-minute break). Keep the planned total near 180 minutes so questions have room. Keep it in sync when durations change.
+- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 195 minutes**. Keep it in sync when durations change.
 - **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes. The freight demo is a recorded video in two parts (see Deck order). Each part has a `…-video-link.md` slide after it, like every other video in the deck. The recordings are placeholders until they are made: `demo-freight-part-1.mp4` and `demo-freight-part-2.mp4`.
