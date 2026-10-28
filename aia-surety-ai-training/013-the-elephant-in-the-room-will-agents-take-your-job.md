@@ -4,7 +4,7 @@ section: "Agents"
 duration_minutes: 2
 ---
 
-# Will AI take my job?
+# 2nd Elephant: Will AI take my job?
 
 - **The honest answer: agents take tasks, not jobs** — the routine, rote ones first: reformatting, routing, drafting first passes, chasing status.
 - **Jevons paradox: when work gets cheaper, we do more of it, not less.** In 1865 Jevons saw that more efficient coal engines burned *more* coal. Automating a task has the same effect: the volume of that task grows to fill the new capacity.

@@ -15,7 +15,3 @@ duration_minutes: 3
 - **Generation:** pick a likely next token, add it, and continue. Simple math, repeated at enormous scale — no magic.
 
 ## Speaker notes
-
-Andrej Kaparthy - They only hallucinate
-
-"Probabilistic" does not mean random guessing. Generation can select a high-scoring token or sample from the distribution, and this mechanism supports substantial reasoning. But the probability of a token is not the probability that an entire answer is factually correct. Lowering randomness can make output more consistent without making it true. This is the seed of the verification section later.

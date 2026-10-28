@@ -26,7 +26,7 @@ Walk the four steps once, slowly, pointing at each bullet. Emphasize that the lo
 
 Then make the upgrade explicit: an AI agent follows the same shape. Sense becomes reading files, emails, or ticket details. Decide becomes the model choosing what to do next. Act becomes calling tools. The thermostat decides with one simple rule; the model decides with everything it learned from its training data — which is why the next sections look closely at what the model and the surrounding software each do.
 
-Transition: "Now let's open that loop up and see the parts of an AI agent."
+Transition: "You have probably used an AI agent loop already without knowing it."
 
 ## Sources
 

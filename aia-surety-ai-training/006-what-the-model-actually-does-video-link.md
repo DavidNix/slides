@@ -11,3 +11,5 @@ duration_minutes: 0
 ## Speaker notes
 
 The entire chat is sent through again for each message.
+
+I run these out of my basement. Tokens in and tokens out.
