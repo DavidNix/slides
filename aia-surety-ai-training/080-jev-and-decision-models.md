@@ -1,7 +1,7 @@
 ---
 slide: 80
 section: "Where the market is going"
-duration_minutes: 3
+duration_minutes: 2
 ---
 
 # Jev and the rise of decision models
