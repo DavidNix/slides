@@ -1,12 +1,10 @@
 ---
-slide: 51
+slide: 52
 section: "Security"
 duration_minutes: 3
 ---
 
 # The lethal trifecta
-
-![The lethal trifecta: access to private data, exposure to untrusted content, and external communication.](../2026-09-ai-security/lethaltrifecta.jpg)
 
 Three useful capabilities. **Any two together are ordinary software. All three together are a complete data-theft path:**
 
@@ -18,13 +16,12 @@ An agent that can read a claim file, process an emailed attachment, and send ema
 
 **“…an attacker can easily trick it into accessing your private data and sending it to that attacker.”** — Simon Willison
 
-<video src="lethal-trifecta.mp4" controls width="100%" aria-label="Three circles — access to private data, exposure to untrusted content, and ability to communicate externally — converge into one attack path. Remove one ingredient, and the attack path closes."></video>
 
 ## Speaker notes
 
 The image and the name are Simon Willison's; the term is now standard shorthand in security discussions of agents. Walk it slowly — this slide is the frame for everything that follows.
 
-The animation below plays the three ingredients converging into one attack path, then closing. Play it after walking the three capabilities.
+The room has just watched the video. Now walk the three capabilities slowly.
 
 Walk the pairs so the audience sees why two are harmless:
 
