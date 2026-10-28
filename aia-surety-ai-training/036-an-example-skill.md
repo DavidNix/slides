@@ -20,7 +20,7 @@ description: Review a brokered freight claim for mismatches
    record asserts.
 2. Check each fact against the carrier's documents.
    Mark each one confirmed, contradicted, or missing.
-3. Build an evidence spreadsheet — one row per fact.
+3. Build an evidence spreadsheet, one row per fact.
 4. Draft follow-up questions only for missing or
    contradicted facts. Do not accuse anyone and do not
    decide the claim.
@@ -31,15 +31,13 @@ description: Review a brokered freight claim for mismatches
 
 ## Speaker notes
 
-Walk the two halves. The name and one-line description are all that sits in the window at session start — progressive disclosure, as on the previous slide. The five steps load only when a task matches, here a disputed freight claim like the one in the demo video.
+Only the name and description sit in the window at the start. The steps load when a task matches, like the disputed freight claim.
 
-Point out step 4. The skill is where the office's rules get written down, including what the agent must not do: it drafts questions, but the examiner decides the claim. A boundary like that is exactly what IT wants to review before the skill circulates.
+Point out step 4. The skill holds the office's rules, including what the agent must not do. The examiner decides the claim. IT should review boundaries like this before a skill circulates.
 
-Connect it to the demo: the freight task in the video uses the same shape — the premade Excel and Word skills produce the outputs, and the exercise brief supplies the claim-review rules a custom skill like this would package permanently.
+The owner of the freight process writes it once and shares it with the team.
 
-This is the shared tier: written once by whoever owns the freight process, shared with the team, one place to update.
-
-Transition: "And here is the good part: you never write that file yourself."
+Transition: "And you never write that file yourself."
 
 ## Sources
 

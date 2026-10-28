@@ -8,17 +8,19 @@ duration_minutes: 3
 
 <video src="prompt-shifts-odds.mp4" controls width="100%" aria-label="The prompt 'Write a short reply to the client. Your bond is ___' first has no extra context, then a note that financial statements are missing, then a note that all documents were received. The next-word odds shift each time, and the weighted pick lands on 'approved'."></video>
 
-**Context sets the odds. Likely is not certain — check the output.**
+**Context sets the odds. Likely is not certain. Check the output.**
 
 ## Speaker notes
 
-Play the video first. It runs about 30 seconds and has no sound, so narrate over it or let the captions carry it. The request is a short client reply ending "Your bond is ___", and the bars show the model's next-word odds over plausible status words: approved, ready, active, pending, on hold, denied.
+Play the video first. It runs about 30 seconds with no sound, so narrate. The bars show next-word odds for "Your bond is ___".
 
-First pass: no extra context. "Approved" leads with about 28 percent — barely ahead, essentially a coin toss among several words. Then one line is typed in: "financial statements still missing." The odds swing hard toward "pending" and "on hold," and "approved" collapses to a few percent. Change the line to "all documents received and signed off," and "approved" jumps to about 71 percent. Finally the model picks one word, weighted by those odds, and this time it lands on "approved."
+- No context: "approved" leads at about 28 percent. A coin toss.
+- "Financial statements still missing": odds swing to "pending" and "on hold."
+- "All documents received and signed off": "approved" jumps to about 71 percent.
 
-Two caveats to say out loud: the percentages are teaching values, not measured model output — the mechanism is real, the numbers are illustrative. And the last step is still a weighted roll of the dice, which is why a likely answer still needs checking. This is the same idea the Verification section will build on.
+The percentages are illustrative. The mechanism is real. The last step is still a weighted roll, so a likely answer still needs checking.
 
-Takeaway for the room: one line of correct context changed the likely answer completely. That is the whole argument for giving AI a clear brief and the right attachments.
+One line of context changed the answer. That is the case for a clear brief and the right attachments.
 
 ## Sources
 

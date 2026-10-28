@@ -17,12 +17,12 @@ For each new capability, ask:
 
 ## Speaker notes
 
-This slide closes the section on purpose: after the threats and the layered defenses, this is the decision procedure staff carry out of the room. Every defense just presented — least privilege, approval, classification, gateways — exists to make the answers to these four questions honest.
+This is the decision procedure staff take out of the room. Every defense in this section makes these four answers honest.
 
-Use sending a missing-document email as the example. The benefit is fewer clicks. The exposure includes the recipient address, message body, and any attachment. A boundary could limit recipients to the authorized agent and require approval of the exact message.
+Example: sending a missing-document email. Benefit: fewer clicks. Exposure: the recipient, body, and attachment. Boundary: limit recipients and require approval of the exact message.
 
-Contrast a reversible internal draft with an externally transmitted financial document. Once a recipient has the information, deleting the sent message does not recall their knowledge of it.
+An internal draft can be undone. A sent financial document cannot.
 
-Assign ownership to the business decision. The person enabling the integration should not accidentally decide the organization's risk tolerance by clicking through broad permissions.
+The person enabling an integration should not set the company's risk tolerance by clicking through permissions.
 
-This same four-question pattern will appear in the pilot exercise. Transition: with the decision framework in hand, trace where data actually travels — the next slide walks the full path.
+Transition: trace where data actually travels.

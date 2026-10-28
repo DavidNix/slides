@@ -15,12 +15,10 @@ duration_minutes: 3
 
 ## Speaker notes
 
-Return to the next-token mechanism and the training discussion. The model produces an answer using learned patterns, context, and its post-training behavior. It does not receive an automatic certificate that every claim is true.
+The model produces likely text. Nothing certifies that each claim is true.
 
-Use the Friday deadline from the opening demonstration. A fluent promise might simply echo the requested deadline. The source must establish a commitment before the draft can state one.
+A hallucination is plausible but unsupported or wrong output. Other failures: missed details, outdated sources, bad math, right facts on the wrong case.
 
-Define hallucination as a plausible-sounding but unsupported or incorrect output. Other failures include missed details, outdated sources, faulty calculations, and correct facts applied to the wrong case.
+"I am 97% confident" is generated text. A second model agreeing is not independent evidence.
 
-“I am 97% confident” is itself generated text unless backed by a validated calibration method. The model checking its own answer or another model agreeing can help find problems, but agreement is not independent evidence of truth.
-
-Distinguish training-time rewards from runtime verification: good performance on training checks does not validate today's business record. Convenience can make us skip the very check that establishes whether the output is useful.
+Convenience tempts us to skip the one check that matters.

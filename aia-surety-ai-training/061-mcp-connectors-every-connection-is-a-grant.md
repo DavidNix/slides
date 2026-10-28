@@ -6,30 +6,27 @@ duration_minutes: 2
 
 # Connectors and MCP: every connection is a grant
 
-In ChatGPT you may have seen **connectors** — switches in Settings that let the assistant reach Gmail, Google Drive, and company systems. Other agent tools have the same idea, and they all speak one open standard:
+In ChatGPT you may have seen **connectors**: switches in Settings that let the assistant reach Gmail, Google Drive, and company systems. Other agent tools have the same idea, and they all speak one open standard:
 
-![A real connector consent screen: the only choices are "Full access" — pre-selected — or "Read-only" that still covers every presentation you can access. There is no narrower option.](mcp-connector-screen.png)
+![A real connector consent screen: the only choices are "Full access", pre-selected, or "Read-only" that still covers every presentation you can access. There is no narrower option.](mcp-connector-screen.png)
 
 - **MCP**, the plug from the Agents section, is how every one of these connectors works.
-- Each connector you enable grants a bundle of capabilities — email, files, records, payments.
-- The consent screen rarely offers a narrow choice: here the options are **Full access** (pre-selected — create, edit, share, delete) or **Read-only** that still reaches *everything* you can see. There is no "just this folder" option.
+- Each connector you enable grants a bundle of capabilities: email, files, records, payments.
+- The consent screen rarely offers a narrow choice: here the options are **Full access** (pre-selected: create, edit, share, delete) or **Read-only** that still reaches *everything* you can see. There is no "just this folder" option.
 - Every connection is an access grant: connect only what the task needs.
 - Review what each connector can read and do **before** approving it, and disable what you no longer use.
 
 **Every connector you enable is an access grant.**
 
-
 ## Speaker notes
 
-MCP, in one line for this room: an open standard — introduced by Anthropic, now adopted across the industry — that lets agent applications connect to external tools and data sources through plug-in "servers." The room may know it as connectors or apps in ChatGPT's settings — same idea, consumer-facing name. One connector standard, thousands of tools.
+MCP is an open standard from Anthropic, now used across the industry. ChatGPT calls them connectors or apps.
 
-Each connector is one of the permission bundles from the previous picture: choosing what to connect is choosing what the gate will ever allow.
+Use the screenshot. "Full access" is pre-selected. "Read-only" still covers every presentation you can see. The narrow choice is often missing. So read the choice, connect only what the task needs, and disconnect when done.
 
-Use the screenshot to show how blunt the real choice is. When a tool asks to connect, the menu is usually two tiers: everything it can do, or everything you can read. Notice three things: "Full access" arrives pre-selected; even "Read-only" covers every private and team presentation, not a chosen folder; and the footnote reminds you that changes already made will remain. The fine-grained least privilege we asked for on the previous slides is not always on the menu — which is exactly why you read the choice before clicking, connect only what the task needs, and disconnect when done.
+Each connector quietly adds trifecta capabilities 1 and 3: private data and external communication. An idle connection is still an open door.
 
-The security point is that the convenience of connecting is exactly how an agent quietly accumulates capabilities 1 and 3 of the trifecta — private data access and external communication — one approved connector at a time. Each approved connector is a standing grant, and an idle connection is still an open door. Review before connecting, not after.
-
-Transition: "That covers what you give a connector. Next: what a connector can do to you."
+Transition: "That is what you give a connector. Next: what a connector can do to you."
 
 ## Sources
 

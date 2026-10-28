@@ -15,17 +15,17 @@ You do not need your own servers to use open models. Use a US host that does not
 
 ## Speaker notes
 
-Connect back to the DeepSeek and GLM slide. They are open-weight models, so anyone can run them. The model is the same. The host decides where your data goes. DeepSeek's own API stores data in China and uses it for training by default. Fireworks runs the same model in the US and keeps nothing.
+The model is the same. The host decides where your data goes. DeepSeek's own API stores data in China and trains on it by default. Fireworks runs the same model in the US and keeps nothing.
 
-Fireworks: it runs open models on its own servers, and speed is its strength. ZDR is the default for open models. One caution for whoever sets it up: its Responses API keeps conversations for 30 days unless the developer turns storage off. Enterprise admins can block every feature that stores content for the whole account.
+Fireworks: ZDR is the default for open models. Caution: its Responses API keeps conversations 30 days unless storage is turned off. Admins can block all storing features.
 
-OpenRouter: one bill and one connection for many models and providers. It works as a simple version of the AI gateway from the Security section. The ZDR setting is off until you turn it on. You can turn it on for the whole account, for one API key, or for one request. When it is on, OpenRouter refuses to send a request to a provider that keeps data. Its ZDR setting covers model requests only. Add-ons such as web search are not covered.
+OpenRouter: one bill for many models, like a simple AI gateway. ZDR is off by default. Turn it on per account, key, or request. It covers model requests only, not add-ons like web search.
 
-The Stripe deal: Stripe announced the purchase in August 2026 and said OpenRouter will keep its product and commitments. Check whether the deal has closed before you present. Also note for the room that a change of owner can move a contract to the new owner. Read the terms again after the deal closes.
+Stripe announced the purchase in August 2026. Check whether it closed. A new owner can change the terms, so reread them.
 
-Tie back to the ZDR slide: ZDR is a contract term, so verify it in writing for your account. Flagged content can still be kept.
+ZDR is a contract term. Get it in writing. Flagged content can still be kept.
 
-Transition: "Models and hosting are covered. Next: agents that run all day."
+Transition: "Next: agents that run all day."
 
 ## Sources
 

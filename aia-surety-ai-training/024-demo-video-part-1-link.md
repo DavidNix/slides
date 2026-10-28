@@ -10,6 +10,6 @@ duration_minutes: 0
 
 ## Speaker notes
 
-Nothing to present. This slide exists so the video link survives in exported PDFs and handouts. Skip past it when projecting.
+Skip when projecting. This slide keeps the video link in exported PDFs.
 
 Placeholder: `demo-freight-part-1.mp4` is not recorded yet.

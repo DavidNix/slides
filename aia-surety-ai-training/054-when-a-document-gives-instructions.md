@@ -18,13 +18,11 @@ An attachment says:
 
 ## Speaker notes
 
-This is indirect prompt injection. The legitimate user did not request the extra action. The instruction arrived through material the assistant was asked to process.
+This is indirect prompt injection. The user did not ask for the extra action. It arrived inside the material.
 
-The entry point could be an email, document, webpage, image, or tool result. An attacker may need only the ability to place content where the system will read it.
+The entry point can be an email, document, web page, image, or tool result. The attacker only needs to put content where the agent will read it.
 
-Unlike a plain chat reply, the attempted redirection arrives inside the work, and an agent may have useful privileges the attacker wants to misuse.
-
-Models can distinguish message roles and often reject these instructions, but that distinction is not perfectly reliable. Enforcement must also exist outside the model.
+Models often reject these instructions, but not reliably. Enforcement must also exist outside the model.
 
 ## Sources
 

@@ -8,25 +8,26 @@ duration_minutes: 3
 
 Default settings may put your conversations to work:
 
-- **ChatGPT:** consumer plans train on your chats by default. Opt out under Data Controls — "Improve the model for everyone."
+- **ChatGPT:** consumer plans train on your chats by default. Opt out under Data Controls: "Improve the model for everyone."
 - **Claude:** consumer plans train on conversations by default as of September 2025. Opt out in settings ("Help improve Claude").
-- Prompts are retained for abuse review — roughly 30 days, longer when a conversation is flagged.
+- Prompts are retained for abuse review: roughly 30 days, longer when a conversation is flagged.
 
 The courtroom record from the previous slides shows what human data is worth to AI labs. Human data is more valuable than gold.
 
-**Your data is an asset — decide who gets value from it.**
+**Your data is an asset. Decide who gets value from it.**
 
 ## Speaker notes
 
-Two distinct exposures here, and both matter. The first is default data handling: consumer plans commonly train on what you type, and prompts are retained for abuse review even when training is off — flagged conversations can be held much longer, and "deleted" is not always immediate.
+Two exposures:
 
-The second is the IP angle. The evidence slides just covered the courtroom record; the short version is the closing line: human data is more valuable than gold to AI labs. Whether a court calls it theft or fair use, the labs' appetite for data is the point: everything typed into a consumer chatbot is material someone else wants.
+- Default handling: consumer plans train on what you type. Prompts are kept for abuse review even with training off. Flagged chats are kept longer.
+- IP: whether courts call it theft or fair use, labs want everything typed into a consumer chatbot.
 
-These are consumer-plan defaults, not business or API terms; enterprise agreements typically exclude training. The point for this room: know which plan you are on, find the opt-outs on every account, and treat free or consumer tiers as public-adjacent.
+Enterprise and API terms usually exclude training. Know your plan, opt out on every account, and treat free tiers as close to public.
 
-Walk through the settings live if possible. Note that opting out usually applies to new conversations, not history already collected under the old setting.
+Show the settings live if possible. Opting out usually covers new chats only.
 
-Verify the settlement figure and the Sony case status before presenting; both are moving targets.
+Verify the settlement figure and the Sony case status before presenting.
 
 ## Sources
 

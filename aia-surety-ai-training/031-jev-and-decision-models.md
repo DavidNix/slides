@@ -9,18 +9,16 @@ duration_minutes: 2
 A new category is forming beside chat models:
 
 - **Jev (TypeSafe)** is a "decision model": it picks the best answer from candidates instead of generating prose.
-- Built for the high-volume, low-judgment calls agents make constantly — routing, classification, choosing a tool or an answer.
+- Built for the high-volume, low-judgment calls agents make constantly: routing, classification, choosing a tool or an answer.
 - Priced near zero per decision. AWS, Microsoft, Cloudflare, and Snowflake shipped decision-model clones within a month.
 
-**The pattern to watch is not one model doing everything, but many cheap specialists behind your harness.**
+**Watch for many cheap specialists behind your harness, not one model doing everything.**
 
 ## Speaker notes
 
-Explain what a decision model is: not a chatbot. Jev scores a list you give it — like a judge ranking options — instead of writing a story. Constrained output makes it fast, extremely cheap, and harder to abuse, though researchers demonstrated jailbreaks of decision-model configurations for about fifty cents, so verification still applies.
+A decision model is not a chatbot. Jev ranks a list you give it, like a judge. It writes no prose. That makes it fast, cheap, and harder to abuse. Researchers still jailbroke one for about fifty cents, so verify.
 
-For architecture: route routine decisions to decision models and save frontier reasoning for work that needs it. Expect the AI gateway, which the Security section covers, to grow a decision-model route.
-
-Takeaway for this room: the pattern to watch is not one model doing everything, but many cheap specialists behind your harness.
+Send routine decisions to decision models. Save frontier models for hard reasoning.
 
 ## Sources
 

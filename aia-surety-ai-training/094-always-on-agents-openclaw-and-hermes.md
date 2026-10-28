@@ -15,15 +15,15 @@ Open-source agents that run all day and take requests from your chat apps:
 
 ## Speaker notes
 
-Call back to the "not magic" slide. An always-on agent wakes on a schedule or a trigger, does the work, and sends the result to your chat app. Typical business uses are a morning briefing, a weekly status report, a research digest, or draft replies that a person approves before they go out.
+An always-on agent wakes on a schedule or trigger and reports to your chat app. Business uses: a morning briefing, a weekly status report, draft replies a person approves.
 
-OpenClaw proved that people want this. It also showed the cost of moving fast. In February 2026, Koi Security found 341 malicious skills among 2,857 on ClawHub, its public skill store. Most of them installed a password stealer. Scans in the same month found tens of thousands of OpenClaw installs open to the internet, many vulnerable to a one-click takeover (CVE-2026-25253). Point out that this is the Security section in real life: untrusted skills, and installs that anyone could reach.
+OpenClaw proved demand and showed the cost of speed. In February 2026, Koi Security found 341 malicious skills out of 2,857 on ClawHub, most with a password stealer. Tens of thousands of installs were open to the internet with a one-click takeover (CVE-2026-25253).
 
-Hermes is the recommendation. It runs scheduled jobs in plain language, keeps memory, and turns repeated work into reusable skills. It removes secrets such as passwords and API keys before it runs code the agent wrote. It also asks for approval before risky commands. The enterprise edition runs on your own hardware or private cloud, so your data stays inside.
+Hermes is the pick. It runs scheduled jobs, keeps memory, and writes skills. It strips secrets before running agent-written code and asks before risky commands. The enterprise edition runs on your own hardware.
 
-Advice for a first pilot: start with a low-risk internal task, keep a person approving anything that leaves the company, and give it no access to money or customers.
+First pilot: a low-risk internal task, a person approving anything that leaves, no access to money or customers.
 
-Transition: "Hermes is my pick for business work. The big labs sell always-on agents too, and they have one good use."
+Transition: "The big labs sell always-on agents too, and they have one good use."
 
 ## Sources
 

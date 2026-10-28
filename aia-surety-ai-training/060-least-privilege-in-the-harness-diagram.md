@@ -12,7 +12,6 @@ duration_minutes: 0
 
 ## Speaker notes
 
-Walk the picture left to right; the talking points are in the previous slide's notes. Two blue dotted paths get through — read file, save draft — and the red path to send email hits the blocked marker no matter how the model words it.
+Two blue paths get through: read file, save draft. The red path to send email is blocked.
 
-The picture shows the harness gate. Say the MCP gate out loud: if the email connector offered no send tool at all, the red path would not exist.
-
+Say the MCP gate out loud: with no send tool on the connector, the red path would not exist.

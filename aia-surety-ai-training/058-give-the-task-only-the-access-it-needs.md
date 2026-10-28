@@ -24,13 +24,10 @@ duration_minutes: 3
 
 ## Speaker notes
 
-Define least privilege as the smallest set of permissions needed to perform the task. This is an established security principle, not a new AI invention. The table is a designed permission boundary — an illustrative mitigation for the hostile document from the injection slides, not a recorded attack or a result from the freight demo.
+Least privilege: the smallest set of permissions the task needs. This is an old security rule.
 
-The convenient shortcut is to give an agent the same broad access as its operator. An employee's account may reach many systems unrelated to this particular job. Tool services should check the caller, authorized records, permitted operations, and allowed destinations. Validate arguments even when they match a schema — a well-formed request can still request the wrong record or recipient.
+The shortcut is to give the agent the operator's full access. That account may reach many unrelated systems. Tools should check the caller, the records, the operation, and the destination. A well-formed request can still name the wrong recipient.
 
-Walk the table slowly: the model might ignore, report, or follow the document's instruction — but a sending restriction enforced by the application does not depend on which response the model chooses. Even a prompt saying "draft only" still needs that external enforcement. Removing sending authority closes this sending path; other tools and network access need their own controls.
-
-If time allows, ask the room which of the two lookup tools needs a sending credential. Neither does.
+Walk the table. The model may follow the document or not. If the application cannot send, it does not matter. A "draft only" prompt still needs enforcement outside the model.
 
 Transition: "Here is what that looks like inside the harness."
-

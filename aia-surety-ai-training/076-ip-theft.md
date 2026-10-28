@@ -12,9 +12,9 @@ What AI labs may take, what it cost them, and what it says about your data.
 
 ## Speaker notes
 
-Pause here — this is a section-within-a-section, and the title is deliberately blunt. The next three slides are evidence, not opinion: two courtroom stories about AI labs and the data they take, then the economics underneath them.
+The next three slides are evidence, not opinion: two court stories, then the economics.
 
-Reassure the room again that this is not a case against using AI — it is the reason the default settings, the contracts, and the boundaries in the rest of this section exist. Labs compete for data because data is the input everything is built from; the question for us is always the same one: what did we give up, and to whom?
+This is not a case against AI. It is why the settings, contracts, and boundaries in this section exist. The question stays the same: what did we give up, and to whom?
 
 Transition: "First: Anthropic and the authors."
 

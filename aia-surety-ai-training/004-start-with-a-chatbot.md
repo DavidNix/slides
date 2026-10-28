@@ -14,10 +14,10 @@ You ask. It responds. You refine the request.
 
 ## Speaker notes
 
-Open a familiar chat interface. Start with the experience before introducing the machinery.
+Open a chat app. Show the experience before the machinery.
 
-Separate three names people often mix together: OpenAI is a company; ChatGPT is an application; the application uses models. Anthropic is a company; Claude names both its assistant product and a family of models.
+Separate three names: OpenAI is a company, ChatGPT is an app, and the app uses models. Claude names both Anthropic's app and its models.
 
-A chatbot is an interface. Some chat applications also search the web, use tools, and perform agentic work. The visual appearance of a chat box does not tell us what access the system has.
+A chat box tells you nothing about what access the system has.
 
-Ask: “When you type a question here, what do you think the software can see?” Take one answer, then use the next slide to clarify.
+Ask: "When you type a question here, what can the software see?"

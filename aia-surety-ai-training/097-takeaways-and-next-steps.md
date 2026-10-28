@@ -22,20 +22,14 @@ Applied AI for businesses · Local and private AI
 
 ## Speaker notes
 
-Walk the five takeaways, then take questions and invite two brief takeaways from the room. Useful prompts:
+Walk the five takeaways, then take questions. Prompts:
 
-- Which part of an agent's operation is clearer now?
-- Which task could your staff use help with?
+- Which task could your team hand off?
 - How would you verify the output?
-- Which convenience would be worth additional access, and which would not?
-- What would determine whether the work belongs in a managed service or a local system?
+- Which convenience is worth more access, and which is not?
 
-Ask someone what evidence would establish that an AI-generated statement is correct.
+Restate the tradeoff: "Every time we say 'just handle it for me,' we should know what authority we are delegating."
 
-Revisit the repetitive tasks named at the start. Participants should now be able to describe both an opportunity and the controls needed to pursue it.
+For Microsoft or product questions outside your experience, say so. Note the detail for AIA's IT team to confirm.
 
-Restate the core tradeoff in plain language: “Every time we say ‘just handle it for me,’ we should know what authority we are delegating.” Good design can reduce the risk while preserving much of the convenience.
-
-For product-specific or Microsoft configuration questions outside your experience, state that directly and connect the question to the underlying principle. Capture the implementation detail for AIA's technical team to confirm.
-
-Finish by encouraging a small, owned, measurable pilot. With the planned durations, this slide ends at 192 minutes of speaking time. With the 15-minute break, that is about 4:27 PM, which leaves time for questions before 4:30 PM.
+Close with a small, owned, measurable pilot. Planned durations end at 192 minutes. With the break, that is about 4:27 PM.

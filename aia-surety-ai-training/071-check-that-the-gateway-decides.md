@@ -6,22 +6,22 @@ duration_minutes: 2
 
 # Check that the gateway actually decides
 
-![Without a gateway, each harness enforces its own scattered rules — some locked, some wide open. With one gateway, every request passes the same classifier, logs, and reviewer.](gateway-single-point-of-governance.png)
+![Without a gateway, each harness enforces its own scattered rules, some locked, some wide open. With one gateway, every request passes the same classifier, logs, and reviewer.](gateway-single-point-of-governance.png)
 
-- **Without a gateway:** every tool connects on its own terms — scattered, inconsistent rules.
+- **Without a gateway:** every tool connects on its own terms, with scattered, inconsistent rules.
 - **With one gateway:** the same rules apply to every request, and every decision leaves a record.
 
 ## Speaker notes
 
-The next slide shows the picture — walk its two panels. On top: each harness connecting on its own — one connection locked down, one wide open, and nobody can say which is which without checking each one. Below: the same requests all pass one gate, so the same rules and the same records apply everywhere. Governance becomes one place to set policy and one place to look.
+The next slide shows the picture. Top: each harness connects on its own, some locked, some open, and nobody knows which. Bottom: one gate, the same rules and records everywhere.
 
-Then make it real: the picture is the design, not the proof. Send one request the policy allows and one it forbids, and find the record for each — the allowed one showing which rule matched, the forbidden one showing the requested destination and the denial reason. If the forbidden request also succeeds, or no record exists, the gateway is not enforcing no matter what the configuration says. An allow you have never tested may just be an open door.
+The picture is the design, not proof. Send one allowed request and one forbidden request. Find the record for each. If the forbidden one succeeds or leaves no record, the gateway is not enforcing.
 
-Keep the caveat on budgets: usage estimates and spending caps need operational validation too — a budget threshold is not a perfect cap on every possible in-flight charge.
+Spending caps need testing too. A budget threshold may not stop every in-flight charge.
 
-For the room: this is IT's verification step, not a staff task — but the question is for everyone: "How do we know the gateway is actually enforcing?" A control you cannot see working is a control you cannot trust.
+This is IT's job. Everyone can ask: "How do we know the gateway is enforcing?"
 
-Transition: "One more way agents go wrong on their own: memory that persists."
+Transition: "One more way agents go wrong: memory that persists."
 
 ## Sources
 

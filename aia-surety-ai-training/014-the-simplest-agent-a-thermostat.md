@@ -20,14 +20,14 @@ A thermostat is an agent, and it contains no AI. The AI agent is the same loop w
 
 ## Speaker notes
 
-Set up the agent loop on the next slide with something the room already owns. Every attendee has seen a thermostat work: nobody tells it the steps, you set the goal and it keeps working toward it on its own.
+Everyone has seen a thermostat. Nobody tells it the steps. You set the goal and it works toward it.
 
-Walk the four steps once, slowly, pointing at each bullet. Emphasize that the loop never stops: the thermostat keeps sensing even when nothing changes.
+Walk the steps once, slowly. The loop never stops.
 
-Then make the upgrade explicit: an AI agent follows the same shape. Sense becomes reading files, emails, or ticket details. Decide becomes the model choosing what to do next. Act becomes calling tools. The thermostat decides with one simple rule; the model decides with everything it learned from its training data — which is why the next sections look closely at what the model and the surrounding software each do.
+An AI agent has the same shape. Sense is reading files, email, or tickets. Decide is the model. Act is calling tools.
 
 Transition: "You have probably used an AI agent loop already without knowing it."
 
 ## Sources
 
-- [Artificial Intelligence: A Modern Approach — agents as systems that perceive through sensors and act through actuators](https://aima.cs.berkeley.edu/).
+- [Artificial Intelligence: A Modern Approach, agents as systems that perceive through sensors and act through actuators](https://aima.cs.berkeley.edu/).

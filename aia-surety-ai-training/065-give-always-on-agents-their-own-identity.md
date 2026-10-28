@@ -17,15 +17,15 @@ Treat an always-on agent like a new hire, not like a copy of you:
 
 ## Speaker notes
 
-Start with the default. Most personal assistants connect to your apps with your own login. Then the agent can do everything you can do. It can read your whole mailbox, open every shared drive, and send email as you. If a document or an email fools the agent, the attacker acts as you.
+The default: most personal assistants use your login. The agent can read your whole mailbox, open every drive, and send email as you. If it is fooled, the attacker acts as you.
 
-A separate identity changes that. The agent gets an account the way a new employee does. IT uses the tools it already has to decide what the account can open. Microsoft 365 and Google Workspace enforce the limits, not the model. This is least privilege from earlier in the section, applied to a person-shaped account.
+A separate account limits that. IT sets what it can open with existing tools. Microsoft 365 or Google Workspace enforce the limits, not the model.
 
-The email address does two jobs. Recipients know that a message came from an agent and not from a colleague. When something goes wrong, the sent folder and the audit log show exactly what the agent did.
+The email address shows recipients that an agent sent the message. The sent folder and audit log show what it did.
 
-The off switch matters most on a bad day. IT disables one account, and no one else loses access to anything.
+On a bad day, IT disables one account and nobody else loses access.
 
-Name the tradeoff. Each agent account costs a license and some setup by IT. In return, a fooled agent can reach only what you chose to share with it. Microsoft now supports this directly. Its Entra Agent ID gives each agent its own directory identity, and an agent account can have its own mailbox when the job needs one.
+Tradeoff: each account costs a license and IT setup. Microsoft Entra Agent ID gives each agent its own identity.
 
 ## Sources
 

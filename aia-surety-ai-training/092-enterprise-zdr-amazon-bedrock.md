@@ -25,25 +25,25 @@ Same prices as Anthropic. US-only processing adds 10%. A 20-page claim file cost
 
 ## Speaker notes
 
-Connect to the ZDR slides in the Security section. ZDR is usually a contract term that you have to trust. On Bedrock, it is a setting that you control and that IT can enforce. That is why Bedrock is the recommendation.
+ZDR is usually a contract term you trust. On Bedrock it is a setting IT can enforce.
 
 Why Bedrock:
 
-- AWS runs a copy of each model in accounts that AWS owns. The model maker has no access to those accounts, so it never sees your prompts, outputs, or logs.
-- Retention is a setting. Mode "none" means nothing is written to storage. IT can use an AWS organization policy to block any other mode, for every account.
-- It runs under the cloud contract, security reviews, and billing that many companies already have.
-- One exception: Anthropic's newest models, Claude Fable 5 and Fable 5.1, require that AWS keep data for up to 30 days for safety review. AWS does the review, and the data stays inside AWS. If your account is set to "none", those models are not available. Opus 5.5, Sonnet 5.5, and Haiku 5.5 work under "none".
+- AWS runs each model in AWS-owned accounts. The model maker never sees prompts, outputs, or logs.
+- Mode "none" writes nothing to storage. An AWS organization policy can block other modes.
+- It uses the cloud contract, reviews, and billing many companies already have.
+- Exception: Claude Fable 5 and 5.1 need up to 30 days of retention for AWS safety review. Under "none" they are unavailable. Opus, Sonnet, and Haiku 5.5 work.
 
-Microsoft Foundry, the second choice:
+Microsoft Foundry, second choice:
 
-- It is a fair option for a company that runs on Microsoft and has an Azure spending commitment.
-- Anthropic, not Microsoft, processes the prompts and outputs as an independent processor. That is true even when the model runs on Azure.
-- Choose "Hosted on Azure" and the US Data Zone. The other option, "Hosted on Anthropic infrastructure", can process data outside Azure and outside your region.
-- ZDR is an arrangement with Anthropic, not a setting you turn on. Do not assume that the Azure OpenAI retention rules apply to Claude.
+- Fair for a Microsoft shop with an Azure spending commitment.
+- Anthropic processes the data as an independent processor, even on Azure.
+- Choose "Hosted on Azure" and the US Data Zone. The other option can process data outside your region.
+- ZDR is an arrangement with Anthropic, not a setting.
 
-Pricing, in plain terms: both clouds charge the same per-token prices as Anthropic. Keeping processing inside the US costs 10% more. The math for the example: a 20-page claim file is about 10,000 tokens in and 1,000 tokens out. On Sonnet 5.5 that is 2 cents plus 1 cent. An agent that runs for an hour can use millions of tokens, so watch agent workloads more closely than single questions. That is the costs slide again.
+The math: a 20-page claim file is about 10,000 tokens in and 1,000 out. On Sonnet that is 2 cents plus 1 cent. An hour-long agent run can use millions of tokens.
 
-Prices change often. Check the Anthropic and AWS pricing pages before you present.
+Check current prices before you present.
 
 Transition: "For open models, there is a quicker route."
 

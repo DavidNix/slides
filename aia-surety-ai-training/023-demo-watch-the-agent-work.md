@@ -19,12 +19,12 @@ The agent gets the review task:
 
 ## Speaker notes
 
-This is the session's one demo: the [freight-claim review](demo-freight-fraud-review.md), shown as a recorded video in two parts. A broker arranges the shipment, and a carrier operates the truck. Explain those roles and the disputed invoice before you play the clip. All businesses and records in the exercise are fictional.
+The session's one demo: the [freight-claim review](demo-freight-fraud-review.md), in two recorded parts. A broker arranges the shipment. A carrier runs the truck. Explain the roles and the disputed invoice first. All records are fictional.
 
-Play part 1 (about one minute). It shows the input folder, the empty output folder, the prompt, and the agent starting to read files. Pause on one visible file read or file creation step. Connect it to the model requesting an action and the harness carrying it out.
+Part 1 runs about one minute: input folder, empty output folder, prompt, and the agent reading files. Pause on one file read. That is the model requesting an action and the harness carrying it out.
 
-Part 2 plays on slide 43, after the Verification section. Tell the room that the agent kept working, and that they will check its work themselves later.
+Part 2 plays on slide 43, after Verification. The room checks the work then.
 
-**Placeholder:** the video is not recorded yet. Record it from the [freight guide](demo-freight-fraud-review.md) and save it as `demo-freight-part-1.mp4`. Until then, use saved output from a rehearsal and say that it is rehearsal output.
+**Placeholder:** record `demo-freight-part-1.mp4` from the [freight guide](demo-freight-fraud-review.md). Until then, use rehearsal output and say so.
 
-**Transition:** The task now has a goal, source files, and boundaries. The next slides explain how context and reusable instructions help the agent carry it out.
+**Transition:** The next slides show how context and reusable instructions help the agent.

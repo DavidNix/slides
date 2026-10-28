@@ -21,15 +21,13 @@ duration_minutes: 2
 
 ## Speaker notes
 
-Take the mystery out of "proactive." An always-on agent feels like it decides to help on its own. It does not. A timer fires, or a message arrives, and the harness starts the agent. This is the same idea as the thermostat from the "Agents are nothing new" slide, or an email rule in Outlook.
+An always-on agent does not decide to help. A timer fires or a message arrives, and the harness starts it. Same as the thermostat, or an Outlook email rule.
 
-The schedule is like a recurring calendar entry. The trigger is an event, such as a chat message, a new email, or a file in a shared folder. When the run ends, the agent stops until the next one.
+The model is stateless. The harness saves notes and reloads them each run. That is the whole trick behind memory.
 
-Call back to the Demystify section. The model is stateless and remembers nothing between calls. The harness saves notes and loads them again at the start of each run. That is the whole trick behind memory.
+Every trigger is a way in. A message that wakes the agent can carry instructions.
 
-This also matters for security. Every trigger is a way in. A message or an email that wakes the agent can also carry instructions, which the Security section covers.
-
-Transition: these agents read your mail, browse the web, and can send messages. The Security section, next, shows why that combination needs care. Near the end, we come back to which always-on agent to use for a business pilot.
+Transition: these agents read mail, browse, and send messages. Security is next.
 
 ## Sources
 

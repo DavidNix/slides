@@ -22,17 +22,20 @@ A rubric is a short list of levels, each with a plain description. It works like
 
 ## Speaker notes
 
-Start with the definition, because "rubric" is not an everyday word. Everyone has seen one at school. A teacher writes down what an A paper looks like and what a C paper looks like, so two teachers grade the same essay the same way. A rubric for the model does the same job.
+"Rubric" is not an everyday word. A teacher writes down what an A paper and a C paper look like, so two teachers grade alike.
 
-Walk the slide top to bottom. The 1-to-10 request is the problem from the previous slide. The model has no real scale, so "7" is a plausible-sounding number, not a measurement. Nobody can check it, and a second run can give a different number.
+The 1-to-10 request has no real scale, so "7" cannot be checked.
 
-The rubric fixes this in two ways. First, you write the levels, so they mean the same thing every time. Each description is a fact a person can check, such as "names a deadline" or "asks a question". Second, the model must quote the words that put the email in its level. A bare label cannot be checked. A quote can be checked in seconds against the email.
+The rubric fixes two things:
 
-If leadership wants a number, count the levels. For example: "This week, 12 urgent, 40 normal, and 30 no action, with ten of each spot-checked." That number comes from checked answers, not from the model's feeling.
+- You write the levels, so they mean the same thing every time.
+- The model quotes the words that prove its pick. You can check a quote in seconds.
 
-This is a pattern to copy for any task, not an AIA procedure. The same shape works for complaint severity, how complete a file is, or the tone of a draft.
+For a number, count the levels: "12 urgent, 40 normal, 30 no action, ten of each spot-checked."
 
-Transition: "Some new models do nothing but this: pick from the choices you wrote. They are called decision models."
+The same shape works for complaint severity, file completeness, or tone.
+
+Transition: "Some new models only do this: pick from the choices you wrote."
 
 ## Sources
 

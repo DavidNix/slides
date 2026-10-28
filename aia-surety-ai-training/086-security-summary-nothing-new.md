@@ -26,15 +26,15 @@ Before you connect a tool or give an agent access, always ask:
 
 ## Speaker notes
 
-This slide closes the Security section. Reassure the room. They do not need a new kind of security team. IT already uses every practice in the right column. The work is to apply those practices to agents, which are new software with access to the same data.
+No new kind of security team is needed. IT already uses every practice in the right column.
 
-Walk the table quickly. Do not explain each row again. Point at two or three rows that fit the room best. For example, Finance already uses a second person to check payments. Verifying an agent's work is the same habit.
+Point at two or three rows only. Example: Finance already has a second person check payments. Verifying agent work is the same habit.
 
-Then make it personal. When an agent runs with your sign-in, the logs show your name. If it sends the wrong file or deletes a record, the company sees you doing it. "The AI did it" is not a defense. That is why always-on agents get their own identity, and why you decide what to connect.
+When an agent uses your sign-in, the logs show your name. "The AI did it" is not a defense.
 
-Then land the question. Call back to the opening slide of the section, "What could go wrong?" That question opened the section. This one closes it, and it is the habit to take back to the desk. If the honest answer is "it emails a customer's file to a stranger" or "it moves money", reduce the access or add a check before you connect it. If the answer is "it writes a bad draft that I delete", go ahead.
+"What could go wrong?" opened the section. This question closes it. If the answer is "it emails a client file to a stranger," cut access or add a check. If it is "a bad draft I delete," go ahead.
 
-Transition: "That is the risk side. Now my recommendations: the specific tools I suggest, now that you know what to watch for."
+Transition: "Now my recommendations."
 
 ## Sources
 

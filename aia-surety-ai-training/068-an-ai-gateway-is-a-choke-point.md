@@ -20,26 +20,28 @@ duration_minutes: 2
 
 ## Speaker notes
 
-Explain a gateway as a managed entry point for applications using model APIs: requests pass through it instead of reaching a provider directly. Two working examples: Bifrost — routing, virtual keys, budgets, rate limits, fallbacks, and observability — and Kong's AI Gateway — access control, prompt guardrails, PII sanitization, and MCP traffic governance with audit logs.
+A gateway is a managed entry point. Apps send model requests through it, not straight to a provider. Examples: Bifrost (routing, budgets, rate limits, logs) and Kong AI Gateway (access control, guardrails, PII removal, MCP governance).
 
-The animation below walks the beats: scattered connections, one way in, an allow, a block, a denied route, and one record. Play it after the bullets; the next two slides carry the static picture and the link to this video.
+Play the video after the bullets.
 
-The diagram two slides ahead shows the picture: the application's requests all pass through the single gatehouse — nothing reaches a model service without going through it — and only then continue to the approved models. The three badges are the three options on this slide: the classifier inspecting what passes, the logs recording it, and the reviewer agent judging suspicious traffic.
+The security value is in one place:
 
-The same choke point extends to the connectors from earlier in the section: a gateway can inventory every MCP server configured across the organization's apps, let an administrator allow or deny each one, and filter which tools are available per team. The connectors slide gave each person a review habit; the gateway makes the same review an organizational control — and on some platforms the denial is enforced on the device, so a blocked server cannot be used even by an app that has it.
+- A classifier on all traffic.
+- Logs of every prompt and tool call.
+- A second AI that reviews suspicious traffic.
 
-For this room the security value is the three options on the slide. A gateway can run a classifier on everything passing through, record every prompt and tool call so analysts can review them after the fact, or hand suspicious traffic to a second AI that judges it. Control and evidence live in one place instead of being scattered across tools.
+For MCP, a gateway lists every server in use, allows or denies each one, and filters tools per team. Some platforms block a denied server on the device.
 
-Two caveats, stated plainly. A gateway only governs traffic routed through it — a person's separate browser session with a hosted chatbot bypasses it entirely. And logs are copies of business data: protect them and minimize what they retain.
+Caveats:
 
-Watch fallback routes. Automatic failover that silently sends a request to a different provider can undo a carefully chosen data boundary.
-
-Transition: demonstrate the gateway making and recording a decision.
+- It only sees traffic routed through it. A personal browser session bypasses it.
+- Logs are copies of business data. Protect them.
+- Automatic failover to another provider can break a chosen data boundary.
 
 ## Sources
 
 - [Bifrost overview and feature list](https://www.getbifrost.ai/docs).
 - [Bifrost budgets and limits](https://docs.getbifrost.ai/features/governance/budget-and-limits).
 - [Bifrost: Govern MCP servers](https://docs.getbifrost.ai/edge/mcp-governance).
-- [Kong Gateway](https://konghq.com/products/kong-gateway) — the AI Gateway variant governs LLM and MCP traffic.
+- [Kong Gateway](https://konghq.com/products/kong-gateway). The AI Gateway variant governs LLM and MCP traffic.
 - [Kong: MCP Traffic Gateway](https://developer.konghq.com/ai-gateway/mcp).

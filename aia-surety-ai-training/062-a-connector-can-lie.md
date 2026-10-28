@@ -17,18 +17,18 @@ The model reads every tool description as text. An MCP server can put instructio
 
 ## Speaker notes
 
-Call back to the MCP slide in the Agents section. When the agent starts, it asks each server for its tools, and each tool has a description. Those descriptions go into the model's context. The model cannot tell content from instructions, so the description is an instruction channel that the user never sees.
+Each tool has a description, and it goes into the model's context. The user never sees it. The model cannot tell content from instructions.
 
-Walk the four cases in order. They go from the server lying to the server being honest but carrying a lie:
+The four cases go from a lying server to an honest server carrying a lie:
 
-- Tool poisoning: Invariant Labs showed this in April 2025. The user approved a harmless tool. Hidden text in its description told the model to read private files and send them out as a tool argument.
-- Fake server: Koi Security found this in September 2025. The package copied the real Postmark project. Fifteen versions were clean, and version 1.0.16 added one line that BCC'd every email to the attacker. It had more than 1,600 downloads before the author deleted it. Installed copies kept working until people removed them.
-- Changes after approval: Invariant calls this a rug pull. The server is clean on the day you check it and changes later.
-- Poisoned content: Invariant Labs, May 2025. The GitHub server had no bug. The agent had a broad token, and a public issue had instructions in it. That is the lethal trifecta again, inside one connector.
+- Tool poisoning (Invariant Labs, April 2025): hidden text told the model to send private files out as a tool argument.
+- Fake server (Koi Security, September 2025): fifteen clean versions, then one line BCC'd every email. Over 1,600 downloads.
+- Rug pull: clean the day you check it, changed later.
+- Poisoned content (Invariant Labs, May 2025): no bug in GitHub's server. A broad token plus a public issue with instructions.
 
-The business point: a connector is software from someone else that runs with your access. You trust its author, its updates, and everything it reads.
+A connector is someone else's software running with your access.
 
-Transition: "So how do you choose a connector you can trust?"
+Transition: "So how do you choose one you can trust?"
 
 ## Sources
 

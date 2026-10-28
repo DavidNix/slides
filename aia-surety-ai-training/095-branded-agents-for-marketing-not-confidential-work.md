@@ -16,25 +16,23 @@ duration_minutes: 2
 
 ## Speaker notes
 
-Call back to the always-on slide before Security. There I did not recommend these products for general work. This slide gives the one place where they fit well.
+Why not for confidential work:
 
-Why they are bad for confidential work:
+- Consumer plans have no business data terms such as ZDR. Duet runs only on Pro and Max.
+- They read everything you connect, all the time.
+- Social messages come from strangers. An agent that reads them and holds your files is the lethal trifecta.
 
-- They are built for one person on a consumer plan. Business data terms, such as zero data retention, are not part of that plan. Duet runs only on Pro and Max plans today.
-- An always-on agent reads everything you connect, all the time. That is a large standing grant.
-- Social messages come from strangers. A direct message is untrusted content. An agent that reads strangers' messages and also holds your files is the lethal trifecta. So keep the two apart.
+Why they fit marketing:
 
-Why they can be good for marketing:
+- Muse reads your Meta messages, feed, and analytics, and drafts replies.
+- Grok Bot lives on X. Tag @bot to hand it a task.
+- Duet sends a morning brief and drafts follow-ups. It has no social connector yet.
 
-- Muse connects your Facebook, Instagram, and Threads accounts automatically when they share a Meta Accounts Center. It can search your messages and feed, read Instagram and Page analytics, and draft replies to common messages.
-- Grok Bot lives on X. You can tag @bot in a post to hand it a task. Its X connector can read posts, timelines, and mentions. xAI also says it can now call a business for you and send you a summary.
-- Duet sends a morning brief from your connected apps and drafts follow-ups. It has no social connector of its own yet, so it fits best for planning and drafting.
+None of the three posts on its own. A person still reviews every public message.
 
-Be precise about posting. None of the three posts on its own. Meta says nothing publishes, sends, or spends without approval. Duet asks before it sends a message. Grok Bot drafts outreach for your approval, and X limits automated replies. A person still reviews every public message, which is the verification habit again.
+Use a separate marketing account. Do not connect company mail, drives, or customer records.
 
-Practical advice: set it up on a separate marketing account. Connect only the social accounts and the public material it needs. Do not connect company mail, drives, or customer records.
-
-Transition: "Whichever agent you choose, it runs on skills. Here is where to find them."
+Transition: "Whichever agent you choose, it runs on skills."
 
 ## Sources
 

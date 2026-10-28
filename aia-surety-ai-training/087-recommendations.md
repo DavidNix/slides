@@ -8,9 +8,7 @@ duration_minutes: 1
 
 ## Speaker notes
 
-Pause here. This opens the last section. The Security section covered what to watch for. This section names the specific tools I recommend, and each slide is one recommendation.
-
-Say plainly that these are my opinions as of this training. Products change fast, so check them before you commit a workflow to one.
+Each slide here is one recommendation. These are my opinions as of this training. Products change fast, so check before you commit.
 
 Transition: "First, which models are the best?"
 

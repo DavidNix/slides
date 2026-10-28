@@ -19,10 +19,10 @@ At every step, ask:
 
 ## Speaker notes
 
-Trace the order-status example through the deployment being considered. A gateway is optional, and components may be combined; the point is to identify the actual recipients and copies of the information.
+Trace one real workflow. Find every recipient and every copy of the data. A gateway is optional.
 
-Add side paths verbally: logs, caches, document extraction, embeddings, analytics, backups, and shared outputs. These can matter even when the main model path is local.
+Name the side paths: logs, caches, extraction, embeddings, analytics, backups, shared outputs. They matter even when the model is local.
 
-Convenience features such as persistent memory, automatic synchronization, and provider fallback deserve the same data-flow questions. More copies and broader access can increase exposure.
+Memory, sync, and provider fallback add copies and access. Ask the same questions about them.
 
-Transition: "One last slide on security, to pull it together."
+Transition: "One last slide on security."

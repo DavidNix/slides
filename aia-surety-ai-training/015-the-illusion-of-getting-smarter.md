@@ -16,13 +16,13 @@ Ask ChatGPT about this week's news and it answers. The same question a couple of
 
 ## Speaker notes
 
-Live demo if the room's connection allows: ask ChatGPT about a story from the past few days, let the audience watch it search the web and cite sources, then point at the search step — that is a tool call, exactly like the thermostat's furnace switch. Fallback: describe the search step and show a captured answer with its citations.
+Live demo: ask ChatGPT about a recent story. Point at the search step. That is a tool call, like the thermostat's furnace switch. Fallback: show a captured answer with citations.
 
-The point is not that models never improve. Each generation is genuinely better at reasoning and writing. But the jump people notice — "it knows about things that happened after its training date" — comes from the harness adding a search tool and feeding the results into the model's context. The model's job is unchanged: read what it is given and produce likely text. The harness's job grew.
+Models do improve each generation. But "it knows recent news" comes from the harness adding search. The model's job is unchanged. The harness's job grew.
 
-This is also why the convenience/security framing matters: when the harness gains the ability to act — search, send, update — the question becomes what that ability can touch.
+When the harness can act (search, send, update), the question is what that ability can touch.
 
-Transition: "So what is doing the work, if not the model? Let's open the loop up and see the parts of an AI agent."
+Transition: "So what does the work, if not the model?"
 
 ## Sources
 

@@ -10,16 +10,16 @@ duration_minutes: 3
 
 **A tech support agent at work.** Today, the model only *answers*: an incoming ticket gets copied into ChatGPT, the suggestion gets reviewed, and a reply gets pasted back.
 
-An agent with the right tools could read the ticket itself, reset the password orclear the stuck print queue, and message the user without any human intervention.
+An agent with the right tools could read the ticket itself, reset the password or clear the stuck print queue, and message the user without any human intervention.
 
-**The difference is not smarter answers — it's permission act.**
+**The difference is permission to act.**
 
 ## Speaker notes
 
 This is where the job loss fear comes from. Agents take autonomous actions. The next slide takes this head-on.
 
-Define an agent from scratch. It is a software system, not a person living inside a computer. Its behavior comes from a model working with surrounding software, instructions, tools, and state.
+An agent is software: a model plus instructions, tools, and state.
 
-Walk the escalation inside the example: pasting a suggested reply is an answer; reading the ticket is the agent acting; resetting the password and clearing the print queue are greater authority. Both are routine, low-risk helpdesk actions — the reset is instantly reversible and the queue restart is scoped to one machine.
+Walk the escalation. Pasting a suggested reply is an answer. Reading the ticket is an action. Resetting the password needs more authority.
 
-Use the support-desk comparison: writing a suggested fix for a colleague is different from having the access needed to carry it out.
+Writing a fix for a colleague is different from having the access to carry it out.

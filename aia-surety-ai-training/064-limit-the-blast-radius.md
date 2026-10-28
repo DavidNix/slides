@@ -17,10 +17,10 @@ duration_minutes: 2
 
 Models are training to see they're in a sandbox and will stop.
 
-Explain a sandbox as an environment that restricts what executing software can access or change. It is one layer of protection and must be configured appropriately.
+A sandbox limits what running software can reach or change. It is one layer, and only as good as its setup.
 
-Outbound network restrictions matter because data theft requires a path out. A sandbox with unrestricted network access may still send anything it can read to an external destination.
+Data theft needs a path out. A sandbox with open network access can still send out anything it reads.
 
-Backups and reversible changes help recover from some mistakes. They cannot reverse information already disclosed externally.
+Backups undo some mistakes. They cannot undo data already sent out.
 
-This is another familiar tradeoff: removing restrictions may make a task easier, while increasing the damage possible from a failure. Adjust the task or provide a narrowly scoped capability before granting broad access.
+Before you grant broad access, narrow the task or give it one scoped capability.

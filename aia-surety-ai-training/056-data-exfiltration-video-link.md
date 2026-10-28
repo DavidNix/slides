@@ -10,4 +10,4 @@ duration_minutes: 0
 
 ## Speaker notes
 
-Nothing to present — this slide exists so the video link survives in exported PDFs and handouts. Skip past it when projecting; it matters when the deck is shared as a file.
+Skip when projecting. This slide keeps the video link in exported PDFs.

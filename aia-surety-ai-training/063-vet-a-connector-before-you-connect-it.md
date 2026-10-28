@@ -19,19 +19,19 @@ Before you switch on a connector, ask:
 
 ## Speaker notes
 
-Map each question to the threat on the previous slide. Questions 1 and 4 stop the fake server and the rug pull. Questions 2 and 3 limit what poisoned content can do with the connection. Question 5 makes the check a company rule, and it previews the AI gateway slides that come next.
+Questions 1 and 4 stop the fake server and the rug pull. Questions 2 and 3 limit poisoned content. Question 5 makes it company policy and previews the gateway.
 
-Spend the most time on the last question. It is the strongest option, and the room now has the skill to do it. The skills slides showed that you can ask the agent to write a skill. You can also ask it to write a small MCP server. Example: "Write an MCP server with one tool that looks up a claim's status by claim number. Read-only. No other tools." The server is a short file that you can read, the same as a skill. It offers exactly one tool, and nobody else can change it.
+Spend the most time on question 6. Ask the agent: "Write an MCP server with one tool that looks up a claim's status by claim number. Read-only." It is a short file you can read, like a skill.
 
-Be honest about the limits of writing your own:
+Limits:
 
-- It still runs with the access you give it, so give it the narrowest sign-in.
-- The content it returns can still carry instructions, as the GitHub case showed.
-- Someone must keep it up to date. For a small read-only tool, that is little work.
+- It runs with the access you give it. Use the narrowest sign-in.
+- Its content can still carry instructions.
+- Someone must maintain it.
 
-For anything bigger than a small tool, use the vendor's official server, and get IT to approve it.
+For anything bigger, use the vendor's server with IT approval.
 
-Transition: "Even with the gate set correctly, assume a bad instruction eventually gets through. That is the blast radius."
+Transition: "Assume a bad instruction gets through anyway. That is the blast radius."
 
 ## Sources
 

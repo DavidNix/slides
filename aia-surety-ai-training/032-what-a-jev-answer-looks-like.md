@@ -18,15 +18,15 @@ The message: *"I was charged twice for my subscription this month. Please refund
 
 ## Speaker notes
 
-This example comes from TypeSafe's own API documentation. Walk the table row by row. Jev writes no reply and no summary. It returns a pick and a percentage for each question, and that is all.
+This example is from TypeSafe's API docs. Jev writes no reply. It returns a pick and a percentage per question.
 
-Point out who writes the choices. A person defines the questions and the options, and Jev only picks among them. Software can then act on the answers directly. For example, it can send the message to the billing queue and flag it for today.
+A person writes the questions and options. Software acts on the answers, for example routing to billing and flagging for today.
 
-Connect the percentages to verification. A low percentage is a signal to send the item to a person instead of acting automatically. The real output is machine-readable data. The table shows the same numbers in plain form.
+A low percentage means send it to a person.
 
-Point back to the rubric slide. This is the same idea: you write the levels, and the model picks one. A decision model is built to do only that.
+Same idea as the rubric: you write the levels, the model picks one.
 
-Transition: "A rubric is a procedure you define once and reuse. Packaging reusable procedures the agent loads on demand is exactly what skills do, and that is next."
+Transition: "A rubric is a procedure you define once and reuse. Skills package those."
 
 ## Sources
 

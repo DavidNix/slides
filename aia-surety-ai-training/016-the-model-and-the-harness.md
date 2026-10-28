@@ -10,13 +10,13 @@ duration_minutes: 3
 
 ## Speaker notes
 
-Use the brain/body comparison as an analogy, not a claim that the model thinks like a person.
+The brain/body comparison is an analogy. The model does not think like a person.
 
-The harness is ordinary software. It assembles the model request, maintains conversation state, checks requested actions, dispatches tools, and returns their results to the model.
+The harness is ordinary software. It builds the model request, keeps state, checks requested actions, runs tools, and returns results.
 
-Tools are pieces of software that do something concrete: read a file, query a record, run a calculation, or send a message. They may run locally, on a company server, or at a provider.
+Tools do concrete work: read a file, query a record, send a message. They run locally, on a company server, or at a provider.
 
-Next, watch the whole loop in motion: one tool call, from your request to the final answer. The ChatGPT news search from the previous slide was this same loop. Some products also provide provider-hosted tools; the same question still applies: which software executes the operation, and with whose authority?
+Always ask: which software runs the operation, and with whose authority?
 
 ## Sources
 
