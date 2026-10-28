@@ -8,7 +8,7 @@ A presenter-led training for AIA Surety staff: use AI well and reason about its 
 
 Emphasis: **agents over LLM internals**. LLM mechanics get intuition-level treatment only. Verification is brief guidance inside Security and Practical, not its own section.
 
-Length: **up to 4 hours**, with questions taken throughout the presentation.
+Schedule: **1:00 to 4:30 PM, with a 15-minute break at 3:00 PM**. That leaves 195 minutes for slides and questions, which the presenter takes throughout. With the planned durations, 3:00 PM falls in the Security mitigations, near slide 63 (human approval). Questions move that point earlier, so the presenter breaks at the nearest slide boundary.
 
 Deck order:
 
@@ -70,5 +70,5 @@ Write for that room: anchor examples in familiar office workflows (email, claims
 - **Questions throughout.** There are no separate Q&A pause slides. The opening slide invites questions at any point during the presentation; the presenter takes them at natural boundaries. The wrap-up slide (`takeaways-and-next-steps`) closes the session and serves as the final question opportunity.
 - **Speaker notes are mandatory.** Each slide includes presenter notes: what to say, what to demonstrate, and what to caveat. Write notes so a substitute presenter could deliver the slide.
 - **Cite sources.** Product claims get links in `## Sources` to official documentation or primary material where possible.
-- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 4 hours**. Keep it in sync when durations change.
+- **Durations feed the timing table.** The session timing table on the welcome slide is the sum of the section durations, and the total must stay **at or under 195 minutes** (the 3.5-hour session less the 15-minute break). Keep the planned total near 180 minutes so questions have room. Keep it in sync when durations change.
 - **Demo slides.** Named `demo-…`; include preparation, steps, and a fallback in the speaker notes. The freight demo is a recorded video in two parts (see Deck order). Each part has a `…-video-link.md` slide after it, like every other video in the deck. The recordings are placeholders until they are made: `demo-freight-part-1.mp4` and `demo-freight-part-2.mp4`.
