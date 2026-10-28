@@ -1,6 +1,6 @@
 ---
-slide: 9
-section: "How AI works"
+slide: 25
+section: "Practical"
 duration_minutes: 2
 ---
 
@@ -16,6 +16,8 @@ duration_minutes: 2
 ## Speaker notes
 
 Present this as a rule of thumb from experience, not a benchmark result: the pattern holds across models and vendors.
+
+Callback to the strengths slide (slide 8): the four strengths are all pattern matching, and that mechanism has a predictable failure mode. This is the warning promised there, now that the demo has shown how much work the pattern matcher can do.
 
 Why classification works: pattern matching with a small, checkable output space. A person can verify ten categories at a glance, errors are visible, and "with reasons" gives you the evidence trail the verification section demands.
 

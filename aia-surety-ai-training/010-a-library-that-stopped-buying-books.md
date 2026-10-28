@@ -1,5 +1,5 @@
 ---
-slide: 12
+slide: 10
 section: "How AI works"
 duration_minutes: 2
 ---
@@ -15,5 +15,3 @@ duration_minutes: 2
 ## Speaker notes
 
 You can models when it's trainig cutoff date was. Often it's months behind.
-
-You can ask ChatGPT about the news and it will tell you, we'll get to that.

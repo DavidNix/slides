@@ -1,12 +1,12 @@
 ---
-slide: 26
-section: "Practical"
+slide: 17
+section: "Agents"
 duration_minutes: 0
 ---
 
-# Video: watch context shift the odds
+# Video: how an agent uses a tool
 
-[prompt-shifts-odds.mp4](prompt-shifts-odds.mp4)
+[harness-tool-call.mp4](harness-tool-call.mp4)
 
 ## Speaker notes
 

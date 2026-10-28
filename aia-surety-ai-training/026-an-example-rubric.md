@@ -1,6 +1,6 @@
 ---
-slide: 10
-section: "How AI works"
+slide: 26
+section: "Practical"
 duration_minutes: 2
 ---
 
@@ -30,7 +30,7 @@ Insist on the quoted reason. A bare label cannot be verified; a quoted fact can 
 
 When leadership wants a number, resist asking the model for a score. Have it classify into these bands, count verified items, and recompute weekly. The measurement is trustworthy because it counts checkable facts — spot-checked — rather than reflecting the model's feel for the question.
 
-Transition: "That is the craft. Next: the two hard limits every model carries."
+Transition: "A rubric is a procedure you define once and reuse on every claim. Packaging reusable procedures the agent loads on demand is exactly what skills do — and that is next."
 
 ## Sources
 
