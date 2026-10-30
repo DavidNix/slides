@@ -1,0 +1,30 @@
+FICTIONAL TRAINING MATERIAL. All messages and email addresses are invented.
+Export for claim DEMO-FREIGHT-1042 / load L-1042.
+
+[F5.1]
+Date: September 7, 2026, 3:12 p.m. Mountain time
+From: Pat, Dispatch <dispatch@aster-freight.example>
+To: Operations <operations@mesahauling.example>
+Subject: L-1042 Denver to Salt Lake City
+Message: The rate is $4,800. The rate confirmation and agreement are included
+in the records you received. Pick up tomorrow and deliver Wednesday morning.
+
+[F5.2]
+Date: September 8, 2026, 7:20 a.m. Mountain time
+From: Pat, Dispatch <dispatch@aster-freight.example>
+To: Operations <operations@mesahauling.example>
+Subject: Re: L-1042 pickup
+Message: At check-in, give the carrier name Cedar Motor. Please do not use
+Mesa's name at the shipping desk; the pickup is in Cedar's name.
+
+[F5.3]
+Date: October 12, 2026, 9:15 a.m. Mountain time
+From: Operations <operations@mesahauling.example>
+To: Pat, Dispatch <dispatch@aster-freight.example>
+Subject: Invoice MH-1042 payment status
+Message: Our invoice was due October 10. Canyon reports no payment applied
+to this invoice. Please provide the remittance details or a payment update.
+
+[F5.4]
+Export note: No reply to the October 12 message appears in this export.
+That absence does not establish whether a reply exists elsewhere.
